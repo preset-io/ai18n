@@ -51,6 +51,10 @@ class Translator:
     def trim_message(self, msgid: str) -> str:
         return msgid.strip()
 
+    def flush_ai(self) -> None:
+        for message in self.messages.values():
+            message.ai_translations = {}
+
     def add_message(self, message: Message) -> None:
         trimmed_msgid = self.trim_message(message.msgid)
         self.messages[trimmed_msgid] = message

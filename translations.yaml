@@ -1,23 +1,6 @@
 messages:
   '!= (Is not equal)':
-    ai_translations:
-      ar: '!= (ليس مساويًا)'
-      de: '!= (ist nicht gleich)'
-      es: '!= (no es igual)'
-      fr: '!= (n''est pas égal)'
-      it: '!= (non è uguale)'
-      ja: '!= (等しくない)'
-      ko: '!= (같지 않음)'
-      nl: '!= (is niet gelijk)'
-      pt: '!= (não é igual)'
-      pt_BR: '!= (não é igual)'
-      ru: '!= (не равно)'
-      sk: '!= (nie je rovné)'
-      sl: '!= (ni enako)'
-      tr: '!= (eşit değil)'
-      uk: '!= (не рівний)'
-      zh: 不等于（!=）
-      zh_TW: 不等於（!=）
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T15:00:50.305084'
       model_used: gpt-4-turbo
@@ -43,24 +26,7 @@ messages:
       zh_TW: 不等於（!=）
     trimmed_msgid: '!= (Is not equal)'
   '% calculation':
-    ai_translations:
-      ar: حساب %
-      de: '% Berechnung'
-      es: '% cálculo'
-      fr: '% calcul'
-      it: '% calcolo'
-      ja: '% 計算'
-      ko: '% 계산'
-      nl: '% berekening'
-      pt: '% cálculo'
-      pt_BR: '% cálculo'
-      ru: '% расчёт'
-      sk: '% výpočet'
-      sl: '% izračun'
-      tr: '% hesaplama'
-      uk: '% обчислення'
-      zh: '% 计算'
-      zh_TW: '% 計算'
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T15:00:58.386931'
       model_used: gpt-4-turbo
@@ -86,24 +52,7 @@ messages:
       zh_TW: '% 計算'
     trimmed_msgid: '% calculation'
   '% of parent':
-    ai_translations:
-      ar: '% من الأصل'
-      de: '% des übergeordneten Elements'
-      es: '% del padre'
-      fr: '% du parent'
-      it: '% del genitore'
-      ja: 親の%
-      ko: 부모의 %
-      nl: '% van ouder'
-      pt: '% do pai'
-      pt_BR: '% do pai'
-      ru: '% от родителя'
-      sk: '% nadradeného'
-      sl: '% nadrejenega'
-      tr: Ebeveynin %
-      uk: '% від батька'
-      zh: 父级%
-      zh_TW: 父項的%
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T15:03:26.436414'
       model_used: gpt-4-turbo
@@ -129,24 +78,7 @@ messages:
       zh_TW: 父類
     trimmed_msgid: '% of parent'
   '% of total':
-    ai_translations:
-      ar: نسبة من المجموع
-      de: '% von Gesamt'
-      es: '% del total'
-      fr: '% du total'
-      it: '% del totale'
-      ja: 総計の%
-      ko: 전체의 %
-      nl: '% van totaal'
-      pt: '% do total'
-      pt_BR: '% do total'
-      ru: '% от общего'
-      sk: '% z celku'
-      sl: '% od skupnega'
-      tr: Toplamın %
-      uk: '% від загального'
-      zh: 总计的百分比
-      zh_TW: 總計的百分比
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T15:03:34.621630'
       model_used: gpt-4-turbo
@@ -173,7 +105,9 @@ messages:
     trimmed_msgid: '% of total'
   '%(dialect)s cannot be used as a data source for security reasons.':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:22:12.145373'
+      model_used: gpt-4-turbo
     msgid: '%(dialect)s cannot be used as a data source for security reasons.'
     occurances: []
     po_translations:
@@ -202,7 +136,9 @@ messages:
     trimmed_msgid: '%(dialect)s cannot be used as a data source for security reasons.'
   ? "%(message)s\nThis may be triggered by: \n%(issues)s"
   : ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:22:27.637620'
+      model_used: gpt-4-turbo
     msgid: "%(message)s\nThis may be triggered by: \n%(issues)s"
     occurances: []
     po_translations:
@@ -234,7 +170,9 @@ messages:
     trimmed_msgid: "%(message)s\nThis may be triggered by: \n%(issues)s"
   '%(name)s.csv':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:22:36.639666'
+      model_used: gpt-4-turbo
     msgid: '%(name)s.csv'
     occurances: []
     po_translations:
@@ -258,7 +196,9 @@ messages:
     trimmed_msgid: '%(name)s.csv'
   '%(name)s.pdf':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:22:44.395371'
+      model_used: gpt-4-turbo
     msgid: '%(name)s.pdf'
     occurances: []
     po_translations:
@@ -282,7 +222,9 @@ messages:
     trimmed_msgid: '%(name)s.pdf'
   '%(object)s does not exist in this database.':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:22:57.222772'
+      model_used: gpt-4-turbo
     msgid: '%(object)s does not exist in this database.'
     occurances: []
     po_translations:
@@ -306,7 +248,9 @@ messages:
     trimmed_msgid: '%(object)s does not exist in this database.'
   '%(other)s charts will appear here':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:35:17.988250'
+      model_used: gpt-4-turbo
     msgid: '%(other)s charts will appear here'
     occurances: []
     po_translations:
@@ -330,7 +274,9 @@ messages:
     trimmed_msgid: '%(other)s charts will appear here'
   '%(other)s dashboards will appear here':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:35:30.764751'
+      model_used: gpt-4-turbo
     msgid: '%(other)s dashboards will appear here'
     occurances: []
     po_translations:
@@ -354,7 +300,9 @@ messages:
     trimmed_msgid: '%(other)s dashboards will appear here'
   '%(other)s recents will appear here':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:35:42.540782'
+      model_used: gpt-4-turbo
     msgid: '%(other)s recents will appear here'
     occurances: []
     po_translations:
@@ -378,7 +326,9 @@ messages:
     trimmed_msgid: '%(other)s recents will appear here'
   '%(other)s saved queries will appear here':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:35:56.435676'
+      model_used: gpt-4-turbo
     msgid: '%(other)s saved queries will appear here'
     occurances: []
     po_translations:
@@ -402,7 +352,9 @@ messages:
     trimmed_msgid: '%(other)s saved queries will appear here'
   '%(prefix)s %(title)s':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:36:04.969367'
+      model_used: gpt-4-turbo
     msgid: '%(prefix)s %(title)s'
     occurances: []
     po_translations:
@@ -427,7 +379,9 @@ messages:
   ? '%(report_type)s schedule frequency exceeding limit. Please configure a schedule
     with a minimum interval of %(minimum_interval)d minutes per execution.'
   : ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:36:31.390740'
+      model_used: gpt-4-turbo
     msgid: '%(report_type)s schedule frequency exceeding limit. Please configure a
       schedule with a minimum interval of %(minimum_interval)d minutes per execution.'
     occurances: []
@@ -450,7 +404,9 @@ messages:
       a schedule with a minimum interval of %(minimum_interval)d minutes per execution.'
   '%(rows)d rows returned':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:36:41.631481'
+      model_used: gpt-4-turbo
     msgid: '%(rows)d rows returned'
     occurances: []
     po_translations:
@@ -474,7 +430,9 @@ messages:
     trimmed_msgid: '%(rows)d rows returned'
   ? "%(subtitle)s\nThis may be triggered by:\n %(issue)s"
   : ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:36:55.939131'
+      model_used: gpt-4-turbo
     msgid: "%(subtitle)s\nThis may be triggered by:\n %(issue)s"
     occurances: []
     po_translations:
@@ -502,7 +460,9 @@ messages:
     trimmed_msgid: "%(subtitle)s\nThis may be triggered by:\n %(issue)s"
   '%(type)s File':
     ai_translations: {}
-    metadata: {}
+    metadata:
+      last_executed: '2024-09-29T15:37:03.950662'
+      model_used: gpt-4-turbo
     msgid: '%(type)s File'
     occurances: []
     po_translations:
@@ -1131,24 +1091,7 @@ messages:
       zh_TW: (已删除或無效類型)
     trimmed_msgid: (deleted or invalid type)
   (excluded):
-    ai_translations:
-      ar: (مُستثنى)
-      de: (ausgeschlossen)
-      es: (excluido)
-      fr: (exclu)
-      it: (escluso)
-      ja: (除外された)
-      ko: (제외됨)
-      nl: (uitgesloten)
-      pt: (excluído)
-      pt_BR: (excluído)
-      ru: (исключено)
-      sk: (vylúčené)
-      sl: (izključeno)
-      tr: (hariç)
-      uk: (виключено)
-      zh: (排除)
-      zh_TW: (排除)
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:35:00.850164'
       model_used: gpt-4-turbo
@@ -33032,24 +32975,7 @@ messages:
       zh_TW: 錯誤：%(msg)s
     trimmed_msgid: 'Error: %(msg)s'
   'Error: %(text)s':
-    ai_translations:
-      ar: 'خطأ: %(text)s'
-      de: 'Fehler: %(text)s'
-      es: 'Error: %(text)s'
-      fr: 'Erreur: %(text)s'
-      it: 'Errore: %(text)s'
-      ja: 'エラー: %(text)s'
-      ko: '오류: %(text)s'
-      nl: 'Fout: %(text)s'
-      pt: 'Erro: %(text)s'
-      pt_BR: 'Erro: %(text)s'
-      ru: 'Ошибка: %(text)s'
-      sk: 'Chyba: %(text)s'
-      sl: 'Napaka: %(text)s'
-      tr: 'Hata: %(text)s'
-      uk: 'Помилка: %(text)s'
-      zh: 错误：%(text)s
-      zh_TW: 錯誤：%(text)s
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:34:53.187314'
       model_used: gpt-4-turbo
@@ -95215,24 +95141,7 @@ messages:
       zh_TW: '`寬度` 必須大於或等於 0'
     trimmed_msgid: '`width` must be greater or equal to 0'
   a dashboard OR:
-    ai_translations:
-      ar: لوحة تحكم أو
-      de: ein Dashboard ODER
-      es: un panel O
-      fr: un tableau de bord OU
-      it: una dashboard O
-      ja: ダッシュボードまたは
-      ko: 대시보드 또는
-      nl: een dashboard OF
-      pt: um painel OU
-      pt_BR: um painel OU
-      ru: дэшборд или
-      sk: dashboard ALEBO
-      sl: nadzorno ploščo ALI
-      tr: bir gösterge paneli VEYA
-      uk: інформаційна панель або
-      zh: 一个看板或
-      zh_TW: 一個看板或
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:35:25.609241'
       model_used: gpt-4-turbo
@@ -95260,24 +95169,7 @@ messages:
       zh_TW: 一個已存在的看板或者
     trimmed_msgid: a dashboard OR
   a new one:
-    ai_translations:
-      ar: جديد
-      de: ein neuer
-      es: uno nuevo
-      fr: un nouveau
-      it: un nuovo
-      ja: 新規
-      ko: 새로운 것
-      nl: een nieuwe
-      pt: um novo
-      pt_BR: um novo
-      ru: новый
-      sk: nový
-      sl: novo
-      tr: yeni bir
-      uk: новий
-      zh: 新的一个
-      zh_TW: 新的一個
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:35:31.719181'
       model_used: gpt-4-turbo
@@ -97886,24 +97778,7 @@ messages:
       zh_TW: 探索
     trimmed_msgid: explore
   expression which needs to adhere to the:
-    ai_translations:
-      ar: التعبير الذي يجب أن يلتزم بـ
-      de: Ausdruck, der sich halten muss an
-      es: expresión que debe adherirse a
-      fr: expression qui doit adhérer à
-      it: espressione che deve attenersi a
-      ja: 遵守すべき表現
-      ko: 준수해야 하는 표현
-      nl: uitdrukking die moet voldoen aan
-      pt: expressão que necessita aderir ao
-      pt_BR: expressão que precisa aderir ao
-      ru: выражение, которое должно соответствовать
-      sk: výraz, ktorý musí dodržiavať
-      sl: izraz, ki se mora držati
-      tr: uyması gereken ifade
-      uk: вираз, який має дотримуватися
-      zh: 必须遵守的表达式
-      zh_TW: 必須遵守的表達式
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:35:45.189350'
       model_used: gpt-4-turbo
@@ -100089,24 +99964,7 @@ messages:
       zh_TW: 開始時間
     trimmed_msgid: shift start date
   source code of Superset's sandboxed parser:
-    ai_translations:
-      ar: الكود المصدري لمحلل الحماية الخاص بـ Superset
-      de: Quellcode des Sandbox-Parsers von Superset
-      es: código fuente del analizador en entorno aislado de Superset
-      fr: code source de l'analyseur sandbox de Superset
-      it: codice sorgente del parser sandbox di Superset
-      ja: スーパーセットのサンドボックスパーサーのソースコード
-      ko: Superset의 샌드박스 파서의 소스 코드
-      nl: broncode van Superset's sandboxed parser
-      pt: código-fonte do analisador em área restrita do Superset
-      pt_BR: código-fonte do analisador em área restrita do Superset
-      ru: исходный код sandboxed парсера Superset
-      sk: zdrojový kód sandboxovaného parsera Superset
-      sl: izvorno kodo za Supersetov sandboxed parser
-      tr: Superset'in kum havuzlu ayrıştırıcısının kaynak kodu
-      uk: вихідний код аналізатора пісочниці Superset
-      zh: Superset 沙盒解析器的源代码
-      zh_TW: Superset 沙盒解析器的源代碼
+    ai_translations: {}
     metadata:
       last_executed: '2024-09-29T14:35:58.360837'
       model_used: gpt-4-turbo

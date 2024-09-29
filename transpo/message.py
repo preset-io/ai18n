@@ -14,13 +14,13 @@ class Message:
         occurances: Optional[List[str]] = None,
     ) -> None:
         self.msgid = msgid
+        self.occurances = occurances or []
         self.po_translations: Dict[str, str] = po_translations or {}
         self.ai_translations: Dict[str, str] = ai_translations or {}
         self.metadata = (
             metadata if metadata else {}
         )  # Metadata (e.g., model used, last execution time)
         self.trimmed_msgid = self.normalize_message(msgid)
-        self.occurances = occurances or []
 
     @classmethod
     def normalize_message(cls, message: str) -> str:

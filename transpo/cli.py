@@ -53,6 +53,10 @@ def main() -> None:
     pull_parser = subparsers.add_parser(
         "po-pull", help="Pull translations from .po files into the YAML file"
     )
+    # po pull subcommand
+    pull_parser = subparsers.add_parser(
+        "flush-ai", help="Flush all translations from the YAML file"
+    )
     pull_parser.add_argument(
         "po_files_folder",
         type=str,
@@ -93,9 +97,10 @@ def main() -> None:
         )
 
         for msg in translator.messages.values():
-            openai_translator.translate_message(msg)
-            # checkpointing after each message
-            translator.to_yaml(TRANSLATION_YAML_FILE)
+            if msg.requires_translation():
+                openai_translator.translate_message(msg)
+                # checkpointing after each message
+                translator.to_yaml(TRANSLATION_YAML_FILE)
 
     elif args.command == "report":
         translator.print_report()
@@ -107,6 +112,10 @@ def main() -> None:
     elif args.command == "po-push":
         translator.load_po_files(args.po_files_folder)
         translator.push_all_po_files()
+
+    elif args.command == "flush-ai":
+        translator.flush_ai()
+        translator.to_yaml(TRANSLATION_YAML_FILE)
 
 
 if __name__ == "__main__":
