@@ -49,6 +49,30 @@ def main() -> None:
         help="Folder where .po files are located (default: current directory)",
     )
 
+    # po pull subcommand
+    pull_parser = subparsers.add_parser(
+        "po-pull", help="Pull translations from .po files into the YAML file"
+    )
+    pull_parser.add_argument(
+        "po_files_folder",
+        type=str,
+        nargs="?",
+        default=os.getcwd(),
+        help="Folder where .po files are located (default: current directory)",
+    )
+
+    # po push subcommand
+    push_parser = subparsers.add_parser(
+        "po-push", help="Push translations from the YAML file to .po files"
+    )
+    push_parser.add_argument(
+        "po_files_folder",
+        type=str,
+        nargs="?",
+        default=os.getcwd(),
+        help="Folder where .po files are located (default: current directory)",
+    )
+
     args = parser.parse_args()
 
     # If no command is provided, print help
@@ -57,11 +81,7 @@ def main() -> None:
         return
 
     # Use the provided folder path or default to the current directory
-    path_to_po_files = args.po_files_folder
-    print(f"Using PO files from: {path_to_po_files}")
-
-    translator = Translator(path_to_po_files)
-    translator.randomize_messages()
+    translator = Translator(TRANSLATION_YAML_FILE)
 
     if args.command == "translate":
         translator.to_yaml(TRANSLATION_YAML_FILE)
@@ -72,13 +92,21 @@ def main() -> None:
             api_key=OPENAI_API_KEY, model=args.model
         )
 
-        for _, message in translator.messages.items():
-            openai_translator.translate_and_update(message)
-
-        translator.push_all_po_files()
+        for msg in translator.messages.values():
+            openai_translator.translate_message(msg)
+            # checkpointing after each message
+            translator.to_yaml(TRANSLATION_YAML_FILE)
 
     elif args.command == "report":
         translator.print_report()
+
+    elif args.command == "po-pull":
+        translator.load_po_files(args.po_files_folder)
+        translator.to_yaml(TRANSLATION_YAML_FILE)
+
+    elif args.command == "po-push":
+        translator.load_po_files(args.po_files_folder)
+        translator.push_all_po_files()
 
 
 if __name__ == "__main__":

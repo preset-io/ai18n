@@ -1,6 +1,8 @@
 import datetime
 from typing import Any, Dict, List, Optional
 
+from transpo.constants import DEFAULT_LANGUAGES
+
 
 class Message:
     def __init__(
@@ -45,6 +47,11 @@ class Message:
             occurances=sorted(set(data.get("occurances", []))),
         )
 
+    def requires_translation(self) -> bool:
+        return not self.ai_translations or not (
+            all([self.ai_translations.get(lang) for lang in DEFAULT_LANGUAGES])
+        )
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "msgid": self.msgid,
@@ -56,4 +63,6 @@ class Message:
         }
 
     def merge_ai_output(self, ai_translations: Dict[str, str]) -> None:
-        self.ai_translations.update(ai_translations)
+        for lang, translation in ai_translations.items():
+            if translation:
+                self.ai_translations[lang] = translation

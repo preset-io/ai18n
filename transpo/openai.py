@@ -1,12 +1,14 @@
 import datetime
 import json
 import textwrap
-from typing import Dict
+from typing import Dict, List
 
 from openai import OpenAI
 
 from transpo.constants import DEFAULT_LANGUAGES
 from transpo.message import Message
+
+MAX_TOKEN = 4096
 
 
 class OpenAIMessageTranslator:
@@ -64,7 +66,7 @@ class OpenAIMessageTranslator:
                 },
                 {"role": "user", "content": prompt},
             ],
-            max_tokens=500,
+            max_tokens=MAX_TOKEN,
             temperature=self.temperature,
         )
 
@@ -80,7 +82,13 @@ class OpenAIMessageTranslator:
             print(f"Error: {e}")
         return translations
 
-    def translate_and_update(self, message: Message) -> None:
-        if translations := self.execute_prompt(message):
-            message.merge_ai_output(translations)
-            message.update_metadata(self.model, datetime.datetime.now())
+    def translate_message(self, message: Message, force: bool = False) -> None:
+        if message.requires_translation() or force:
+            translations = self.execute_prompt(message)
+            if translations:
+                message.merge_ai_output(translations)
+                message.update_metadata(self.model, datetime.datetime.now())
+
+    def translate(self, messages: List[Message], force: bool = False) -> None:
+        for message in messages:
+            self.translate_message(message, force=force)

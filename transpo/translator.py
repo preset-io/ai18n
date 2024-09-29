@@ -11,37 +11,35 @@ from transpo.message import Message
 
 
 class Translator:
-    def __init__(self, path_to_po_files: str) -> None:
+    def __init__(self, yaml_file: str = "./translations.yaml") -> None:
         self.messages: Dict[str, Message] = {}
-        self.path_to_po_files = path_to_po_files
+        self.yaml_file: str = yaml_file
         self.po_files_dict: Dict[str, POFile] = {}
 
-        self.load_po_files()
-        self.merge_all_po_files()
+        if yaml_file:
+            self.from_yaml(yaml_file)
 
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any], path_to_po_files: str) -> "Translator":
-        translator = cls(path_to_po_files)
-        for trimmed_msgid, message_data in data["messages"].items():
+    def from_dict(self, data: Dict[str, Any]) -> None:
+        messages = data["messages"]
+        for trimmed_msgid, message_data in messages.items():
             message = Message.from_dict(message_data)
-            translator.messages[trimmed_msgid] = message
-        return translator
+            self.messages[trimmed_msgid] = message
+
+    def from_yaml(self, yaml_file: str) -> None:
+        print(f"Loading translations from YAML file '{yaml_file}'")
+        with open(yaml_file, "r") as file:
+            data = yaml.safe_load(file)
+        return self.from_dict(data)
 
     def to_dict(self) -> Dict[str, Dict[str, Any]]:
         sorted_keys = sorted(self.messages.keys())
         return {"messages": {k: self.messages[k].to_dict() for k in sorted_keys}}
 
-    @classmethod
-    def from_yaml(cls, yaml_path: str, path_to_po_files: str) -> "Translator":
-        with open(yaml_path, "r") as file:
-            data = yaml.safe_load(file)
-        return cls.from_dict(data, path_to_po_files)
-
     def to_yaml(self, yaml_path: str) -> None:
-        print(f"Saving translations to YAML file...{yaml_path}")
+        print(f"Saving translations to YAML file '{yaml_path}'")
         data = self.to_dict()
         with open(yaml_path, "w", encoding="utf-8") as file:
-            yaml.dump(data, file, allow_unicode=True)
+            yaml.dump(data, file, allow_unicode=True, sort_keys=True)
 
     def randomize_messages(self) -> None:
         keys = list(self.messages.keys())
@@ -61,12 +59,13 @@ class Translator:
         trimmed_msgid = self.trim_message(msgid)
         return self.messages.get(trimmed_msgid)
 
-    def load_po_files(self) -> None:
-        for filepath in self.get_po_files():
-            lang = filepath.split("/")[-3]
-            print(f"Loading {lang} from {filepath}")
+    def load_po_files(self, po_folder: str) -> None:
+        for filepath in self.get_po_files(po_folder):
+            print(f"Loading file {filepath}")
+            po_file = pofile(filepath)
+            lang = po_file.metadata["Language"]
             if lang != "en":
-                self.po_files_dict[lang] = pofile(filepath)
+                self.po_files_dict[lang] = po_file
 
     def merge_po_file(self, lang: str, po_file: POFile) -> None:
         for entry in po_file:
@@ -88,9 +87,9 @@ class Translator:
         for lang, po_file in self.po_files_dict.items():
             self.merge_po_file(lang, po_file)
 
-    def get_po_files(self) -> List[str]:
+    def get_po_files(self, po_folder: str) -> List[str]:
         po_files = []
-        for root, _, files in os.walk(self.path_to_po_files):
+        for root, _, files in os.walk(po_folder):
             for file in files:
                 if file.endswith(".po"):
                     po_files.append(os.path.join(root, file))
