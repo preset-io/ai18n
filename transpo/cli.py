@@ -10,6 +10,8 @@ TRANSLATION_YAML_FILE = "./translations.yaml"
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Superset Translation Tool")
+
+    # Define subcommands
     subparsers = parser.add_subparsers(title="Commands", dest="command")
 
     # Translate subcommand
@@ -27,21 +29,35 @@ def main() -> None:
     translate_parser.add_argument(
         "--model", type=str, default="gpt-4-turbo", help="OpenAI model to use"
     )
+    translate_parser.add_argument(
+        "po_files_folder",
+        type=str,
+        nargs="?",
+        default=os.getcwd(),
+        help="Folder where .po files are located (default: current directory)"
+    )
 
     # Report subcommand
-    report_parser = subparsers.add_parser(  # NOQA
+    report_parser = subparsers.add_parser(
         "report", help="Generate a report of translation statistics"
     )
-
-    path_to_po_files = os.path.join(
-        os.path.dirname(__file__), "../../superset/translations/"
+    report_parser.add_argument(
+        "po_files_folder",
+        type=str,
+        nargs="?",
+        default=os.getcwd(),
+        help="Folder where .po files are located (default: current directory)"
     )
+
     args = parser.parse_args()
+
+    # Use the provided folder path or default to the current directory
+    path_to_po_files = args.po_files_folder
+    print(f"Using PO files from: {path_to_po_files}")
 
     translator = Translator(path_to_po_files)
     translator.randomize_messages()
     translator.to_yaml(TRANSLATION_YAML_FILE)
-    print(args.command)
 
     if args.command == "translate":
         if not OPENAI_API_KEY:
@@ -54,12 +70,5 @@ def main() -> None:
         for _, message in translator.messages.items():
             openai_translator.translate_and_update(message)
 
-        translator.push_all_po_files()
+        translator.push_all_po
 
-    elif args.command == "report":
-        # Implement your reporting logic here
-        translator.print_report()
-
-
-if __name__ == "__main__":
-    main()
