@@ -74,8 +74,7 @@ class Translator:
             msgstr = str(entry.msgstr)
             trimmed_msgid = self.trim_message(msgid)
             matched_message = self.find_message(trimmed_msgid)
-            occurances = {o[0] for o in entry.occurrences}
-            print(occurances)
+            occurances = sorted({o[0] for o in entry.occurrences})
             if matched_message:
                 matched_message.po_translations[lang] = msgstr
                 matched_message.occurances = occurances

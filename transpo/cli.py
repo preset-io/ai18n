@@ -51,15 +51,20 @@ def main() -> None:
 
     args = parser.parse_args()
 
+    # If no command is provided, print help
+    if args.command is None:
+        parser.print_help()
+        return
+
     # Use the provided folder path or default to the current directory
     path_to_po_files = args.po_files_folder
     print(f"Using PO files from: {path_to_po_files}")
 
     translator = Translator(path_to_po_files)
     translator.randomize_messages()
-    translator.to_yaml(TRANSLATION_YAML_FILE)
 
     if args.command == "translate":
+        translator.to_yaml(TRANSLATION_YAML_FILE)
         if not OPENAI_API_KEY:
             print("Error: OPENAI_API_KEY environment variable is not set.")
             return
@@ -70,5 +75,12 @@ def main() -> None:
         for _, message in translator.messages.items():
             openai_translator.translate_and_update(message)
 
-        translator.push_all_po
+        translator.push_all_po_files()
+
+    elif args.command == "report":
+        translator.print_report()
+
+
+if __name__ == "__main__":
+    main()
 
