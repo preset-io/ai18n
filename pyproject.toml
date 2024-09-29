@@ -29,6 +29,7 @@ fix = true
 
 [tool.mypy]
 strict = true
+ignore_missing_imports = true
 
 [tool.ruff.lint]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
@@ -95,4 +96,3 @@ docstring-code-format = false
 # This only has an effect when the `docstring-code-format` setting is
 # enabled.
 docstring-code-line-length = "dynamic"
-

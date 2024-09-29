@@ -74,7 +74,7 @@ class Translator:
             msgstr = str(entry.msgstr)
             trimmed_msgid = self.trim_message(msgid)
             matched_message = self.find_message(trimmed_msgid)
-            occurances = sorted({o[0] for o in entry.occurrences})
+            occurances: List[str] = sorted({o[0] for o in entry.occurrences})
             if matched_message:
                 matched_message.po_translations[lang] = msgstr
                 matched_message.occurances = occurances
@@ -113,7 +113,7 @@ class Translator:
         words = re.findall(r"\b\w+\b", text)  # Find word-like sequences
         return len(words)
 
-    def compute_translation_statistics(self) -> Dict[str, Dict[str, float]]:
+    def compute_translation_statistics(self) -> Dict[str, Dict[str, Any]]:
         """Compute percentage of strings and words translated for each language."""
         # Initialize statistics data structure
         stats = {

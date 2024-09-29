@@ -34,7 +34,7 @@ def main() -> None:
         type=str,
         nargs="?",
         default=os.getcwd(),
-        help="Folder where .po files are located (default: current directory)"
+        help="Folder where .po files are located (default: current directory)",
     )
 
     # Report subcommand
@@ -46,7 +46,7 @@ def main() -> None:
         type=str,
         nargs="?",
         default=os.getcwd(),
-        help="Folder where .po files are located (default: current directory)"
+        help="Folder where .po files are located (default: current directory)",
     )
 
     args = parser.parse_args()
@@ -83,4 +83,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

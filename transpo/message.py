@@ -1,5 +1,5 @@
 import datetime
-from typing import Any, Dict, Optional, Set
+from typing import Any, Dict, List, Optional
 
 
 class Message:
@@ -9,7 +9,7 @@ class Message:
         po_translations: Optional[Dict[str, str]] = None,
         ai_translations: Optional[Dict[str, str]] = None,
         metadata: Optional[Dict[str, str]] = None,
-        occurances: Optional[Set[str]] = None,
+        occurances: Optional[List[str]] = None,
     ) -> None:
         self.msgid = msgid
         self.po_translations: Dict[str, str] = po_translations or {}
@@ -18,7 +18,7 @@ class Message:
             metadata if metadata else {}
         )  # Metadata (e.g., model used, last execution time)
         self.trimmed_msgid = self.normalize_message(msgid)
-        self.occurances = occurances or set()
+        self.occurances = occurances or []
 
     @classmethod
     def normalize_message(cls, message: str) -> str:
@@ -42,7 +42,7 @@ class Message:
             po_translations=data.get("po_translations", {}),
             ai_translations=data.get("ai_translations", {}),
             metadata=data.get("metadata", {}),
-            occurances=set(data.get("occurances", [])),
+            occurances=sorted(set(data.get("occurances", []))),
         )
 
     def to_dict(self) -> Dict[str, Any]:
@@ -52,7 +52,7 @@ class Message:
             "po_translations": self.po_translations,
             "ai_translations": self.ai_translations,
             "metadata": self.metadata,
-            "occurances": list(self.occurances),
+            "occurances": self.occurances,
         }
 
     def merge_ai_output(self, ai_translations: Dict[str, str]) -> None:
