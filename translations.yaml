@@ -1,8 +1,25 @@
 messages:
   '!= (Is not equal)':
-    ai_translations: {}
+    ai_translations:
+      ar: '!= (ليس مساويًا)'
+      de: '!= (ist nicht gleich)'
+      es: '!= (no es igual)'
+      fr: '!= (n''est pas égal)'
+      it: '!= (non è uguale)'
+      ja: '!= (等しくない)'
+      ko: '!= (같지 않음)'
+      nl: '!= (is niet gelijk)'
+      pt: '!= (não é igual)'
+      pt_BR: '!= (não é igual)'
+      ru: '!= (не равно)'
+      sk: '!= (nie je rovné)'
+      sl: '!= (ni enako)'
+      tr: '!= (eşit değil)'
+      uk: '!= (не рівний)'
+      zh: 不等于（!=）
+      zh_TW: 不等於（!=）
     metadata:
-      last_executed: '2024-09-29T15:00:50.305084'
+      last_executed: '2024-09-29T15:40:35.936719'
       model_used: gpt-4-turbo
     msgid: '!= (Is not equal)'
     occurances: []
@@ -26,9 +43,26 @@ messages:
       zh_TW: 不等於（!=）
     trimmed_msgid: '!= (Is not equal)'
   '% calculation':
-    ai_translations: {}
+    ai_translations:
+      ar: حساب %
+      de: '% Berechnung'
+      es: '% cálculo'
+      fr: '% calcul'
+      it: '% calcolo'
+      ja: '% 計算'
+      ko: '% 계산'
+      nl: '% berekening'
+      pt: '% cálculo'
+      pt_BR: '% cálculo'
+      ru: '% расчёт'
+      sk: '% výpočet'
+      sl: '% izračun'
+      tr: '% hesaplama'
+      uk: '% обчислення'
+      zh: '% 计算'
+      zh_TW: '% 計算'
     metadata:
-      last_executed: '2024-09-29T15:00:58.386931'
+      last_executed: '2024-09-29T15:40:44.420633'
       model_used: gpt-4-turbo
     msgid: '% calculation'
     occurances: []
@@ -52,9 +86,26 @@ messages:
       zh_TW: '% 計算'
     trimmed_msgid: '% calculation'
   '% of parent':
-    ai_translations: {}
+    ai_translations:
+      ar: '% من الأصل'
+      de: '% des übergeordneten Elements'
+      es: '% del padre'
+      fr: '% du parent'
+      it: '% del genitore'
+      ja: 親の%
+      ko: 부모의 %
+      nl: '% van ouder'
+      pt: '% do pai'
+      pt_BR: '% do pai'
+      ru: '% от родителя'
+      sk: '% nadriadeného'
+      sl: '% nadrejenega'
+      tr: Ebeveynin %
+      uk: '% від батька'
+      zh: 父项的%
+      zh_TW: 父項的%
     metadata:
-      last_executed: '2024-09-29T15:03:26.436414'
+      last_executed: '2024-09-29T15:40:52.932359'
       model_used: gpt-4-turbo
     msgid: '% of parent'
     occurances: []
@@ -78,9 +129,26 @@ messages:
       zh_TW: 父類
     trimmed_msgid: '% of parent'
   '% of total':
-    ai_translations: {}
+    ai_translations:
+      ar: نسبة من المجموع
+      de: '% von Gesamt'
+      es: '% del total'
+      fr: '% du total'
+      it: '% del totale'
+      ja: 総計の%
+      ko: 전체의 %
+      nl: '% van totaal'
+      pt: '% do total'
+      pt_BR: '% do total'
+      ru: '% от общего'
+      sk: '% z celkového'
+      sl: '% celotnega'
+      tr: Toplamın %
+      uk: '% від загального'
+      zh: 总计的%
+      zh_TW: 總計的%
     metadata:
-      last_executed: '2024-09-29T15:03:34.621630'
+      last_executed: '2024-09-29T15:41:02.458256'
       model_used: gpt-4-turbo
     msgid: '% of total'
     occurances: []
@@ -104,9 +172,32 @@ messages:
       zh_TW: 顯示總計
     trimmed_msgid: '% of total'
   '%(dialect)s cannot be used as a data source for security reasons.':
-    ai_translations: {}
+    ai_translations:
+      ar: لا يمكن استخدام %(dialect)s كمصدر بيانات لأسباب أمنية.
+      de: '%(dialect)s kann aus Sicherheitsgründen nicht als Datenquelle verwendet
+        werden.'
+      es: '%(dialect)s no puede ser utilizado como fuente de datos por razones de
+        seguridad.'
+      fr: '%(dialect)s ne peut pas être utilisé comme source de données pour des raisons
+        de sécurité.'
+      it: '%(dialect)s non può essere utilizzato come fonte di dati per motivi di
+        sicurezza.'
+      ja: '%(dialect)s はセキュリティ上の理由からデータソースとして使用できません。'
+      ko: '%(dialect)s는 보안상의 이유로 데이터 소스로 사용할 수 없습니다.'
+      nl: '%(dialect)s kan niet als gegevensbron worden gebruikt om veiligheidsredenen.'
+      pt: '%(dialect)s não pode ser usado como fonte de dados por motivos de segurança.'
+      pt_BR: '%(dialect)s não pode ser utilizado como fonte de dados por razões de
+        segurança.'
+      ru: '%(dialect)s не может быть использован в качестве источника данных по соображениям
+        безопасности.'
+      sk: '%(dialect)s nemôže byť použitý ako zdroj dát z bezpečnostných dôvodov.'
+      sl: '%(dialect)s ni mogoče uporabiti kot vir podatkov iz varnostnih razlogov.'
+      tr: '%(dialect)s güvenlik nedenleriyle veri kaynağı olarak kullanılamaz.'
+      uk: '%(dialect)s не може використовуватися як джерело даних з міркувань безпеки.'
+      zh: 出于安全原因，%(dialect)s 不能用作数据源。
+      zh_TW: 出於安全原因，%(dialect)s 不能用作數據源。
     metadata:
-      last_executed: '2024-09-29T15:22:12.145373'
+      last_executed: '2024-09-29T15:41:20.438386'
       model_used: gpt-4-turbo
     msgid: '%(dialect)s cannot be used as a data source for security reasons.'
     occurances: []
@@ -135,9 +226,34 @@ messages:
       zh_TW: 出於安全原因，%(dialect)s SQLite 資料庫不能用作數據源。
     trimmed_msgid: '%(dialect)s cannot be used as a data source for security reasons.'
   ? "%(message)s\nThis may be triggered by: \n%(issues)s"
-  : ai_translations: {}
+  : ai_translations:
+      ar: "%(message)s\nقد يحدث هذا بسبب: \n%(issues)s"
+      de: "%(message)s\nDies kann ausgelöst werden durch: \n%(issues)s"
+      es: "%(message)s\nEsto puede ser desencadenado por: \n%(issues)s"
+      fr: "%(message)s\nCela peut être déclenché par : \n%(issues)s"
+      it: "%(message)s\nQuesto può essere innescato da: \n%(issues)s"
+      ja: "%(message)s\nこれは次の原因で引き起こされる可能性があります: \n%(issues)s"
+      ko: "%(message)s\n이것은 다음에 의해 트리거될 수 있습니다: \n%(issues)s"
+      nl: "%(message)s\nDit kan worden geactiveerd door: \n%(issues)s"
+      pt: "%(message)s\nIsto pode ser desencadeado por: \n%(issues)s"
+      pt_BR: "%(message)s\nIsso pode ser acionado por: \n%(issues)s"
+      ru: "%(message)s\nЭто может быть вызвано: \n%(issues)s"
+      sk: "%(message)s\nToto môže byť spôsobené: \n%(issues)s"
+      sl: "%(message)s\nTo je lahko sproženo z: \n%(issues)s"
+      tr: "%(message)s\nBu, şu nedenlerle tetiklenebilir: \n%(issues)s"
+      uk: "%(message)s\nЦе може бути спровоковано: \n%(issues)s"
+      zh: '%(message)s
+
+        这可能由以下因素触发：
+
+        %(issues)s'
+      zh_TW: '%(message)s
+
+        這可能由以下因素觸發：
+
+        %(issues)s'
     metadata:
-      last_executed: '2024-09-29T15:22:27.637620'
+      last_executed: '2024-09-29T15:51:12.742371'
       model_used: gpt-4-turbo
     msgid: "%(message)s\nThis may be triggered by: \n%(issues)s"
     occurances: []
@@ -169,9 +285,26 @@ messages:
         這可能由以下因素觸發：%(issues)s'
     trimmed_msgid: "%(message)s\nThis may be triggered by: \n%(issues)s"
   '%(name)s.csv':
-    ai_translations: {}
+    ai_translations:
+      ar: '%(name)s.csv'
+      de: '%(name)s.csv'
+      es: '%(name)s.csv'
+      fr: '%(name)s.csv'
+      it: '%(name)s.csv'
+      ja: '%(name)s.csv'
+      ko: '%(name)s.csv'
+      nl: '%(name)s.csv'
+      pt: '%(name)s.csv'
+      pt_BR: '%(name)s.csv'
+      ru: '%(name)s.csv'
+      sk: '%(name)s.csv'
+      sl: '%(name)s.csv'
+      tr: '%(name)s.csv'
+      uk: '%(name)s.csv'
+      zh: '%(name)s.csv'
+      zh_TW: '%(name)s.csv'
     metadata:
-      last_executed: '2024-09-29T15:22:36.639666'
+      last_executed: '2024-09-29T15:51:20.483664'
       model_used: gpt-4-turbo
     msgid: '%(name)s.csv'
     occurances: []
@@ -195,9 +328,26 @@ messages:
       zh_TW: ''
     trimmed_msgid: '%(name)s.csv'
   '%(name)s.pdf':
-    ai_translations: {}
+    ai_translations:
+      ar: '%(name)s.pdf'
+      de: '%(name)s.pdf'
+      es: '%(name)s.pdf'
+      fr: '%(name)s.pdf'
+      it: '%(name)s.pdf'
+      ja: '%(name)s.pdf'
+      ko: '%(name)s.pdf'
+      nl: '%(name)s.pdf'
+      pt: '%(name)s.pdf'
+      pt_BR: '%(name)s.pdf'
+      ru: '%(name)s.pdf'
+      sk: '%(name)s.pdf'
+      sl: '%(name)s.pdf'
+      tr: '%(name)s.pdf'
+      uk: '%(name)s.pdf'
+      zh: '%(name)s.pdf'
+      zh_TW: '%(name)s.pdf'
     metadata:
-      last_executed: '2024-09-29T15:22:44.395371'
+      last_executed: '2024-09-29T15:51:28.389780'
       model_used: gpt-4-turbo
     msgid: '%(name)s.pdf'
     occurances: []
@@ -221,9 +371,26 @@ messages:
       zh_TW: ''
     trimmed_msgid: '%(name)s.pdf'
   '%(object)s does not exist in this database.':
-    ai_translations: {}
+    ai_translations:
+      ar: '%(object)s غير موجود في قاعدة البيانات هذه.'
+      de: '%(object)s existiert nicht in der Datenbank.'
+      es: '%(object)s no existe en esta base de datos.'
+      fr: '%(object)s n''existe pas dans cette base de données.'
+      it: '%(object)s non esiste in questo database.'
+      ja: '%(object)s はこのデータベースに存在しません。'
+      ko: '%(object)s는 이 데이터베이스에 존재하지 않습니다.'
+      nl: '%(object)s bestaat niet in deze database.'
+      pt: '%(object)s não existe nesta base de dados.'
+      pt_BR: '%(object)s não existe neste banco de dados.'
+      ru: '%(object)s не существует в этой базе данных.'
+      sk: '%(object)s neexistuje v tejto databáze.'
+      sl: '%(object)s ne obstaja v tej podatkovni bazi.'
+      tr: '%(object)s bu veritabanında mevcut değil.'
+      uk: '%(object)s не існує в цій базі даних.'
+      zh: 数据库中不存在 %(object)s 。
+      zh_TW: 資料庫中不存在 %(object)s 。
     metadata:
-      last_executed: '2024-09-29T15:22:57.222772'
+      last_executed: '2024-09-29T15:51:40.243793'
       model_used: gpt-4-turbo
     msgid: '%(object)s does not exist in this database.'
     occurances: []
@@ -247,9 +414,26 @@ messages:
       zh_TW: 資料庫中不存在 %(object)s 。
     trimmed_msgid: '%(object)s does not exist in this database.'
   '%(other)s charts will appear here':
-    ai_translations: {}
+    ai_translations:
+      ar: ستظهر مخططات %(other)s هنا
+      de: '%(other)s Diagramme werden hier angezeigt'
+      es: '%(other)s gráficos aparecerán aquí'
+      fr: '%(other)s graphiques apparaîtront ici'
+      it: '%(other)s grafici appariranno qui'
+      ja: '%(other)s のグラフがここに表示されます'
+      ko: '%(other)s 차트가 여기에 표시됩니다'
+      nl: '%(other)s grafieken verschijnen hier'
+      pt: '%(other)s gráficos aparecerão aqui'
+      pt_BR: '%(other)s gráficos irão aparecer aqui'
+      ru: '%(other)s диаграммы появятся здесь'
+      sk: '%(other)s grafy sa zobrazia tu'
+      sl: '%(other)s grafikoni bodo prikazani tu'
+      tr: '%(other)s grafikler burada görünecek'
+      uk: '%(other)s діаграми з’являться тут'
+      zh: '%(other)s 图表将出现在此处'
+      zh_TW: '%(other)s 圖表將出現在此處'
     metadata:
-      last_executed: '2024-09-29T15:35:17.988250'
+      last_executed: '2024-09-29T15:51:53.214474'
       model_used: gpt-4-turbo
     msgid: '%(other)s charts will appear here'
     occurances: []
@@ -273,9 +457,26 @@ messages:
       zh_TW: ' %(other)s 圖表將出現在此處'
     trimmed_msgid: '%(other)s charts will appear here'
   '%(other)s dashboards will appear here':
-    ai_translations: {}
+    ai_translations:
+      ar: ستظهر لوحات معلومات %(other)s هنا
+      de: '%(other)s Dashboards werden hier angezeigt'
+      es: Los tableros %(other)s aparecerán aquí
+      fr: '%(other)s tableaux de bord apparaîtront ici'
+      it: Le dashboard %(other)s appariranno qui
+      ja: '%(other)s のダッシュボードがここに表示されます'
+      ko: '%(other)s 대시보드가 여기에 표시됩니다'
+      nl: '%(other)s dashboards zullen hier verschijnen'
+      pt: Os painéis %(other)s aparecerão aqui
+      pt_BR: '%(other)s painéis irão aparecer aqui'
+      ru: '%(other)s дашбордов появятся здесь'
+      sk: '%(other)s nástenky sa zobrazia tu'
+      sl: '%(other)s nadzorne plošče bodo prikazane tu'
+      tr: '%(other)s panoları burada görünecek'
+      uk: '%(other)s інформаційні панелі з’являться тут'
+      zh: '%(other)s 看板将出现在此处'
+      zh_TW: '%(other)s 看板將出現在此處'
     metadata:
-      last_executed: '2024-09-29T15:35:30.764751'
+      last_executed: '2024-09-29T15:52:06.803433'
       model_used: gpt-4-turbo
     msgid: '%(other)s dashboards will appear here'
     occurances: []
@@ -299,9 +500,26 @@ messages:
       zh_TW: ' %(other)s 看板將出現在此處'
     trimmed_msgid: '%(other)s dashboards will appear here'
   '%(other)s recents will appear here':
-    ai_translations: {}
+    ai_translations:
+      ar: '%(other)s الأخيرة ستظهر هنا'
+      de: Aktuelle %(other)s werden hier angezeigt
+      es: '%(other)s recientes aparecerán aquí'
+      fr: '%(other)s récents apparaîtront ici'
+      it: '%(other)s recenti appariranno qui'
+      ja: '%(other)s の最近の項目がここに表示されます'
+      ko: '%(other)s 최근 항목이 여기에 표시됩니다'
+      nl: '%(other)s recenten zullen hier verschijnen'
+      pt: '%(other)s recentes aparecerão aqui'
+      pt_BR: '%(other)s recentes aparecerão aqui'
+      ru: '%(other)s последние появятся здесь'
+      sk: '%(other)s nedávne sa zobrazia tu'
+      sl: '%(other)s zadnji bodo prikazani tu'
+      tr: '%(other)s son eklenenler burada görünecek'
+      uk: '%(other)s недавні з''являться тут'
+      zh: '%(other)s 最近的将出现在这里'
+      zh_TW: '%(other)s 最近的將出現在這裡'
     metadata:
-      last_executed: '2024-09-29T15:35:42.540782'
+      last_executed: '2024-09-29T15:52:32.716363'
       model_used: gpt-4-turbo
     msgid: '%(other)s recents will appear here'
     occurances: []

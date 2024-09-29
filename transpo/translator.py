@@ -121,9 +121,11 @@ class Translator:
         # Initialize statistics data structure
         stats = {
             lang: {
-                "translated_strings": 0,
+                "po_translated_strings": 0,
+                "ai_translated_strings": 0,
                 "total_strings": 0,
-                "translated_words": 0,
+                "po_translated_words": 0,
+                "ai_translated_words": 0,
                 "total_words": 0,
                 "orphaned": 0,
             }
@@ -135,7 +137,9 @@ class Translator:
             # Assume English text for counting words
             english_word_count = self.count_words(msgid)
 
-            for lang, translation in message.po_translations.items():
+            for lang in DEFAULT_LANGUAGES:
+                po_translation = message.po_translations.get(lang)
+                ai_translation = message.ai_translations.get(lang) or po_translation
                 stats[lang]["total_strings"] += 1
                 stats[lang]["total_words"] += english_word_count
 
@@ -144,9 +148,13 @@ class Translator:
                     stats[lang]["orphaned"] += 1
 
                 # If the message is translated (non-empty)
-                if translation:
-                    stats[lang]["translated_strings"] += 1
-                    stats[lang]["translated_words"] += english_word_count
+                if po_translation:
+                    stats[lang]["po_translated_strings"] += 1
+                    stats[lang]["po_translated_words"] += english_word_count
+                # If the message is translated (non-empty)
+                if ai_translation:
+                    stats[lang]["ai_translated_strings"] += 1
+                    stats[lang]["ai_translated_words"] += english_word_count
 
         return stats
 
@@ -162,20 +170,23 @@ class Translator:
 
         for lang, data in stats.items():
             total_strings = data["total_strings"]
-            total_words = data["total_words"]
-            translated_strings = data["translated_strings"]
-            translated_words = data["translated_words"]
+            # total_words = data["total_words"]
+            po_translated_strings = data["po_translated_strings"]
+            # po_translated_words = data["po_translated_words"]
+            ai_translated_strings = data["ai_translated_strings"]
+            # ai_translated_words = data["ai_translated_words"]
             orphaned = data["orphaned"]
 
             # Calculate percentage of translated strings and words
-            string_translation_percentage = (
-                (translated_strings / total_strings) * 100 if total_strings > 0 else 0
+            string_po_translation_percentage = (
+                (po_translated_strings / total_strings) * 100 if total_strings > 0 else 0
             )
-            word_translation_percentage = (
-                (translated_words / total_words) * 100 if total_words > 0 else 0
+            # Calculate percentage of translated strings and words
+            string_ai_translation_percentage = (
+                (ai_translated_strings / total_strings) * 100 if total_strings > 0 else 0
             )
 
             # Print the report row
             print(
-                f"{lang:<10} | {string_translation_percentage:>19.2f}% | {orphaned:<10} | {word_translation_percentage:>8.2f}%"
+                f"{lang:<10} | {string_po_translation_percentage:>19.2f}% | {orphaned:<10} | {string_ai_translation_percentage:>8.2f}%"
             )
