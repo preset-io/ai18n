@@ -23,8 +23,12 @@ class OpenAIMessageTranslator:
 
     def build_prompt(self, message: Message) -> str:
         """Create a translation prompt for the OpenAI API."""
-        occurances_str = "For context here are the files that the string appears in:\n"
-        occurances_str += "\n".join([f"- {s}" for s in message.occurances])
+        occurances_str = ""
+        if message.occurances:
+            occurances_str = (
+                "For context here are the files that the string appears in:\n"
+            )
+            occurances_str += "\n".join([f"- {s}" for s in message.occurances])
         prompt = textwrap.dedent(f"""
             Translate the following text for the UI of Apache Superset, a web-based business intelligence software.
             This is in the context of a .po file, so please follow the appropriate formatting for pluralization if needed.

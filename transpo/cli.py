@@ -30,9 +30,8 @@ def main() -> None:
         "--model", type=str, default="gpt-4-turbo", help="OpenAI model to use"
     )
     translate_parser.add_argument(
-        "po_files_folder",
+        "--po-files-folder",
         type=str,
-        nargs="?",
         default=os.getcwd(),
         help="Folder where .po files are located (default: current directory)",
     )
@@ -42,9 +41,8 @@ def main() -> None:
         "report", help="Generate a report of translation statistics"
     )
     report_parser.add_argument(
-        "po_files_folder",
+        "--po-files-folder",
         type=str,
-        nargs="?",
         default=os.getcwd(),
         help="Folder where .po files are located (default: current directory)",
     )
@@ -53,14 +51,20 @@ def main() -> None:
     pull_parser = subparsers.add_parser(
         "po-pull", help="Pull translations from .po files into the YAML file"
     )
-    # po pull subcommand
-    pull_parser = subparsers.add_parser(
+    pull_parser.add_argument(
+        "--po-files-folder",
+        type=str,
+        default=os.getcwd(),
+        help="Folder where .po files are located (default: current directory)",
+    )
+
+    # flush-ai subcommand
+    flush_ai_parser = subparsers.add_parser(
         "flush-ai", help="Flush all translations from the YAML file"
     )
-    pull_parser.add_argument(
-        "po_files_folder",
+    flush_ai_parser.add_argument(
+        "--po-files-folder",
         type=str,
-        nargs="?",
         default=os.getcwd(),
         help="Folder where .po files are located (default: current directory)",
     )
@@ -70,9 +74,8 @@ def main() -> None:
         "po-push", help="Push translations from the YAML file to .po files"
     )
     push_parser.add_argument(
-        "po_files_folder",
+        "--po-files-folder",
         type=str,
-        nargs="?",
         default=os.getcwd(),
         help="Folder where .po files are located (default: current directory)",
     )
@@ -107,6 +110,7 @@ def main() -> None:
 
     elif args.command == "po-pull":
         translator.load_po_files(args.po_files_folder)
+        translator.merge_all_po_files()
         translator.to_yaml(TRANSLATION_YAML_FILE)
 
     elif args.command == "po-push":
