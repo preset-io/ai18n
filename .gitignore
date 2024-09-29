@@ -1,0 +1,5 @@
+ai18n.egg-info
+ai18n/__pycache__/
+translations.yml
+.*__pycache__.*
+*.pyc

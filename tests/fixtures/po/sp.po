@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"Language: sp\n"
+
+msgid "Hello"
+msgstr "Hola"
+
+msgid "Goodbye"
+msgstr "Adiós"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "No"
+msgstr "No"
