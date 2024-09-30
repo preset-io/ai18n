@@ -5,8 +5,8 @@ from typing import Dict, List
 
 from openai import OpenAI
 
-from transpo.constants import DEFAULT_LANGUAGES
-from transpo.message import Message
+from ai18n.constants import DEFAULT_LANGUAGES
+from ai18n.message import Message
 
 MAX_TOKEN = 4096
 

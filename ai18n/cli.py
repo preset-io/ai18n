@@ -1,8 +1,8 @@
 import argparse
 import os
 
-from transpo.openai import OpenAIMessageTranslator
-from transpo.translator import Translator
+from ai18n.openai import OpenAIMessageTranslator
+from ai18n.translator import Translator
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 TRANSLATION_YAML_FILE = "./translations.yaml"

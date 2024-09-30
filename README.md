@@ -1,7 +1,7 @@
 
-# Transpo - AI-Powered PO Translation Tool
+# ai18n - AI-Powered PO Translation Tool
 
-**Transpo** is a versatile tool for managing translations in PO files. Originally developed for Apache Superset, it leverages OpenAI to automate translation tasks, merging traditional PO workflows with AI enhancements. With built-in support for YAML-based translation memory, Transpo makes it easy to keep translations consistent and up-to-date across multiple languages.
+**ai18n** is a versatile tool for managing translations in PO files. Originally developed for Apache Superset, it leverages OpenAI to automate translation tasks, merging traditional PO workflows with AI enhancements. With built-in support for YAML-based translation memory, ai18n makes it easy to keep translations consistent and up-to-date across multiple languages.
 
 ---
 
@@ -40,34 +40,34 @@
     Run this command to use OpenAI for filling in missing translations:
 
     ```bash
-    transpo translate --po-files-folder <path-to-po-files> --batch-size 10 --temperature 0.5
+    ai18n translate --po-files-folder <path-to-po-files> --batch-size 10 --temperature 0.5
     ```
 
 2. **Generate a Translation Report**:
     Get insights into how many strings and words are translated:
 
     ```bash
-    transpo report --po-files-folder <path-to-po-files>
+    ai18n report --po-files-folder <path-to-po-files>
     ```
 
 3. **PO/YAML Management**:
     - **Pull**: Load translations from PO files into the YAML memory.
 
       ```bash
-      transpo po-pull --po-files-folder <path-to-po-files>
+      ai18n po-pull --po-files-folder <path-to-po-files>
       ```
 
     - **Push**: Push translations from the YAML back into PO files.
 
       ```bash
-      transpo po-push --po-files-folder <path-to-po-files>
+      ai18n po-push --po-files-folder <path-to-po-files>
       ```
 
 4. **Flush AI Translations**:
     Clear all AI-generated translations from the YAML file:
 
     ```bash
-    transpo flush-ai
+    ai18n flush-ai
     ```
 
 ---
@@ -97,7 +97,7 @@
 
 ## License
 
-Transpo is currently all-rights reserved to Preset, but could eventually be open source if it
+ai18n is currently all-rights reserved to Preset, but could eventually be open source if it
 turns out to not be much of a differentiator.
 
 ---

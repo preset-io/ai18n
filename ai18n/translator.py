@@ -6,8 +6,8 @@ from typing import Any, Dict, List, Optional
 import yaml
 from polib import POFile, pofile
 
-from transpo.constants import DEFAULT_LANGUAGES
-from transpo.message import Message
+from ai18n.constants import DEFAULT_LANGUAGES
+from ai18n.message import Message
 
 
 class Translator:

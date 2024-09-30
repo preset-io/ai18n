@@ -1,7 +1,7 @@
 import datetime
 from typing import Any, Dict, List, Optional
 
-from transpo.constants import DEFAULT_LANGUAGES
+from ai18n.constants import DEFAULT_LANGUAGES
 
 
 class Message:

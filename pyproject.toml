@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "transpo"
+name = "ai18n"
 version = "0.1.0"
 description = "A tool for managing and automating translations with OpenAI and PO files"
 authors = [
@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-transpo = "transpo.cli:main"
+ai18n = "ai18n.cli:main"
 
 
 [tool.ruff]
