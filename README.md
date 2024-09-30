@@ -1,15 +1,111 @@
-# transpo
 
-transpo is simple utility to translate PO files using the openai API.
+# Transpo - AI-Powered PO Translation Tool
 
-It will:
-- dig out all .po files from a folder, bring them in-memory
-- for each string that need translation, formulate a prompt asking openai with
-  the context of existing translations, to provide a new/better translation and fill in
-  the gaps. If for instance 6 out 12 translations are present, the prompt ask to translate
-  the original english string, but will provide all 6 other language translations for reference
-- save everything relevant in a yaml file (po content, newly translated strings, metadata, ...)
-- push back new/improved translated strings to the po files
+**Transpo** is a versatile tool for managing translations in PO files. Originally developed for Apache Superset, it leverages OpenAI to automate translation tasks, merging traditional PO workflows with AI enhancements. With built-in support for YAML-based translation memory, Transpo makes it easy to keep translations consistent and up-to-date across multiple languages.
+
+---
+
+## Key Features
+
+- **AI-Powered Translations**: Automatically fill in missing translations using OpenAI models like `gpt-4`.
+- **PO/YAML Syncing**: Manage translations centrally in a YAML file while keeping traditional PO files in sync.
+- **Custom Reports**: Generate reports showing translation coverage across languages.
+- **CLI Interface**: Easy-to-use command-line interface for translating, syncing, and reporting on translations.
+
+---
+
+## Installation
+
+1. Clone the repository and install dependencies for both runtime and development:
+
+    ```bash
+    pip install -r requirements.txt
+    pip install -r requirements-dev.txt
+    pip install -e .
+    ```
+
+2. Set your OpenAI API key:
+
+    ```bash
+    export OPENAI_API_KEY=<your-openai-api-key>
+    ```
+
+---
+
+## Usage
+
+### General Commands
+
+1. **Translate Missing Strings**:
+    Run this command to use OpenAI for filling in missing translations:
+
+    ```bash
+    transpo translate --po-files-folder <path-to-po-files> --batch-size 10 --temperature 0.5
+    ```
+
+2. **Generate a Translation Report**:
+    Get insights into how many strings and words are translated:
+
+    ```bash
+    transpo report --po-files-folder <path-to-po-files>
+    ```
+
+3. **PO/YAML Management**:
+    - **Pull**: Load translations from PO files into the YAML memory.
+
+      ```bash
+      transpo po-pull --po-files-folder <path-to-po-files>
+      ```
+
+    - **Push**: Push translations from the YAML back into PO files.
+
+      ```bash
+      transpo po-push --po-files-folder <path-to-po-files>
+      ```
+
+4. **Flush AI Translations**:
+    Clear all AI-generated translations from the YAML file:
+
+    ```bash
+    transpo flush-ai
+    ```
+
+---
+
+## Development Workflow
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone <repository-url>
+    ```
+
+2. **Install dependencies** for development:
+
+    ```bash
+    pip install -r requirements-dev.txt
+    pip install -e .
+    ```
+
+3. **Run tests**:
+
+    ```bash
+    pytest
+    ```
+
+---
+
+## License
+
+Transpo is currently all-rights reserved to Preset, but could eventually be open source if it
+turns out to not be much of a differentiator.
+
+---
+
+## Author
+
+Built by the team behind Apache Superset, originally tailored for its multilingual support needs, but adaptable to any project that uses PO files for translations.
+
 
 ## Example prompt
 ```
