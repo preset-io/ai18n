@@ -4098,8 +4098,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: 1H
   1M:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 1M
+      es: 1M
+      fr: 1M
+      it: 1M
+    metadata:
+      last_executed: '2024-09-30T17:08:15.820834'
+      model_used: gpt-4-turbo
     msgid: 1M
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4127,8 +4133,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: 1M
   1T:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: jede Minute (1T)
+      es: cada minuto (1T)
+      fr: toutes les minutes (1T)
+      it: ogni minuto (1T)
+    metadata:
+      last_executed: '2024-09-30T17:08:18.988443'
+      model_used: gpt-4-turbo
     msgid: 1T
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4156,8 +4168,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: 1T
   2 years:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 2 Jahre
+      es: 2 años
+      fr: 2 ans
+      it: 2 anni
+    metadata:
+      last_executed: '2024-09-30T17:08:21.547424'
+      model_used: gpt-4-turbo
     msgid: 2 years
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4185,8 +4203,14 @@ messages:
       zh_TW: 2年
     trimmed_msgid: 2 years
   2 years ago:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: vor 2 Jahren
+      es: Hace 2 años
+      fr: Il y a 2 ans
+      it: 2 anni fa
+    metadata:
+      last_executed: '2024-09-30T17:08:24.516609'
+      model_used: gpt-4-turbo
     msgid: 2 years ago
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx
@@ -4212,8 +4236,14 @@ messages:
       zh_TW: 2年之前
     trimmed_msgid: 2 years ago
   2/98 percentiles:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 2/98 Perzentile
+      es: Percentiles 2/98
+      fr: 2/98 centiles
+      it: Percentili 2/98
+    metadata:
+      last_executed: '2024-09-30T17:08:27.999021'
+      model_used: gpt-4-turbo
     msgid: 2/98 percentiles
     occurances:
     - superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/controlPanel.ts
@@ -4238,8 +4268,14 @@ messages:
       zh_TW: 2/98百分位
     trimmed_msgid: 2/98 percentiles
   '22':
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: '22'
+      es: '22'
+      fr: '22'
+      it: '22'
+    metadata:
+      last_executed: '2024-09-30T17:08:30.457539'
+      model_used: gpt-4-turbo
     msgid: '22'
     occurances:
     - superset-frontend/src/features/databases/DatabaseModal/SSHTunnelForm.tsx
@@ -4264,8 +4300,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: '22'
   28 days:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 28 Tage
+      es: 28 días
+      fr: 28 jours
+      it: 28 giorni
+    metadata:
+      last_executed: '2024-09-30T17:08:33.158575'
+      model_used: gpt-4-turbo
     msgid: 28 days
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4293,8 +4335,14 @@ messages:
       zh_TW: 28天
     trimmed_msgid: 28 days
   28 days ago:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: vor 28 Tagen
+      es: Hace 28 días
+      fr: Il y a 28 jours
+      it: 28 giorni fa
+    metadata:
+      last_executed: '2024-09-30T17:08:36.246637'
+      model_used: gpt-4-turbo
     msgid: 28 days ago
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx
@@ -4320,8 +4368,14 @@ messages:
       zh_TW: 28天之前
     trimmed_msgid: 28 days ago
   2D:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 2D
+      es: 2D
+      fr: 2D
+      it: 2D
+    metadata:
+      last_executed: '2024-09-30T17:08:38.700508'
+      model_used: gpt-4-turbo
     msgid: 2D
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js
@@ -4349,8 +4403,14 @@ messages:
       zh_TW: 2D
     trimmed_msgid: 2D
   3 letter code of the country:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 3-Buchstaben-Code des Landes
+      es: Código de 3 letras del país
+      fr: Code à 3 lettres du pays
+      it: Codice a 3 lettere del paese
+    metadata:
+      last_executed: '2024-09-30T17:08:44.964374'
+      model_used: gpt-4-turbo
     msgid: 3 letter code of the country
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts
@@ -4375,8 +4435,14 @@ messages:
       zh_TW: 國家3字碼
     trimmed_msgid: 3 letter code of the country
   3 years:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 3 Jahre
+      es: 3 años
+      fr: 3 ans
+      it: 3 anni
+    metadata:
+      last_executed: '2024-09-30T17:08:47.873533'
+      model_used: gpt-4-turbo
     msgid: 3 years
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4404,8 +4470,14 @@ messages:
       zh_TW: 3年
     trimmed_msgid: 3 years
   3 years ago:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: vor 3 Jahren
+      es: Hace 3 años
+      fr: Il y a 3 ans
+      it: 3 anni fa
+    metadata:
+      last_executed: '2024-09-30T17:08:51.960695'
+      model_used: gpt-4-turbo
     msgid: 3 years ago
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx
@@ -4431,8 +4503,14 @@ messages:
       zh_TW: 3年前
     trimmed_msgid: 3 years ago
   30 days:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 30 Tage
+      es: 30 días
+      fr: 30 jours
+      it: 30 giorni
+    metadata:
+      last_executed: '2024-09-30T17:08:54.449631'
+      model_used: gpt-4-turbo
     msgid: 30 days
     occurances:
     - superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx
@@ -4461,8 +4539,14 @@ messages:
       zh_TW: 30天
     trimmed_msgid: 30 days
   30 days ago:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: Vor 30 Tagen
+      es: Hace 30 días
+      fr: Il y a 30 jours
+      it: 30 giorni fa
+    metadata:
+      last_executed: '2024-09-30T17:08:57.184048'
+      model_used: gpt-4-turbo
     msgid: 30 days ago
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx
@@ -4488,8 +4572,14 @@ messages:
       zh_TW: 30天之前
     trimmed_msgid: 30 days ago
   30 minute:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 30 Minuten
+      es: 30 minutos
+      fr: 30 minutes
+      it: 30 minuti
+    metadata:
+      last_executed: '2024-09-30T17:08:59.845140'
+      model_used: gpt-4-turbo
     msgid: 30 minute
     occurances:
     - superset/db_engine_specs/base.py
@@ -4514,8 +4604,14 @@ messages:
       zh_TW: 30分鐘
     trimmed_msgid: 30 minute
   30 minutes:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 30 Minuten
+      es: 30 minutos
+      fr: 30 minutes
+      it: 30 minuti
+    metadata:
+      last_executed: '2024-09-30T17:09:02.380234'
+      model_used: gpt-4-turbo
     msgid: 30 minutes
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/sharedControls.tsx
@@ -4541,8 +4637,14 @@ messages:
       zh_TW: 30分鐘
     trimmed_msgid: 30 minutes
   30 second:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 30 Sekunden
+      es: 30 segundos
+      fr: 30 secondes
+      it: 30 secondi
+    metadata:
+      last_executed: '2024-09-30T17:09:05.052082'
+      model_used: gpt-4-turbo
     msgid: 30 second
     occurances:
     - superset/db_engine_specs/base.py
@@ -4567,8 +4669,14 @@ messages:
       zh_TW: 30秒
     trimmed_msgid: 30 second
   30 seconds:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 30 Sekunden
+      es: 30 segundos
+      fr: 30 secondes
+      it: 30 secondi
+    metadata:
+      last_executed: '2024-09-30T17:09:07.728653'
+      model_used: gpt-4-turbo
     msgid: 30 seconds
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/sharedControls.tsx
@@ -4594,8 +4702,14 @@ messages:
       zh_TW: 30秒
     trimmed_msgid: 30 seconds
   3D:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 3D
+      es: 3D
+      fr: 3D
+      it: 3D
+    metadata:
+      last_executed: '2024-09-30T17:09:10.067318'
+      model_used: gpt-4-turbo
     msgid: 3D
     occurances:
     - superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Arc/index.ts
@@ -4623,8 +4737,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: 3D
   4 weeks (freq=4W-MON):
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 4 Wochen (Häufigkeit=4W-MON)
+      es: 4 semanas (freq=4W-LUN)
+      fr: 4 semaines (fréq=4W-LUN)
+      it: 4 settimane (freq=4W-LUN)
+    metadata:
+      last_executed: '2024-09-30T17:09:14.491762'
+      model_used: gpt-4-turbo
     msgid: 4 weeks (freq=4W-MON)
     occurances:
     - superset-frontend/plugins/legacy-preset-chart-nvd3/src/TimePivot/controlPanel.ts
@@ -4649,8 +4769,14 @@ messages:
       zh_TW: ''
     trimmed_msgid: 4 weeks (freq=4W-MON)
   5 minute:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 5 Minuten
+      es: 5 minutos
+      fr: 5 minutes
+      it: 5 minuti
+    metadata:
+      last_executed: '2024-09-30T17:09:17.089588'
+      model_used: gpt-4-turbo
     msgid: 5 minute
     occurances:
     - superset/db_engine_specs/base.py
@@ -4675,8 +4801,14 @@ messages:
       zh_TW: 5分鐘
     trimmed_msgid: 5 minute
   5 minutes:
-    ai_translations: {}
-    metadata: {}
+    ai_translations:
+      de: 5 Minuten
+      es: 5 minutos
+      fr: 5 minutes
+      it: 5 minuti
+    metadata:
+      last_executed: '2024-09-30T17:09:19.611344'
+      model_used: gpt-4-turbo
     msgid: 5 minutes
     occurances:
     - superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/sharedControls.tsx
@@ -25115,2314 +25247,3 @@ messages:
     ai_translations: {}
     metadata: {}
     msgid: Copy message
-    occurances:
-    - superset-frontend/src/components/ErrorMessage/ErrorAlert.tsx
-    po_translations:
-      ar: نسخ الرسالة
-      de: Meldung kopieren
-      es: Mensaje de Aviso
-      fr: Copier le message
-      it: ''
-      ja: メッセージをコピー
-      ko: ''
-      nl: Kopieer bericht
-      pt: Mensagem de Aviso
-      pt_BR: Copiar mensagem
-      ru: Скопировать сообщение
-      sk: ''
-      sl: Kopiraj sporočilo
-      sl_SI: Kopiraj sporočilo
-      tr: Mesajı kopyala
-      uk: Скопіюйте повідомлення
-      zh: 复制信息
-      zh_TW: 複製訊息
-    trimmed_msgid: Copy message
-  Copy of %s:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy of %s
-    occurances:
-    - superset-frontend/src/SqlLab/actions/sqlLab.js
-    - superset-frontend/src/SqlLab/reducers/sqlLab.js
-    po_translations:
-      ar: نسخة من %s
-      de: Kopie von %s
-      es: Copia de %s
-      fr: Copie de %s
-      it: Copia di %s
-      ja: '%sのコピー'
-      ko: ''
-      nl: Kopie van %s
-      pt: Cópia de %s
-      pt_BR: Copiar de %s
-      ru: Копия %s
-      sk: ''
-      sl: Kopija %s
-      sl_SI: Kopija %s
-      tr: '%s’in kopyası'
-      uk: Копія %s
-      zh: '%s 的副本'
-      zh_TW: '%s 的副本'
-    trimmed_msgid: Copy of %s
-  Copy partition query to clipboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy partition query to clipboard
-    occurances:
-    - superset-frontend/src/SqlLab/components/TableElement/index.tsx
-    po_translations:
-      ar: نسخ استعلام القسم إلى الحافظة
-      de: Partitionsabfrage in Zwischenablage kopieren
-      es: Copiar consulta de partición al portapapeles
-      fr: Copier la requête de partition vers le presse-papier
-      it: ''
-      ja: パーティションクエリをクリップボードにコピー
-      ko: ''
-      nl: Kopieer partitie query naar klembord
-      pt: Copiar query de partição para a área de transferência
-      pt_BR: Copiar consulta de partição para a área de transferência
-      ru: Скопировать часть запроса в буфер обмена
-      sk: ''
-      sl: Kopiraj particijsko poizvedbo na odložišče
-      sl_SI: Kopiraj particijsko poizvedbo na odložišče
-      tr: ''
-      uk: Скопіюйте запит на розділ у буфер обміну
-      zh: 将分区查询复制到剪贴板
-      zh_TW: 將分區查詢複製到剪貼簿
-    trimmed_msgid: Copy partition query to clipboard
-  Copy permalink to clipboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy permalink to clipboard
-    occurances:
-    - superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx
-    - superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx
-    - superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx
-    po_translations:
-      ar: نسخ الرابط الثابت إلى الحافظة
-      de: Permalink in Zwischenablage kopieren
-      es: Copiar consulta de partición al portapapeles
-      fr: Copier le lien dans le presse-papiers
-      it: copia URL in appunti
-      ja: パーマリンクをクリップボードにコピー
-      ko: 클립보드에 복사하기
-      nl: Kopieer permalink naar klembord
-      pt: Copiar query de partição para a área de transferência
-      pt_BR: Copiar permalink para a área de transferência
-      ru: Скопировать ссылку в буфер обмена
-      sk: ''
-      sl: Kopiraj povezavo v odložišče
-      sl_SI: Kopiraj povezavo v odložišče
-      tr: Linki panoya kopyala
-      uk: Скопіюйте постійне посилання на буфер обміну
-      zh: 将查询链接复制到剪贴板
-      zh_TW: 將查詢链接複製到剪貼簿
-    trimmed_msgid: Copy permalink to clipboard
-  Copy query URL:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy query URL
-    occurances:
-    - superset-frontend/src/pages/SavedQueryList/index.tsx
-    po_translations:
-      ar: نسخ عنوان URL لطلب البحث
-      de: Abfrage-URL kopieren
-      es: Copiar URL de la consulta
-      fr: Copier l'URL de la requête
-      it: Query vuota?
-      ja: クエリ URL のコピー
-      ko: ''
-      nl: Kopieer query URL
-      pt: Query vazia?
-      pt_BR: Copiar URL da consulta
-      ru: Скопировать ссылку на запрос
-      sk: ''
-      sl: Kopiraj URL poizvedbe
-      sl_SI: Kopiraj URL poizvedbe
-      tr: Sorgu URL’ini kopyala
-      uk: Скопіюйте URL -адресу запитів
-      zh: 复制查询URL
-      zh_TW: 複製查詢 URL
-    trimmed_msgid: Copy query URL
-  Copy query link to your clipboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy query link to your clipboard
-    occurances:
-    - superset-frontend/src/SqlLab/components/ShareSqlLabQuery/index.tsx
-    po_translations:
-      ar: نسخ رابط الاستعلام إلى الحافظة
-      de: Abfragelink in die Zwischenablage kopieren
-      es: Copiar consulta de partición al portapapeles
-      fr: Copier le lien de la requête vers le presse-papier
-      it: copia URL in appunti
-      ja: クエリのlinkをクリップボードにコピー
-      ko: 클립보드에 복사하기
-      nl: Kopieer query link naar uw klembord
-      pt: Copiar query de partição para a área de transferência
-      pt_BR: Copiar link de consulta para sua área de transferência
-      ru: Скопировать ссылку на запрос в буфер обмена
-      sk: ''
-      sl: Kopiraj povezavo do poizvedbe v odložišče
-      sl_SI: Kopiraj povezavo do poizvedbe v odložišče
-      tr: Sorgu linkini panoya kopyala
-      uk: Скопіюйте посилання на запит у свій буфер обміну
-      zh: 将查询链接复制到剪贴板
-      zh_TW: 將查詢链接複製到剪貼簿
-    trimmed_msgid: Copy query link to your clipboard
-  Copy the identifier of the account you are trying to connect to.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy the identifier of the account you are trying to connect to.
-    occurances:
-    - superset-frontend/src/features/databases/DatabaseModal/DatabaseConnectionForm/ValidatedInputField.tsx
-    po_translations:
-      ar: انسخ معرف الحساب الذي تحاول الاتصال به.
-      de: Kopieren Sie den Namen der Datenbank, mit der Sie eine Verbindung herstellen
-        möchten.
-      es: ''
-      fr: Copier le nom de la base de données à laquelle vous essayez de vous connecter.
-      it: ''
-      ja: 接続しようとしているアカウントの識別子をコピーします。
-      ko: ''
-      nl: Kopieer de identifier van de account waarmee u verbinding probeert te maken.
-      pt: ''
-      pt_BR: Copiar o nome do banco de dados que você está tentando se conectar.
-      ru: Впишите идентификатор аккаунта, с помощью которого нужно подключиться
-      sk: ''
-      sl: Kopirajte ID računa, s katerim se skušate povezati.
-      sl_SI: Kopirajte ID računa, s katerim se skušate povezati.
-      tr: ''
-      uk: Скопіюйте назву бази даних, до якої ви намагаєтесь підключитися.
-      zh: 将尝试连接的账号复制到这里
-      zh_TW: 將嘗試連接的账號複製到這里
-    trimmed_msgid: Copy the identifier of the account you are trying to connect to.
-  Copy the name of the HTTP Path of your cluster.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy the name of the HTTP Path of your cluster.
-    occurances:
-    - superset-frontend/src/features/databases/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx
-    po_translations:
-      ar: انسخ اسم مسار HTTP لمجموعتك.
-      de: Kopieren Sie den Namen des HTTP-Pfads Ihres Clusters.
-      es: ''
-      fr: Copiez le nom du chemin HTTP de votre grappe.
-      it: ''
-      ja: クラスターの HTTP パスの名前をコピーします。
-      ko: ''
-      nl: Kopieer de naam van het HTTP-pad van uw cluster.
-      pt: ''
-      pt_BR: Copiar o nome do caminho HTTP de seu cluster.
-      ru: Скопировать имя HTTP пути вашего кластера
-      sk: ''
-      sl: Kopirajte naziv HTTP poti vaše gruče.
-      sl_SI: Kopirajte naziv HTTP poti vaše gruče.
-      tr: ''
-      uk: Скопіюйте назву HTTP -шляху кластера.
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Copy the name of the HTTP Path of your cluster.
-  Copy the name of the database you are trying to connect to.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy the name of the database you are trying to connect to.
-    occurances:
-    - superset-frontend/src/features/databases/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx
-    po_translations:
-      ar: انسخ اسم قاعدة البيانات التي تحاول الاتصال بها.
-      de: Kopieren Sie den Namen der Datenbank, mit der Sie eine Verbindung herstellen
-        möchten.
-      es: ''
-      fr: Copiez le nom de la base de données à laquelle vous essayez de vous connecter.
-      it: ''
-      ja: 接続しようとしているデータベースの名前をコピーします。
-      ko: ''
-      nl: Kopieer de naam van de database waarmee u verbinding probeert te maken.
-      pt: ''
-      pt_BR: Copiar o nome do banco de dados que você está tentando se conectar.
-      ru: Впишите имя базы данных, к которой вы пытаетесь подключиться
-      sk: ''
-      sl: Kopirajte ime podatkovne baze, s katero se skušate povezati.
-      sl_SI: Kopirajte ime podatkovne baze, s katero se skušate povezati.
-      tr: ''
-      uk: Скопіюйте назву бази даних, до якої ви намагаєтесь підключитися.
-      zh: 将尝试连接的数据库名复制到这里
-      zh_TW: 將嘗試連接的資料庫名複製到這里
-    trimmed_msgid: Copy the name of the database you are trying to connect to.
-  Copy to Clipboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy to Clipboard
-    occurances:
-    - superset-frontend/src/SqlLab/components/ResultSet/index.tsx
-    po_translations:
-      ar: نسخ إلى الحافظة
-      de: In Zwischenablage kopieren
-      es: Copiar al portapapeles
-      fr: Copier vers le presse-papier
-      it: copia URL in appunti
-      ja: クリップボードにコピー
-      ko: ''
-      nl: Kopieer naar Klembord
-      pt: Copiar para área de transferência
-      pt_BR: Copiar para Área de transferência
-      ru: Скопировать в буфер обмена
-      sk: ''
-      sl: Kopiraj na odložišče
-      sl_SI: Kopiraj na odložišče
-      tr: Panoya Kopyala
-      uk: Копіювати в буфер обміну
-      zh: 复制到剪贴板
-      zh_TW: 複製到剪貼簿
-    trimmed_msgid: Copy to Clipboard
-  Copy to clipboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Copy to clipboard
-    occurances:
-    - superset-frontend/src/components/CopyToClipboard/index.tsx
-    - superset-frontend/src/dashboard/components/URLShortLinkButton/index.tsx
-    po_translations:
-      ar: نسخ إلى الحافظة
-      de: In die Zwischenablage kopieren
-      es: Copiar al portapapeles
-      fr: Copier vers le presse-papier
-      it: ''
-      ja: クリップボードにコピー
-      ko: 클립보드에 복사하기
-      nl: Kopieer naar klembord
-      pt: Copiar para área de transferência
-      pt_BR: Copiar para área de transferência
-      ru: Скопировать в буфер обмена
-      sk: ''
-      sl: Kopiraj na odložišče
-      sl_SI: Kopiraj na odložišče
-      tr: Panoya kopyala
-      uk: Копіювати в буфер обміну
-      zh: 复制到剪贴板
-      zh_TW: 複製到剪貼簿
-    trimmed_msgid: Copy to clipboard
-  Correlation:
-    ai_translations: {}
-    metadata: {}
-    msgid: Correlation
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js
-    - superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js
-    - superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js
-    - superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bubble/index.js
-    - superset-frontend/plugins/plugin-chart-echarts/src/Bubble/index.ts
-    - superset-frontend/plugins/plugin-chart-echarts/src/Heatmap/index.ts
-    po_translations:
-      ar: الارتباط
-      de: Korrelation
-      es: Duración
-      fr: Corrélation
-      it: Descrizione
-      ja: 相関
-      ko: ''
-      nl: Correlatie
-      pt: Descrição
-      pt_BR: Correlação
-      ru: Корреляция
-      sk: ''
-      sl: Korelacija
-      sl_SI: Korelacija
-      tr: ''
-      uk: Співвідношення
-      zh: 相关性
-      zh_TW: 相關性
-    trimmed_msgid: Correlation
-  Cost estimate:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cost estimate
-    occurances:
-    - superset-frontend/src/SqlLab/components/EstimateQueryCostButton/index.tsx
-    po_translations:
-      ar: تقدير التكلفة
-      de: Kostenschätzung
-      es: Estimación de costo
-      fr: Estimation des coûts
-      it: ''
-      ja: コストの見積もり
-      ko: ''
-      nl: Kostenraming
-      pt: Modelos CSS
-      pt_BR: Estimativa de custo
-      ru: Прогноз затрат
-      sk: ''
-      sl: Ocena potratnosti
-      sl_SI: Ocena potratnosti
-      tr: ''
-      uk: Оцінка витрат
-      zh: 成本估算
-      zh_TW: 成本估算
-    trimmed_msgid: Cost estimate
-  'Could not connect to database: "%(database)s"':
-    ai_translations: {}
-    metadata: {}
-    msgid: 'Could not connect to database: "%(database)s"'
-    occurances:
-    - superset/db_engine_specs/ocient.py
-    po_translations:
-      ar: 'تعذر الاتصال بقاعدة البيانات: "%(database)s"'
-      de: Es konnte keine Verbindung zur Datenbank "%(database)s" hergestellt werden.
-      es: 'No se puede conectar a la Base de Datos: "%(database)s\ '
-      fr: 'Impossible de se connecter à la base de données : « %(database)s »'
-      it: ''
-      ja: 'データベースに接続できませんでした。: "%(database)s"'
-      ko: ''
-      nl: 'Kan niet verbinden met de database: "%(database)s"'
-      pt: ''
-      pt_BR: Não é possível se conectar ao banco de dados "%(banco de dados)s".
-      ru: Не удалось подключиться к базе данных "%(database)s"
-      sk: ''
-      sl: 'Neuspešna povezava s podatkovno bazo: "%(database)s"'
-      sl_SI: 'Neuspešna povezava s podatkovno bazo: "%(database)s"'
-      tr: 'Veritabanına bağlanılamadı: “%(database)s”'
-      uk: 'Не вдалося підключитися до бази даних: “%(database)s”'
-      zh: 不能连接到数据库"%(database)s"
-      zh_TW: 不能連接到資料庫"%(database)s"
-    trimmed_msgid: 'Could not connect to database: "%(database)s"'
-  Could not determine datasource type:
-    ai_translations: {}
-    metadata: {}
-    msgid: Could not determine datasource type
-    occurances:
-    - superset/views/utils.py
-    po_translations:
-      ar: تعذر تحديد نوع مصدر البيانات
-      de: Datenquellentyp konnte nicht ermittelt werden
-      es: No se pudo determinar el tipo de fuente de datos
-      fr: Impossible de déterminer le type de source de données
-      it: ''
-      ja: データソースタイプを決定できませんでした。
-      ko: ''
-      nl: Kon type gegevensbron niet bepalen
-      pt: ''
-      pt_BR: Não foi possível determinar o tipo de fonte de dados
-      ru: Не удалось определить тип источника данных
-      sk: ''
-      sl: Ni mogoče določiti tipa podatkovnega vira
-      sl_SI: Ni mogoče določiti tipa podatkovnega vira
-      tr: ''
-      uk: Не вдалося визначити тип даних
-      zh: 无法确定数据源类型
-      zh_TW: 無法確定數據源類型
-    trimmed_msgid: Could not determine datasource type
-  Could not fetch all saved charts:
-    ai_translations: {}
-    metadata: {}
-    msgid: Could not fetch all saved charts
-    occurances:
-    - superset-frontend/src/dashboard/actions/sliceEntities.ts
-    - superset-frontend/src/dashboard/reducers/sliceEntities.js
-    po_translations:
-      ar: تعذر جلب جميع المخططات المحفوظة
-      de: Nicht alle gespeicherten Diagramme konnten abgerufen werden
-      es: No se pudieron cargar todos los gráficos guardados
-      fr: Impossible de récupérer tous les graphiques sauvegardés
-      it: Non posso connettermi al server
-      ja: 保存したすべてのチャートを取得できませんでした
-      ko: ''
-      nl: Kon niet alle opgeslagen grafieken ophalen
-      pt: Não foi possível ligar ao servidor
-      pt_BR: Não foi possível obter todos os gráficos salvos
-      ru: Не удалось получить все сохраненные диаграммы
-      sk: ''
-      sl: Vseh shranjenih grafikonov ni bilo mogoče pridobiti
-      sl_SI: Vseh shranjenih grafikonov ni bilo mogoče pridobiti
-      tr: Tüm kayıtlı grafikler getirilemedi
-      uk: Не міг отримати всі збережених діаграм
-      zh: 无法获取所有保存的图表
-      zh_TW: 無法獲取所有保存的圖表
-    trimmed_msgid: Could not fetch all saved charts
-  Could not find viz object:
-    ai_translations: {}
-    metadata: {}
-    msgid: Could not find viz object
-    occurances:
-    - superset/views/utils.py
-    po_translations:
-      ar: تعذر العثور على كائن بمعنى
-      de: Visualisierungsobjekt konnte nicht gefunden werden
-      es: No se pudo encontrar el objeto de visualización
-      fr: Impossible de trouver l'objet viz
-      it: ''
-      ja: viz オブジェクトが見つかりませんでした。
-      ko: ''
-      nl: Kon het viz object niet vinden
-      pt: ''
-      pt_BR: Não foi possível encontrar o objeto viz
-      ru: Не удалось найти объект визуализации
-      sk: ''
-      sl: Ni mogoče najti vizualizacijskega objekta
-      sl_SI: Ni mogoče najti vizualizacijskega objekta
-      tr: ''
-      uk: Не вдалося знайти об'єкт Viz
-      zh: 找不到可视化对象
-      zh_TW: 找不到可視化對象
-    trimmed_msgid: Could not find viz object
-  Could not load database driver:
-    ai_translations: {}
-    metadata: {}
-    msgid: Could not load database driver
-    occurances:
-    - superset/commands/database/exceptions.py
-    po_translations:
-      ar: تعذر تحميل برنامج تشغيل قاعدة البيانات
-      de: Datenbanktreiber konnte nicht geladen werden
-      es: No se ha podido cargar el controlador de la base de datos
-      fr: Impossible de charger le pilote de la base de données
-      it: Non posso connettermi al server
-      ja: データベースドライバーをロードできませんでした。
-      ko: 데이터베이스 드라이버를 로드할 수 없습니다
-      nl: Kon het database driver niet laden
-      pt: Não foi possível ligar ao servidor
-      pt_BR: Não foi possível carregar o driver do banco de dados
-      ru: Не удалось загрузить драйвер базы данных
-      sk: ''
-      sl: Ni mogoče naložiti gonilnika podatkovne baze
-      sl_SI: Ni mogoče naložiti gonilnika podatkovne baze
-      tr: Veritabanı sürücüsü yüklenemedi
-      uk: Не вдалося завантажити драйвер бази даних
-      zh: 无法加载数据库驱动程序
-      zh_TW: 無法加载資料庫驱動程序
-    trimmed_msgid: Could not load database driver
-  'Could not load database driver: {}':
-    ai_translations: {}
-    metadata: {}
-    msgid: 'Could not load database driver: {}'
-    occurances:
-    - superset/commands/database/test_connection.py
-    po_translations:
-      ar: 'تعذر تحميل برنامج تشغيل قاعدة البيانات: {}'
-      de: 'Datenbanktreiber konnte nicht geladen werden: {}'
-      es: 'No se ha podido cargar el controlador de la base de datos: {}'
-      fr: 'Impossible de charger le pilote de la base de données : {}'
-      it: Non posso connettermi al server
-      ja: 'データベース ドライバーを読み込めませんでした。: {}'
-      ko: ''
-      nl: 'Kon het database driver niet laden: {}'
-      pt: Não foi possível ligar ao servidor
-      pt_BR: 'Não foi possível carregar o driver de banco de dados: {}'
-      ru: 'Не удалось загрузить драйвер базы данных: {}'
-      sk: ''
-      sl: 'Ni mogoče naložiti gonilnika podatkovne baze: {}'
-      sl_SI: 'Ni mogoče naložiti gonilnika podatkovne baze: {}'
-      tr: 'Veritabanı sürücüsü yüklenemedi: {}'
-      uk: 'Не вдалося завантажити драйвер бази даних: {}'
-      zh: 无法加载数据库驱动程序：{}
-      zh_TW: 無法加载資料庫驱動程序：{}
-    trimmed_msgid: 'Could not load database driver: {}'
-  'Could not resolve hostname: "%(host)s".':
-    ai_translations: {}
-    metadata: {}
-    msgid: 'Could not resolve hostname: "%(host)s".'
-    occurances:
-    - superset/db_engine_specs/ocient.py
-    po_translations:
-      ar: 'تعذر حل اسم المضيف: "%(host)s".'
-      de: ''
-      es: ''
-      fr: 'Impossible de résoudre le nom d''hôte : « %(host)s »'
-      it: ''
-      ja: 'ホスト名を解決できませんでした。: "%(host)s"。'
-      ko: ''
-      nl: 'Kan de hostname niet omzetten: "%(host)s".'
-      pt: ''
-      pt_BR: ''
-      ru: 'Не удалось обнаружить хост: "%(host)s".'
-      sk: ''
-      sl: 'Gostitelj ni dosegljiv: "%(host)s".'
-      sl_SI: 'Gostitelj ni dosegljiv: "%(host)s".'
-      tr: ''
-      uk: 'Не вдалося вирішити ім''я хоста: “%(host)s".'
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: 'Could not resolve hostname: "%(host)s".'
-  Count:
-    ai_translations: {}
-    metadata: {}
-    msgid: Count
-    occurances:
-    - superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx
-    po_translations:
-      ar: عد
-      de: Anzahl
-      es: Columna
-      fr: Nombre
-      it: Colonna
-      ja: カウント
-      ko: 컬럼 추가
-      nl: Tel
-      pt: Coluna
-      pt_BR: Contar
-      ru: Количество
-      sk: ''
-      sl: Število
-      sl_SI: Število
-      tr: Say
-      uk: Рахувати
-      zh: 计数
-      zh_TW: 計數
-    trimmed_msgid: Count
-  Count Unique Values:
-    ai_translations: {}
-    metadata: {}
-    msgid: Count Unique Values
-    occurances:
-    - superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx
-    po_translations:
-      ar: عد القيم الفريدة
-      de: Eindeutige Werte zählen
-      es: Es filtrable
-      fr: Compter les valeurs uniques
-      it: Filtrabile
-      ja: 一意の値を数える
-      ko: 필터
-      nl: Unieke waarde tellen
-      pt: ''
-      pt_BR: Contar valores únicos
-      ru: Количество уникальных значений
-      sk: ''
-      sl: Število unikatnih
-      sl_SI: Število unikatnih
-      tr: ''
-      uk: Порахуйте унікальні значення
-      zh: 计算唯一值
-      zh_TW: 計算唯一值
-    trimmed_msgid: Count Unique Values
-  Count as Fraction of Columns:
-    ai_translations: {}
-    metadata: {}
-    msgid: Count as Fraction of Columns
-    occurances:
-    - superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx
-    po_translations:
-      ar: العد ككسر من الأعمدة
-      de: Als Anteil der Spalten zählen
-      es: ''
-      fr: Compter comme fraction de colonnes
-      it: ''
-      ja: 列の小数としてカウントする
-      ko: ''
-      nl: Tel als fractie van de kolommen
-      pt: ''
-      pt_BR: Contar como fração de Colunas
-      ru: Количество, как доля от столбцов
-      sk: ''
-      sl: Štetje kot delež stolpcev
-      sl_SI: Štetje kot delež stolpcev
-      tr: ''
-      uk: Вважати як частка стовпців
-      zh: 列计数的分数占比
-      zh_TW: 列計數的分數占比
-    trimmed_msgid: Count as Fraction of Columns
-  Count as Fraction of Rows:
-    ai_translations: {}
-    metadata: {}
-    msgid: Count as Fraction of Rows
-    occurances:
-    - superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx
-    po_translations:
-      ar: العد ككسر من الصفوف
-      de: Als Anteil der Zeilen zählen
-      es: ''
-      fr: Compter comme fraction de rangées
-      it: ''
-      ja: 行の小数部としてカウント
-      ko: ''
-      nl: Tel als fractie van de rijen
-      pt: ''
-      pt_BR: Contar como fração de Linhas
-      ru: Количество, как доля от строк
-      sk: ''
-      sl: Štetje kot delež vrstic
-      sl_SI: Štetje kot delež vrstic
-      tr: ''
-      uk: Порахуйте як частку рядків
-      zh: 行计数的分数占比
-      zh_TW: 行計數的分數占比
-    trimmed_msgid: Count as Fraction of Rows
-  Count as Fraction of Total:
-    ai_translations: {}
-    metadata: {}
-    msgid: Count as Fraction of Total
-    occurances:
-    - superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx
-    po_translations:
-      ar: عد ككسر من الإجمالي
-      de: Als Anteil der Gesamtsumme zählen
-      es: ''
-      fr: Compter comme fraction de total
-      it: ''
-      ja: 合計の小数として数えます
-      ko: ''
-      nl: Tel als fractie van het totaal
-      pt: ''
-      pt_BR: Contar como fração do Total
-      ru: Количество, как доля от целого
-      sk: ''
-      sl: Štetje kot delež skupne vsote
-      sl_SI: Štetje kot delež skupne vsote
-      tr: ''
-      uk: Вважається часткою загальної кількості
-      zh: 总计数的分数占比
-      zh_TW: 總計數的分數占比
-    trimmed_msgid: Count as Fraction of Total
-  Country:
-    ai_translations: {}
-    metadata: {}
-    msgid: Country
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-country-map/src/controlPanel.ts
-    - superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts
-    po_translations:
-      ar: بلد
-      de: Land
-      es: Mapa de País
-      fr: Pays
-      it: Mappa della Nazione
-      ja: 国
-      ko: 컬럼 추가
-      nl: Land
-      pt: Mapa de País
-      pt_BR: País
-      ru: Страна
-      sk: ''
-      sl: Država
-      sl_SI: Država
-      tr: Ülke
-      uk: Країна
-      zh: 国家
-      zh_TW: 國家
-    trimmed_msgid: Country
-  Country Color Scheme:
-    ai_translations: {}
-    metadata: {}
-    msgid: Country Color Scheme
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts
-    po_translations:
-      ar: نظام ألوان البلد
-      de: Länderfarbschema
-      es: Esquema de Color Lineal
-      fr: Schéma de couleurs de pays
-      it: ''
-      ja: 国の配色
-      ko: ''
-      nl: Land kleurenschema
-      pt: Esquema de cores lineares
-      pt_BR: Esquema de cores do país
-      ru: Цветовая схема страны
-      sk: ''
-      sl: Barvna shema držav
-      sl_SI: Barvna shema držav
-      tr: ''
-      uk: Колірна гамма країни
-      zh: 国家颜色方案
-      zh_TW: 國家颜色方案
-    trimmed_msgid: Country Color Scheme
-  Country Column:
-    ai_translations: {}
-    metadata: {}
-    msgid: Country Column
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts
-    po_translations:
-      ar: عمود البلد
-      de: Länderspalte
-      es: Filtrar por estado
-      fr: Colonne de pays
-      it: Controlli del filtro
-      ja: 国の列
-      ko: 컬럼 목록
-      nl: Land Column
-      pt: Controlo de filtro
-      pt_BR: Coluna do país
-      ru: Столбец со страной
-      sk: ''
-      sl: Stolpec z državami
-      sl_SI: Stolpec z državami
-      tr: ''
-      uk: Стовпчик країни
-      zh: 国家字段
-      zh_TW: 國家欄位
-    trimmed_msgid: Country Column
-  Country Field Type:
-    ai_translations: {}
-    metadata: {}
-    msgid: Country Field Type
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts
-    po_translations:
-      ar: نوع حقل البلد
-      de: Feldtyp "Land"
-      es: ''
-      fr: Type de champ de pays
-      it: ''
-      ja: 国フィールドタイプ
-      ko: ''
-      nl: Land Veld Type
-      pt: ''
-      pt_BR: Tipo de campo País
-      ru: Тип поля страны
-      sk: ''
-      sl: Tip polja za države
-      sl_SI: Tip polja za države
-      tr: ''
-      uk: Тип поля країни
-      zh: 国家字段的类型
-      zh_TW: 國家欄位的類型
-    trimmed_msgid: Country Field Type
-  Country Map:
-    ai_translations: {}
-    metadata: {}
-    msgid: Country Map
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js
-    - superset/viz.py
-    po_translations:
-      ar: خريطة البلد
-      de: Länderkarte
-      es: Mapa de País
-      fr: Carte de pays
-      it: Mappa della Nazione
-      ja: 国別地図
-      ko: ''
-      nl: Landenkaart
-      pt: Mapa de País
-      pt_BR: Mapa do País
-      ru: Карта страны
-      sk: ''
-      sl: Zemljevid držav
-      sl_SI: Zemljevid držav
-      tr: Ülke Haritası
-      uk: Карта країни
-      zh: 国家地图
-      zh_TW: 國家地圖
-    trimmed_msgid: Country Map
-  Create:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create
-    occurances:
-    - superset-frontend/src/SqlLab/components/SqlEditor/index.tsx
-    po_translations:
-      ar: خلق
-      de: Erstellen
-      es: 'crear un '
-      fr: Créer
-      it: Creato il
-      ja: 作成
-      ko: ''
-      nl: Maak
-      pt: Criado em
-      pt_BR: Criar
-      ru: Создать
-      sk: ''
-      sl: Ustvari
-      sl_SI: Ustvari
-      tr: Oluştur
-      uk: Створити
-      zh: 创建
-      zh_TW: 創建
-    trimmed_msgid: Create
-  Create Chart:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create Chart
-    occurances:
-    - superset-frontend/src/SqlLab/components/ExploreResultsButton/index.tsx
-    po_translations:
-      ar: إنشاء مخطط
-      de: Diagramm erstellen
-      es: Compartir gráfico
-      fr: Créer un graphique
-      it: Esplora grafico
-      ja: チャートを作成
-      ko: 차트 보기
-      nl: Grafiek aanmaken
-      pt: Crie uma nova visualização
-      pt_BR: Criar gráfico
-      ru: Создать диаграмму
-      sk: ''
-      sl: Ustvarite grafikon
-      sl_SI: Ustvarite grafikon
-      tr: Grafik Oluştur
-      uk: Створити діаграму
-      zh: 创建图表
-      zh_TW: 創建圖表
-    trimmed_msgid: Create Chart
-  Create a dataset:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create a dataset
-    occurances:
-    - superset-frontend/src/explore/components/DatasourcePanel/index.tsx
-    - superset-frontend/src/explore/components/ExploreChartPanel/index.jsx
-    - superset-frontend/src/explore/components/controls/DndColumnSelectControl/ColumnSelectPopover.tsx
-    - superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx
-    po_translations:
-      ar: إنشاء مجموعة بيانات
-      de: Datensatz erstellen
-      es: 'crear un '
-      fr: Créer un ensemble de données
-      it: Mostra database
-      ja: データセットを作成
-      ko: 차트 수정
-      nl: Een dataset aanmaken
-      pt: Criado em
-      pt_BR: Criar um conjunto de dados
-      ru: Создать датасет
-      sk: ''
-      sl: Ustvarite podatkovni set
-      sl_SI: Ustvarite podatkovni set
-      tr: Veriseti oluştur
-      uk: Створіть набір даних
-      zh: '创建数据集 '
-      zh_TW: 創建數據集
-    trimmed_msgid: Create a dataset
-  ? "Create a dataset to begin visualizing your data as a chart or go to\n       \
-    \   SQL Lab to query your data."
-  : ai_translations: {}
-    metadata: {}
-    msgid: "Create a dataset to begin visualizing your data as a chart or go to\n\
-      \          SQL Lab to query your data."
-    occurances:
-    - superset-frontend/src/features/databases/DatabaseModal/ModalHeader.tsx
-    po_translations:
-      ar: "إنشاء مجموعة بيانات لبدء تصور بياناتك كمخطط أو الانتقال إلى\n         \
-        \ SQL Lab للاستعلام عن بياناتك."
-      de: "Erstellen Sie einen Datensatz, um mit der Visualisierung Ihrer Daten als\
-        \ Diagramm zu beginnen, oder wechseln Sie zu\n          SQL Lab, um Ihre Daten\
-        \ abzufragen."
-      es: ''
-      fr: Créer un ensemble de données pour commencer à visualiser vos données sous
-        forme de graphique ou aller à SQL Lab pour interroger vos données.
-      it: ''
-      ja: "データセットを作成してデータをグラフとして視覚化するか、\n SQL Lab に移動してデータをクエリします。"
-      ko: ''
-      nl: "Maak een dataset aan om uw gegevens te visualiseren als grafiek of ga naar\n\
-        \          SQL Lab om uw gegevens op te vragen."
-      pt: ''
-      pt_BR: "Criar um conjunto de dados para começar a visualizar seus dados como\
-        \ um gráfico ou vá para\n          SQL Lab para consultar seus dados."
-      ru: Создайте датасет для визуализации ваших данных на диаграмме или перейдите
-        в SQL Lab для просмотра данных
-      sk: ''
-      sl: "Ustvarite podatkovni set, da začnete vizualizacijo podatkov z grafikonom\
-        \ ali\n          pojdite v SQL-laboratorij za poizvedovanje nad podatki."
-      sl_SI: "Ustvarite podatkovni set, da začnete vizualizacijo podatkov z grafikonom\
-        \ ali\n          pojdite v SQL-laboratorij za poizvedovanje nad podatki."
-      tr: ''
-      uk: "Створіть набір даних, щоб почати візуалізувати свої дані як діаграму або\
-        \ перейти до\n          SQL Lab, щоб запитати ваші дані."
-      zh: 创建一个数据集以开始将您的数据可视化为图表，或者前往 SQL 工具箱查询您的数据。
-      zh_TW: 創建一個數據集以開始將您的數據可視化為圖表，或者前往 SQL 工具箱查詢您的數據。
-    trimmed_msgid: "Create a dataset to begin visualizing your data as a chart or\
-      \ go to\n          SQL Lab to query your data."
-  Create a new chart:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create a new chart
-    occurances:
-    - superset-frontend/src/dashboard/components/DashboardGrid.jsx
-    - superset-frontend/src/pages/ChartCreation/index.tsx
-    po_translations:
-      ar: إنشاء مخطط جديد
-      de: Neues Diagramm erstellen
-      es: Crear un nuevo Gráfico
-      fr: Créer un nouveau graphique
-      it: ''
-      ja: 新しいチャートを作成
-      ko: 새 차트 생성
-      nl: Maak een nieuwe grafiek
-      pt: Crie uma nova visualização
-      pt_BR: Criar um novo gráfico
-      ru: Создать новую диаграмму
-      sk: ''
-      sl: Ustvarite nov grafikon
-      sl_SI: Ustvarite nov grafikon
-      tr: Yeni grafik oluştur
-      uk: Створіть нову діаграму
-      zh: 创建新图表
-      zh_TW: 創建新圖表
-    trimmed_msgid: Create a new chart
-  Create chart:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create chart
-    occurances:
-    - superset-frontend/src/explore/components/RunQueryButton/index.tsx
-    - superset-frontend/src/utils/getChartRequiredFieldsMissingMessage.ts
-    po_translations:
-      ar: إنشاء مخطط
-      de: Diagramm erstellen
-      es: Compartir gráfico
-      fr: Créer un graphique
-      it: Esplora grafico
-      ja: チャートを作成
-      ko: 차트 보기
-      nl: Grafiek aanmaken
-      pt: Crie uma nova visualização
-      pt_BR: Criar gráfico
-      ru: Создать диаграмму
-      sk: ''
-      sl: Ustvarite grafikon
-      sl_SI: Ustvarite grafikon
-      tr: Grafik oluştur
-      uk: Створити діаграму
-      zh: 创建图表
-      zh_TW: 創建圖表
-    trimmed_msgid: Create chart
-  Create chart with dataset:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create chart with dataset
-    occurances:
-    - superset-frontend/src/features/datasets/AddDataset/EditDataset/UsageTab/index.tsx
-    po_translations:
-      ar: إنشاء مخطط مع مجموعة بيانات
-      de: Diagramm mit Datensatz erstellen
-      es: ''
-      fr: Créer un graphique avec un ensemble de données
-      it: ''
-      ja: データセットを使用してチャートを作成する
-      ko: ''
-      nl: Maak een grafiek met dataset
-      pt: ''
-      pt_BR: Criar gráfico com conjunto de dados
-      ru: Создать диаграмму из датасета
-      sk: ''
-      sl: Ustvarite grafikon s podatkovnim setom
-      sl_SI: Ustvarite grafikon s podatkovnim setom
-      tr: Veriseti ile grafik oluştur
-      uk: Створіть діаграму за допомогою набору даних
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Create chart with dataset
-  Create dataframe index:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create dataframe index
-    occurances:
-    - superset-frontend/src/features/databases/UploadDataModel/index.tsx
-    po_translations:
-      ar: فهرس إطار البيانات
-      de: Dataframe-Index
-      es: Índice de Dataframe
-      fr: Index des cadres de données
-      it: Seleziona una destinazione
-      ja: データフレームインデックス
-      ko: 데이터소스 선택
-      nl: Dataframe Index
-      pt: Criado em
-      pt_BR: Índice do dataframe
-      ru: Индекс датафрейма
-      sk: ''
-      sl: Indeks dataframe-a
-      sl_SI: Indeks dataframe-a
-      tr: Veriseti oluştur
-      uk: Індекс даних даних
-      zh: Dataframe索引
-      zh_TW: Dataframe 索引
-    trimmed_msgid: Create dataframe index
-  Create dataset:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create dataset
-    occurances:
-    - superset-frontend/src/features/home/RightMenu.tsx
-    po_translations:
-      ar: إنشاء مجموعة بيانات
-      de: Datensatz erstellen
-      es: Cambiar fuente
-      fr: Créer un ensemble de données
-      it: Seleziona una destinazione
-      ja: データセットを作成
-      ko: 데이터소스 선택
-      nl: Dataset aanmaken
-      pt: Criado em
-      pt_BR: Criar conjunto de dados
-      ru: Создать датасет
-      sk: ''
-      sl: Ustvarite podatkovni set
-      sl_SI: Ustvarite podatkovni set
-      tr: Veriseti oluştur
-      uk: Створити набір даних
-      zh: 创建数据集
-      zh_TW: 創建數據集
-    trimmed_msgid: Create dataset
-  Create dataset and create chart:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create dataset and create chart
-    occurances:
-    - superset-frontend/src/features/datasets/AddDataset/Footer/index.tsx
-    po_translations:
-      ar: إنشاء مجموعة بيانات وإنشاء مخطط
-      de: Datensatz erstellen und Diagramm erstellen
-      es: Crear un nuevo Gráfico
-      fr: Créer un ensemble de données et un graphique
-      it: ''
-      ja: データセットの作成とチャートの作成
-      ko: 새 차트 생성
-      nl: Maak dataset aan en maak grafiek
-      pt: Crie uma nova visualização
-      pt_BR: Criar conjunto de dados e criar gráfico
-      ru: Создать датасет и диаграмму
-      sk: ''
-      sl: Ustvarite podatkovni set in grafikon
-      sl_SI: Ustvarite podatkovni set in grafikon
-      tr: Veriseti ekle ve grafik oluştur
-      uk: Створити набір даних та створити діаграму
-      zh: 创建数据集和图表
-      zh_TW: 創建數據集和圖表
-    trimmed_msgid: Create dataset and create chart
-  Create new chart:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create new chart
-    occurances:
-    - superset-frontend/src/dashboard/components/SliceAdder.jsx
-    - superset-frontend/src/pages/ChartCreation/index.tsx
-    po_translations:
-      ar: إنشاء مخطط جديد
-      de: Neues Diagramm erstellen
-      es: Crear un nuevo Gráfico
-      fr: Créer un nouveau graphique
-      it: Creato il
-      ja: 新しいチャートを作成
-      ko: 새 차트 생성
-      nl: Maak een nieuwe grafiek
-      pt: Crie uma nova visualização
-      pt_BR: Criar novo gráfico
-      ru: Создать диаграмму
-      sk: ''
-      sl: Ustvarite nov grafikon
-      sl_SI: Ustvarite nov grafikon
-      tr: Yeni grafik oluştur
-      uk: Створіть нову діаграму
-      zh: 创建新图表
-      zh_TW: 創建新圖表
-    trimmed_msgid: Create new chart
-  Create or select schema...:
-    ai_translations: {}
-    metadata: {}
-    msgid: Create or select schema...
-    occurances:
-    - superset-frontend/src/features/databases/DatabaseModal/ExtraOptions.tsx
-    po_translations:
-      ar: إنشاء مخطط أو تحديده...
-      de: Schema erstellen oder auswählen…
-      es: ''
-      fr: Créer ou sélectionner schéma...
-      it: ''
-      ja: スキーマを作成または選択します...
-      ko: ''
-      nl: Schema aanmaken of selecteren...
-      pt: ''
-      pt_BR: Criar ou selecionar esquema...
-      ru: Создать или выбрать схему...
-      sk: ''
-      sl: Ustvarite ali izberite shemo...
-      sl_SI: Ustvarite ali izberite shemo...
-      tr: ''
-      uk: Створити або вибрати схему ...
-      zh: 创建或者选择模式
-      zh_TW: 創建或者選擇模式
-    trimmed_msgid: Create or select schema...
-  Created:
-    ai_translations: {}
-    metadata: {}
-    msgid: Created
-    occurances:
-    - superset-frontend/src/features/home/ActivityTable.tsx
-    po_translations:
-      ar: انشاء
-      de: Erstellt
-      es: Creado
-      fr: Crée
-      it: Creato il
-      ja: 作成した項目
-      ko: 생성자
-      nl: Aangemaakt
-      pt: Criado em
-      pt_BR: Criado
-      ru: Создано
-      sk: ''
-      sl: Ustvarjene
-      sl_SI: Ustvarjene
-      tr: Oluşturuldu
-      uk: Створений
-      zh: 已创建
-      zh_TW: 已創建
-    trimmed_msgid: Created
-  Created by:
-    ai_translations: {}
-    metadata: {}
-    msgid: Created by
-    occurances:
-    - superset-frontend/src/components/MetadataBar/ContentConfig.tsx
-    po_translations:
-      ar: تم الإنشاء بواسطة
-      de: Erstellt von
-      es: Creado por
-      fr: Créé par
-      it: Creato il
-      ja: 作成者
-      ko: 생성자
-      nl: Gecreëerd door
-      pt: Criado em
-      pt_BR: Criado por
-      ru: Кем создано
-      sk: ''
-      sl: Ustvaril
-      sl_SI: Ustvaril
-      tr: Oluşturan
-      uk: Створений
-      zh: 创建人
-      zh_TW: 創建人
-    trimmed_msgid: Created by
-  Created by me:
-    ai_translations: {}
-    metadata: {}
-    msgid: Created by me
-    occurances:
-    - superset/charts/filters.py
-    - superset/dashboards/filters.py
-    po_translations:
-      ar: تم إنشاؤها بواسطتي
-      de: Von mir erstellt
-      es: Creado por
-      fr: Créé par moi
-      it: Creato il
-      ja: 私が作成した。
-      ko: 생성자
-      nl: Gemaakt door mij
-      pt: Criado em
-      pt_BR: Criado por mim
-      ru: Создано мной
-      sk: ''
-      sl: Ustvarjeno z moje strani
-      sl_SI: Ustvarjeno z moje strani
-      tr: ''
-      uk: Створений мною
-      zh: 我创建的
-      zh_TW: 我創建的
-    trimmed_msgid: Created by me
-  Created on:
-    ai_translations: {}
-    metadata: {}
-    msgid: Created on
-    occurances:
-    - superset-frontend/src/components/MetadataBar/ContentConfig.tsx
-    po_translations:
-      ar: تم إنشاؤه في
-      de: Erstellt am
-      es: Creado el
-      fr: Créé le
-      it: Creato il
-      ja: 作成日
-      ko: 생성자
-      nl: Gemaakt op
-      pt: Criado em
-      pt_BR: Criado em
-      ru: Дата создания
-      sk: ''
-      sl: Ustvarjeno
-      sl_SI: Ustvarjeno
-      tr: Oluşturan
-      uk: Створений на
-      zh: 创建日期
-      zh_TW: 創建日期
-    trimmed_msgid: Created on
-  Creating SSH Tunnel failed for an unknown reason:
-    ai_translations: {}
-    metadata: {}
-    msgid: Creating SSH Tunnel failed for an unknown reason
-    occurances:
-    - superset/commands/database/ssh_tunnel/exceptions.py
-    po_translations:
-      ar: فشل إنشاء نفق SSH لسبب غير معروف
-      de: Das Erstellen eines SSH-Tunnels ist aus unbekanntem Grund fehlgeschlagen
-      es: Importar el gráfico falló por una razón desconocida
-      fr: La création d'un tunnel SSH a échoué pour une raison inconnue
-      it: ''
-      ja: SSH トンネルの作成が不明な理由で失敗しました。
-      ko: 차트 불러오기는 알 수 없는 이유로 실패했습니다
-      nl: Het creëren van SSH-tunnel is mislukt om onbekende reden
-      pt: ''
-      pt_BR: A criação do túnel SSH falhou por um motivo desconhecido
-      ru: Не удалось создать SSH-туннель по неизвестной причине
-      sk: ''
-      sl: Ustvarjanje SSH-tunela ni uspelo zaradi neznanega razloga
-      sl_SI: Ustvarjanje SSH-tunela ni uspelo zaradi neznanega razloga
-      tr: ''
-      uk: Створення тунелю SSH не вдалося з незрозумілої причини
-      zh: 创建SSH隧道失败，原因未知
-      zh_TW: 創建 SSH 隧道失敗，原因未知
-    trimmed_msgid: Creating SSH Tunnel failed for an unknown reason
-  Creating a data source and creating a new tab:
-    ai_translations: {}
-    metadata: {}
-    msgid: Creating a data source and creating a new tab
-    occurances:
-    - superset-frontend/src/SqlLab/components/ExploreCtasResultsButton/index.tsx
-    po_translations:
-      ar: إنشاء مصدر بيانات وإنشاء علامة تبويب جديدة
-      de: Erstelle eine Datenquelle und eine neue Registerkarte
-      es: Creando un origen de datos y creando una nueva pestaña
-      fr: Créer une source de données et ouvrir un nouvel onglet
-      it: ''
-      ja: データソースの作成と新しいタブの作成
-      ko: ''
-      nl: Een gegevensbron maken en een nieuw tabblad maken
-      pt: A criar uma nova origem de dados, a exibir numa nova aba
-      pt_BR: Criando uma fonte de dados e criando uma nova guia
-      ru: Создание источника данных и добавление новой вкладки
-      sk: ''
-      sl: Ustvarjanje podatkovnega vira in novega zavihka
-      sl_SI: Ustvarjanje podatkovnega vira in novega zavihka
-      tr: ''
-      uk: Створення джерела даних та створення нової вкладки
-      zh: 创建数据源，并弹出一个新的选项卡
-      zh_TW: 創建數據源，並弹出一個新的選項卡
-    trimmed_msgid: Creating a data source and creating a new tab
-  Creator:
-    ai_translations: {}
-    metadata: {}
-    msgid: Creator
-    occurances:
-    - superset/views/chart/mixin.py
-    - superset/views/dashboard/mixin.py
-    - superset/views/dashboard/views.py
-    - superset/views/database/mixins.py
-    po_translations:
-      ar: خالق
-      de: Ersteller*in
-      es: Creador
-      fr: Créateur
-      it: Creatore
-      ja: 作成者
-      ko: 생성자
-      nl: Maker
-      pt: Criador
-      pt_BR: Criador
-      ru: Автор
-      sk: ''
-      sl: Avtor
-      sl_SI: Avtor
-      tr: ''
-      uk: Творець
-      zh: 作者
-      zh_TW: 作者
-    trimmed_msgid: Creator
-  Crimson:
-    ai_translations: {}
-    metadata: {}
-    msgid: Crimson
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts
-    po_translations:
-      ar: قرمزي
-      de: Purpur
-      es: Acción
-      fr: Cramoisi
-      it: Azione
-      ja: 真紅
-      ko: 활동
-      nl: Donkerrood
-      pt: Acção
-      pt_BR: Carmesim
-      ru: Малиновый
-      sk: ''
-      sl: Škrlatna
-      sl_SI: Škrlatna
-      tr: ''
-      uk: Малиновий
-      zh: 血红色
-      zh_TW: 血红色
-    trimmed_msgid: Crimson
-  Cross-filter will be applied to all of the charts that use this dataset.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cross-filter will be applied to all of the charts that use this dataset.
-    occurances:
-    - superset-frontend/src/components/Chart/ChartContextMenu/ChartContextMenu.tsx
-    po_translations:
-      ar: سيتم تطبيق التصفية التبادلية على جميع المخططات التي تستخدم مجموعة البيانات
-        هذه.
-      de: Der Kreuzfilter wird auf alle Diagramme angewendet, die diesenn Datensatz
-        verwenden.
-      es: ''
-      fr: Le filtre croisé sera appliqué à tous les graphiques qui utilisent cet ensemble
-        de données.
-      it: ''
-      ja: クロスフィルターは、このデータセットを使用するすべてのチャートに適用されます。
-      ko: ''
-      nl: Cross-filter zal worden toegepast op alle grafieken die deze data gebruiken.
-      pt: ''
-      pt_BR: Filtro cruzado vai ser aplicado para todos os gráficos que utilizam esse
-        conjunto de dados.
-      ru: Кросс-фильтр будет применен ко всем диаграммам, использующим этот датасет
-      sk: ''
-      sl: Medsebojni filter bo uporabljen za vse grafikone, ki uporabljajo ta podatkovni
-        set.
-      sl_SI: Medsebojni filter bo uporabljen za vse grafikone, ki uporabljajo ta podatkovni
-        set.
-      tr: ''
-      uk: Перехресний фільтр буде застосований до всіх діаграм, які використовують
-        цей набір даних.
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Cross-filter will be applied to all of the charts that use this
-      dataset.
-  Cross-filtering is not enabled for this dashboard.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cross-filtering is not enabled for this dashboard.
-    occurances:
-    - superset-frontend/src/components/Chart/ChartContextMenu/ChartContextMenu.tsx
-    po_translations:
-      ar: لم يتم تمكين التصفية التبادلية للوحة المعلومات هذه.
-      de: Die Kreuzfilterung ist für dieses Dashboard nicht aktiviert.
-      es: No hay filtros en este dashboard
-      fr: Le filtrage croisé n'est pas activé pour ce tableau de bord.
-      it: ''
-      ja: このダッシュボードではクロス フィルタリングが有効になっていません
-      ko: ''
-      nl: Cross-filtering is niet ingeschakeld voor dit dashboard.
-      pt: 'Desculpe, houve um erro ao gravar este dashbard: '
-      pt_BR: A filtragem cruzada não está ativada para esse painel.
-      ru: Кросс-фильтрация отключена на этом дашборде
-      sk: ''
-      sl: Medsebojni filtri za to nadzorno ploščo niso omogočeni.
-      sl_SI: Medsebojni filtri za to nadzorno ploščo niso omogočeni.
-      tr: ''
-      uk: Перехресне фільтрування не ввімкнено для цієї інформаційної панелі.
-      zh: 此看板中没有启用交叉筛选。
-      zh_TW: 此看板中没有啟用交叉篩選。
-    trimmed_msgid: Cross-filtering is not enabled for this dashboard.
-  Cross-filtering is not enabled in this dashboard:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cross-filtering is not enabled in this dashboard
-    occurances:
-    - superset-frontend/src/dashboard/components/nativeFilters/FilterBar/CrossFilters/ScopingModal/ScopingTreePanel.tsx
-    po_translations:
-      ar: لم يتم تمكين التصفية المتقاطعة في لوحة المعلومات هذه
-      de: Die Kreuzfilterung ist für dieses Dashboard nicht aktiviert.
-      es: No hay filtros en este dashboard
-      fr: Le filtrage croisé n'est pas activé dans ce tableau de bord.
-      it: 'Non hai i permessi per accedere alla/e sorgente/i dati: %(name)s.'
-      ja: このダッシュボードではクロスフィルタリングが有効になっていません
-      ko: ''
-      nl: Cross-filtering is niet ingeschakeld in dit dashboard
-      pt: 'Desculpe, houve um erro ao gravar este dashbard: '
-      pt_BR: A filtragem cruzada não está ativada para esse painel.
-      ru: Фильтры не применены к этому дашборду
-      sk: ''
-      sl: Medsebojni filtri za to nadzorno ploščo niso omogočeni
-      sl_SI: Medsebojni filtri za to nadzorno ploščo niso omogočeni
-      tr: ''
-      uk: Перехресне фільтрування не ввімкнено для цієї інформаційної панелі
-      zh: 此看板中没有启用交叉筛选。
-      zh_TW: 此看板中没有啟用交叉篩選。
-    trimmed_msgid: Cross-filtering is not enabled in this dashboard
-  Cross-filtering scoping:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cross-filtering scoping
-    occurances:
-    - superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx
-    - superset-frontend/src/dashboard/components/nativeFilters/FilterBar/CrossFilters/ScopingModal/ScopingModal.tsx
-    - superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterBarSettings/index.tsx
-    po_translations:
-      ar: تحديد نطاق التصفية المتقاطعة
-      de: Kreuzfilterung aktivieren
-      es: Filtro de padre
-      fr: Portée du filtrage croisé
-      it: Cerca / Filtra
-      ja: クロスフィルタリングのスコープ設定
-      ko: 필터
-      nl: Cross-filtering scoping
-      pt: Perfil
-      pt_BR: Habilitar filtragem cruzada
-      ru: Область действия кросс-фильтра
-      sk: ''
-      sl: Doseg medsebojnih filtrov
-      sl_SI: Doseg medsebojnih filtrov
-      tr: Çapraz filtreme kapsamı
-      uk: Перехресне фільтрування
-      zh: 交叉筛选作用域
-      zh_TW: 交叉篩選作用域
-    trimmed_msgid: Cross-filtering scoping
-  Cross-filters:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cross-filters
-    occurances:
-    - superset-frontend/src/dashboard/components/nativeFilters/FilterBar/CrossFilters/VerticalCollapse.tsx
-    po_translations:
-      ar: المرشحات المتقاطعة
-      de: Kreuzfilter
-      es: Filtro de padre
-      fr: Filtres croisés
-      it: Cerca / Filtra
-      ja: クロスフィルター
-      ko: 필터
-      nl: Cross-filters
-      pt: Perfil
-      pt_BR: Filtros cruzados
-      ru: Задать область действия кросс-фильтра
-      sk: ''
-      sl: Medsebojni filtri
-      sl_SI: Medsebojni filtri
-      tr: Çapraz filtreler
-      uk: Перехресні фільтри
-      zh: 交叉筛选
-      zh_TW: 交叉篩選
-    trimmed_msgid: Cross-filters
-  Cumulative:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cumulative
-    occurances:
-    - superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts
-    - superset-frontend/plugins/plugin-chart-echarts/src/Histogram/controlPanel.tsx
-    po_translations:
-      ar: التراكمي
-      de: Kumuliert
-      es: Activo
-      fr: Cumulatif
-      it: Azione
-      ja: 累積的な
-      ko: ''
-      nl: Cumulatief
-      pt: Acção
-      pt_BR: Acumulado
-      ru: С накоплением
-      sk: ''
-      sl: Kumulativno
-      sl_SI: Kumulativno
-      tr: ''
-      uk: Кумулятивний
-      zh: 累计
-      zh_TW: 累計
-    trimmed_msgid: Cumulative
-  Currency:
-    ai_translations: {}
-    metadata: {}
-    msgid: Currency
-    occurances:
-    - superset-frontend/src/explore/components/controls/CurrencyControl/CurrencyControl.tsx
-    po_translations:
-      ar: عملة
-      de: ''
-      es: ''
-      fr: ''
-      it: ''
-      ja: 通貨
-      ko: ''
-      nl: Valuta
-      pt: ''
-      pt_BR: ''
-      ru: Валюта
-      sk: ''
-      sl: Valuta
-      sl_SI: Valuta
-      tr: ''
-      uk: ''
-      zh: 货币
-      zh_TW: 貨幣
-    trimmed_msgid: Currency
-  Currency format:
-    ai_translations: {}
-    metadata: {}
-    msgid: Currency format
-    occurances:
-    - superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/sharedControls.tsx
-    - superset-frontend/src/explore/components/controls/ColumnConfigControl/constants.tsx
-    po_translations:
-      ar: تنسيق العملة
-      de: Wertformat
-      es: Formato de correo electrónico
-      fr: Format d'e-mail
-      it: Formato Datetime
-      ja: 通貨形式
-      ko: D3 포멧
-      nl: Valuta opmaak
-      pt: Formato de valor
-      pt_BR: Formato do valor
-      ru: Формат валюты
-      sk: ''
-      sl: Oblika zapisa valute
-      sl_SI: Oblika zapisa valute
-      tr: ''
-      uk: Формат значення
-      zh: 货币格式
-      zh_TW: 貨幣格式
-    trimmed_msgid: Currency format
-  Currency prefix or suffix:
-    ai_translations: {}
-    metadata: {}
-    msgid: Currency prefix or suffix
-    occurances:
-    - superset-frontend/src/explore/components/controls/CurrencyControl/CurrencyControl.tsx
-    po_translations:
-      ar: بادئة أو لاحقة العملة
-      de: ''
-      es: ''
-      fr: ''
-      it: ''
-      ja: 通貨の接頭辞または接尾辞
-      ko: ''
-      nl: Valuta voorvoegsel of achtervoegsel
-      pt: ''
-      pt_BR: ''
-      ru: Префикс или суффикс валюты
-      sk: ''
-      sl: Predpona ali pripona valute
-      sl_SI: Predpona ali pripona valute
-      tr: ''
-      uk: ''
-      zh: 货币前缀或后缀
-      zh_TW: 貨幣前缀或後缀
-    trimmed_msgid: Currency prefix or suffix
-  Currency symbol:
-    ai_translations: {}
-    metadata: {}
-    msgid: Currency symbol
-    occurances:
-    - superset-frontend/src/explore/components/controls/CurrencyControl/CurrencyControl.tsx
-    po_translations:
-      ar: رمز العملة
-      de: ''
-      es: ''
-      fr: ''
-      it: ''
-      ja: 通貨記号
-      ko: ''
-      nl: Valuta symbool
-      pt: ''
-      pt_BR: ''
-      ru: Символ валюты
-      sk: ''
-      sl: Simbol valute
-      sl_SI: Simbol valute
-      tr: ''
-      uk: ''
-      zh: 货币符号
-      zh_TW: 貨幣符號
-    trimmed_msgid: Currency symbol
-  Current:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: العد
-      de: Anzahl
-      es: Columna
-      fr: nombre
-      it: Colonna
-      ja: 通貨
-      ko: 컬럼 추가
-      nl: Valuta
-      pt: Coluna
-      pt_BR: contagem
-      ru: Текущий
-      sk: ''
-      sl: Valuta
-      sl_SI: Valuta
-      tr: sayı
-      uk: рахувати
-      zh: 货币
-      zh_TW: 貨幣
-    trimmed_msgid: Current
-  Current day:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current day
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: تشغيل الاستعلام الحالي
-      de: Abfrage ausführen
-      es: Ejecutar consulta
-      fr: Lancer la requête
-      it: condividi query
-      ja: 通貨
-      ko: Query 실행
-      nl: Valuta
-      pt: Executar query
-      pt_BR: Executar consulta
-      ru: Текущий день
-      sk: ''
-      sl: Valuta
-      sl_SI: Valuta
-      tr: Geçerli sayfayı seç
-      uk: Запустити запит
-      zh: 货币
-      zh_TW: 貨幣
-    trimmed_msgid: Current day
-  Current month:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current month
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: الشهر الماضي
-      de: Wertformat
-      es: Formato de correo electrónico
-      fr: Format d'e-mail
-      it: Formato Datetime
-      ja: 通貨記号
-      ko: D3 포멧
-      nl: Valuta symbool
-      pt: Formato de valor
-      pt_BR: Formato do valor
-      ru: Текущий месяц
-      sk: ''
-      sl: Simbol valute
-      sl_SI: Simbol valute
-      tr: son ay
-      uk: Формат значення
-      zh: 货币符号
-      zh_TW: 貨幣符號
-    trimmed_msgid: Current month
-  Current quarter:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current quarter
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: تشغيل الاستعلام الحالي
-      de: Abfrage ausführen
-      es: Ejecutar consulta
-      fr: Lancer la requête
-      it: condividi query
-      ja: 現在のクエリを実行する
-      ko: Query 실행
-      nl: Voer huidige query uit
-      pt: Executar query
-      pt_BR: Executar consulta
-      ru: Текущий квартал
-      sk: ''
-      sl: Zaženi trenutno poizvedbo
-      sl_SI: Zaženi trenutno poizvedbo
-      tr: son çeyrek
-      uk: Запустити запит
-      zh: 运行查询
-      zh_TW: 運行查詢
-    trimmed_msgid: Current quarter
-  Current week:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current week
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: تشغيل الاستعلام الحالي
-      de: Abfrage ausführen
-      es: Ejecutar consulta
-      fr: Lancer la requête
-      it: condividi query
-      ja: 現在のクエリを実行する
-      ko: Query 실행
-      nl: Voer huidige query uit
-      pt: Executar query
-      pt_BR: Executar consulta
-      ru: Текущая неделя
-      sk: ''
-      sl: Zaženi trenutno poizvedbo
-      sl_SI: Zaženi trenutno poizvedbo
-      tr: ''
-      uk: Запустити запит
-      zh: 运行查询
-      zh_TW: 運行查詢
-    trimmed_msgid: Current week
-  Current year:
-    ai_translations: {}
-    metadata: {}
-    msgid: Current year
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: تشغيل الاستعلام الحالي
-      de: Abfrage ausführen
-      es: Ejecutar consulta
-      fr: Lancer la requête
-      it: condividi query
-      ja: 通貨
-      ko: Query 실행
-      nl: Valuta
-      pt: Executar query
-      pt_BR: Executar consulta
-      ru: Текущий год
-      sk: ''
-      sl: Valuta
-      sl_SI: Valuta
-      tr: ''
-      uk: Запустити запит
-      zh: 货币
-      zh_TW: 貨幣
-    trimmed_msgid: Current year
-  'Currently rendered: %s':
-    ai_translations: {}
-    metadata: {}
-    msgid: 'Currently rendered: %s'
-    occurances:
-    - superset-frontend/src/explore/components/controls/VizTypeControl/FastVizSwitcher.tsx
-    po_translations:
-      ar: 'المعروض حاليا: %s'
-      de: 'Derzeit dargestellt: %s'
-      es: ''
-      fr: 'Actuellement rendu : %s'
-      it: ''
-      ja: '現在レンダリング中: %s'
-      ko: ''
-      nl: 'Momenteel weergegeven: %s'
-      pt: ''
-      pt_BR: 'Atualmente renderizado: %s'
-      ru: 'Сейчас отрисовано: %s'
-      sk: ''
-      sl: 'Trenutno izrisano: %s'
-      sl_SI: 'Trenutno izrisano: %s'
-      tr: ''
-      uk: 'В даний час надано: %s'
-      zh: 当前渲染为：%s
-      zh_TW: 當前渲染為：%s
-    trimmed_msgid: 'Currently rendered: %s'
-  Custom:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom
-    occurances:
-    - superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts
-    po_translations:
-      ar: تقليد
-      de: Angepasst
-      es: Personalizar
-      fr: Personnalisé
-      it: ''
-      ja: カスタム
-      ko: ''
-      nl: Aangepast
-      pt: ''
-      pt_BR: Personalizado
-      ru: Пользовательский
-      sk: ''
-      sl: Prilagojen
-      sl_SI: Prilagojen
-      tr: ''
-      uk: Звичайний
-      zh: 自定义
-      zh_TW: 自定義
-    trimmed_msgid: Custom
-  Custom Conditional Formatting:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom Conditional Formatting
-    occurances:
-    - superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx
-    po_translations:
-      ar: التنسيق الشرطي
-      de: Bedingte Formatierung
-      es: Información adicional
-      fr: Formatage conditionnel
-      it: Formato Datetime
-      ja: 条件付き書式
-      ko: 주석
-      nl: Voorwaardelijke opmaak
-      pt: Metadados adicionais
-      pt_BR: Formatação condicional
-      ru: Условное форматирование
-      sk: ''
-      sl: Pogojno oblikovanje
-      sl_SI: Pogojno oblikovanje
-      tr: Ek bilgi
-      uk: Умовне форматування
-      zh: 条件格式设置
-      zh_TW: 條件格式設定
-    trimmed_msgid: Custom Conditional Formatting
-  Custom Plugin:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom Plugin
-    occurances:
-    - superset/views/dynamic_plugins.py
-    po_translations:
-      ar: البرنامج المساعد المخصص
-      de: Benutzerdefiniertes Plugin
-      es: Customizar
-      fr: Plugiciel personnalisé
-      it: ''
-      ja: カスタムプラグイン
-      ko: 커스텀 플러그인
-      nl: Aangepaste Plugin
-      pt: ''
-      pt_BR: Plugin personalizado
-      ru: Пользовательский плагин
-      sk: ''
-      sl: Prilagojeni vtičnik
-      sl_SI: Prilagojeni vtičnik
-      tr: ''
-      uk: Спеціальний плагін
-      zh: 自定义插件
-      zh_TW: 自定義插件
-    trimmed_msgid: Custom Plugin
-  Custom Plugins:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom Plugins
-    occurances:
-    - superset/views/dynamic_plugins.py
-    po_translations:
-      ar: الإضافات المخصصة
-      de: Benutzerdefinierte Plugins
-      es: Customizar
-      fr: Plugiciels personnalisés
-      it: ''
-      ja: カスタムプラグイン
-      ko: 커스텀 플러그인
-      nl: Aangepaste Plugins
-      pt: Cláusula WHERE personalizada
-      pt_BR: Plugins personalizados
-      ru: Пользовательские плагины
-      sk: ''
-      sl: Prilagojeni vtičniki
-      sl_SI: Prilagojeni vtičniki
-      tr: ''
-      uk: Спеціальні плагіни
-      zh: 自定义插件
-      zh_TW: 自定義插件
-    trimmed_msgid: Custom Plugins
-  Custom SQL:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom SQL
-    occurances:
-    - superset-frontend/src/explore/components/controls/DndColumnSelectControl/ColumnSelectPopover.tsx
-    - superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopover/index.jsx
-    - superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx
-    po_translations:
-      ar: SQL مخصص
-      de: Benutzerdefinierte SQL
-      es: SQL Personalizado
-      fr: SQL personnalisé
-      it: ''
-      ja: カスタムSQL
-      ko: ''
-      nl: Aangepaste SQL
-      pt: ''
-      pt_BR: SQL personalizado
-      ru: Через SQL
-      sk: ''
-      sl: Prilagojen SQL
-      sl_SI: Prilagojen SQL
-      tr: ''
-      uk: Спеціальний SQL
-      zh: 自定义SQL
-      zh_TW: 自定義 SQL
-    trimmed_msgid: Custom SQL
-  Custom SQL ad-hoc metrics are not enabled for this dataset:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom SQL ad-hoc metrics are not enabled for this dataset
-    occurances:
-    - superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx
-    po_translations:
-      ar: لم يتم تمكين مقاييس SQL المخصصة المخصصة لمجموعة البيانات هذه
-      de: Benutzerdefinierte SQL-Ad-hoc-Metriken sind für diesen Datasatz nicht aktiviert
-      es: ''
-      fr: Les mesures SQL ponctuelles personnalisées ne sont pas activées pour cet
-        ensemble de données
-      it: ''
-      ja: カスタム SQL アドホック メトリクスはこのデータセットでは有効になっていません
-      ko: ''
-      nl: Aangepaste SQL ad hoc statistieken zijn niet ingeschakeld voor deze dataset
-      pt: ''
-      pt_BR: As métricas ad-hoc de SQL personalizado não estão ativadas para este
-        conjunto de dados
-      ru: Пользовательские ad-hoc меры SQL не разрешены для этого датасета
-      sk: ''
-      sl: Ad-hoc SQL mere po meri za ta podatkovni set niso omogočene
-      sl_SI: Ad-hoc SQL mere po meri za ta podatkovni set niso omogočene
-      tr: ''
-      uk: Спеціальні спеціальні показники SQL не ввімкнено для цього набору даних
-      zh: 此数据集无法启用自定义SQL即席查询、
-      zh_TW: 此數據集無法啟用自定義 SQL 即席查詢、
-    trimmed_msgid: Custom SQL ad-hoc metrics are not enabled for this dataset
-  Custom SQL fields cannot contain sub-queries.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom SQL fields cannot contain sub-queries.
-    occurances:
-    - superset/errors.py
-    - superset/models/helpers.py
-    po_translations:
-      ar: لا يمكن أن تحتوي حقول SQL المخصصة على استعلامات فرعية.
-      de: Benutzerdefinierte SQL-Felder dürfen keine Unterabfragen enthalten.
-      es: ''
-      fr: Les champs SQL personnalisés ne peuvent pas contenir de sous-requêtes.
-      it: ''
-      ja: カスタムSQLフィールドにはサブクエリを含めることはできません。
-      ko: ''
-      nl: Aangepaste SQL velden mogen geen sub-query's bevatten.
-      pt: ''
-      pt_BR: Os campos SQL personalizados não podem conter subconsultas.
-      ru: Пользовательские поля SQL не могут содержать подзапросы
-      sk: ''
-      sl: Prilagojena SQL-polja ne smejo vsebovati podpoizvedb.
-      sl_SI: Prilagojena SQL-polja ne smejo vsebovati podpoizvedb.
-      tr: ''
-      uk: Спеціальні поля SQL не можуть містити підзапити.
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Custom SQL fields cannot contain sub-queries.
-  Custom color palettes:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom color palettes
-    occurances:
-    - superset-frontend/src/explore/components/controls/ColorSchemeControl/index.tsx
-    po_translations:
-      ar: الإكمال التلقائي
-      de: Autovervollständigung
-      es: Autocompletar filtros
-      fr: Complétion automatique
-      it: ''
-      ja: 自動補完
-      ko: ''
-      nl: Automatisch aanvullen
-      pt: ''
-      pt_BR: Autocompletar
-      ru: Автозаполнение
-      sk: ''
-      sl: Samodokončaj
-      sl_SI: Samodokončaj
-      tr: Otomatik tamamlama
-      uk: Автозаповнення
-      zh: 自动补全
-      zh_TW: 自動補全
-    trimmed_msgid: Custom color palettes
-  Custom date:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom date
-    occurances:
-    - superset-frontend/packages/superset-ui-chart-controls/src/sections/timeComparison.tsx
-    po_translations:
-      ar: هي علامة مخصصة
-      de: Angepasst
-      es: Personalizar
-      fr: Personnalisé
-      it: Ultima Modifica
-      ja: カスタム
-      ko: 시작 시간
-      nl: Aangepast
-      pt: Início
-      pt_BR: Personalizado
-      ru: Пользовательская дата
-      sk: ''
-      sl: Prilagojen
-      sl_SI: Prilagojen
-      tr: Başlangıç tarihi
-      uk: Звичайний
-      zh: 自定义
-      zh_TW: 自定義
-    trimmed_msgid: Custom date
-  Custom interval:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom interval
-    occurances:
-    - superset-frontend/src/dashboard/components/RefreshIntervalModal.tsx
-    po_translations:
-      ar: الفاصل الزمني للتحديث
-      de: Intervall
-      es: Intérvalo de actualización
-      fr: Intervalle
-      it: Filtrabile
-      ja: 間隔
-      ko: 새로고침 간격
-      nl: Interval
-      pt: Filtrável
-      pt_BR: Intervalo
-      ru: Пользовательский интервал
-      sk: ''
-      sl: Interval
-      sl_SI: Interval
-      tr: Yenileme aralığı
-      uk: Інтервал
-      zh: 间隔
-      zh_TW: 間隔
-    trimmed_msgid: Custom interval
-  Custom time filter plugin:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom time filter plugin
-    occurances:
-    - superset-frontend/src/filters/components/Time/index.ts
-    po_translations:
-      ar: البرنامج المساعد لتصفية الوقت المخصص
-      de: Benutzerdefiniertes Zeitfilter-Plugin
-      es: ''
-      fr: Plugiciel de filtre horaire personnalisé
-      it: ''
-      ja: カスタムタイムフィルタープラグイン
-      ko: ''
-      nl: Aangepaste tijdfilter plugin
-      pt: ''
-      pt_BR: Plugin de filtro de tempo personalizado
-      ru: Пользовательский плагин фильтра времени
-      sk: ''
-      sl: Prilagojeni vtičnik za časovni filter
-      sl_SI: Prilagojeni vtičnik za časovni filter
-      tr: ''
-      uk: Спеціальний плагін фільтра часу
-      zh: 自定义时间过滤器插件
-      zh_TW: 自定義時間過濾器插件
-    trimmed_msgid: Custom time filter plugin
-  Custom width of the screenshot in pixels:
-    ai_translations: {}
-    metadata: {}
-    msgid: Custom width of the screenshot in pixels
-    occurances:
-    - superset/reports/schemas.py
-    po_translations:
-      ar: العرض المخصص للقطة الشاشة بالبكسل
-      de: ''
-      es: ''
-      fr: ''
-      it: ''
-      ja: スクリーンショットのカスタム幅 (ピクセル単位)
-      ko: ''
-      nl: Aangepaste breedte van de schermafbeelding in pixels
-      pt: ''
-      pt_BR: ''
-      ru: Ширина скриншота в пикселях
-      sk: ''
-      sl: Poljubna širina zaslonske slike v pikslih
-      sl_SI: Poljubna širina zaslonske slike v pikslih
-      tr: ''
-      uk: ''
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Custom width of the screenshot in pixels
-  Customize:
-    ai_translations: {}
-    metadata: {}
-    msgid: Customize
-    occurances:
-    - superset-frontend/src/explore/components/ControlPanelsContainer.tsx
-    po_translations:
-      ar: تخصيص
-      de: Anpassen
-      es: Personalizar
-      fr: Personnaliser
-      it: ''
-      ja: カスタマイズ
-      ko: ''
-      nl: Pas aan
-      pt: ''
-      pt_BR: Personalizar
-      ru: Кастомизация
-      sk: ''
-      sl: Prilagodi
-      sl_SI: Prilagodi
-      tr: ''
-      uk: Налаштувати
-      zh: 定制化配置
-      zh_TW: 定制化配置
-    trimmed_msgid: Customize
-  Customize Metrics:
-    ai_translations: {}
-    metadata: {}
-    msgid: Customize Metrics
-    occurances:
-    - superset-frontend/plugins/plugin-chart-echarts/src/Radar/controlPanel.tsx
-    po_translations:
-      ar: تخصيص المقاييس
-      de: Anpassen von Metriken
-      es: Personalizar
-      fr: Personnaliser les mesures
-      it: ''
-      ja: メトリクスのカスタマイズ
-      ko: ''
-      nl: Aanpassen van Metrieken
-      pt: ''
-      pt_BR: Personalizar métricas
-      ru: Настроить меры
-      sk: ''
-      sl: Prilagodi mere
-      sl_SI: Prilagodi mere
-      tr: ''
-      uk: Налаштуйте показники
-      zh: 自定义指标
-      zh_TW: 自定義指標
-    trimmed_msgid: Customize Metrics
-  ? Customize chart metrics or columns with currency symbols as prefixes or suffixes.
-    Choose a symbol from dropdown or type your own.
-  : ai_translations: {}
-    metadata: {}
-    msgid: Customize chart metrics or columns with currency symbols as prefixes or
-      suffixes. Choose a symbol from dropdown or type your own.
-    occurances:
-    - superset-frontend/src/explore/components/controls/ColumnConfigControl/constants.tsx
-    po_translations:
-      ar: قم بتخصيص مقاييس الرسم البياني أو الأعمدة برموز العملات كبادئات أو لواحق.
-        اختر رمزا من القائمة المنسدلة أو اكتب رمزك الخاص.
-      de: ''
-      es: ''
-      fr: Les graphiques en aires de séries temporelles sont similaires aux graphiques
-        en lignes dans la mesure où ils représentent des variables avec la même échelle,
-        mais les graphiques en aires empilent les mesures les unes sur les autres.
-        Dans Superset, un graphique en aires peut être en flux, en pile ou en expansion.
-      it: ''
-      ja: 通貨記号をプレフィックスまたはサフィックスとして使用してグラフのメトリクスまたは列をカスタマイズします。
-      ko: ''
-      nl: Pas grafiek metrieken of kolommen met valutasymbolen aan als voorvoegsels
-        of achtervoegsels. Kies een eigen symbool in de vervolgkeuzelijst of typ.
-      pt: ''
-      pt_BR: ''
-      ru: ''
-      sk: ''
-      sl: Prilagodi mere grafikona ali stolpce s predponami ali priponami valute.
-        Izberite simbol ali napišite lastnega.
-      sl_SI: Prilagodi mere grafikona ali stolpce s predponami ali priponami valute.
-        Izberite simbol ali napišite lastnega.
-      tr: ''
-      uk: ''
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Customize chart metrics or columns with currency symbols as prefixes
-      or suffixes. Choose a symbol from dropdown or type your own.
-  Customize columns:
-    ai_translations: {}
-    metadata: {}
-    msgid: Customize columns
-    occurances:
-    - superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx
-    po_translations:
-      ar: تخصيص الأعمدة
-      de: Spalten anpassen
-      es: Columnas calculadas
-      fr: Personnaliser les colonnes
-      it: Visualizza colonne
-      ja: 列をカスタマイズする
-      ko: 컬럼 목록
-      nl: Kolommen aanpassen
-      pt: Cláusula WHERE personalizada
-      pt_BR: Personalizar colunas
-      ru: Настроить столбцы
-      sk: ''
-      sl: Prilagodi stolpce
-      sl_SI: Prilagodi stolpce
-      tr: ''
-      uk: Налаштуйте стовпці
-      zh: 自定义列
-      zh_TW: 自定義列
-    trimmed_msgid: Customize columns
-  Customize data source, filters, and layout.:
-    ai_translations: {}
-    metadata: {}
-    msgid: Customize data source, filters, and layout.
-    occurances:
-    - superset-frontend/src/features/alerts/AlertReportModal.tsx
-    po_translations:
-      ar: ''
-      de: ''
-      es: ''
-      fr: ''
-      it: ''
-      ja: データソース、フィルター、レイアウトをカスタマイズします。
-      ko: ''
-      nl: ''
-      pt: ''
-      pt_BR: ''
-      ru: Настройте источник данных, фильтры и шаблон
-      sk: ''
-      sl_SI: ''
-      tr: ''
-      uk: ''
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Customize data source, filters, and layout.
-  Cyclic dependency detected:
-    ai_translations: {}
-    metadata: {}
-    msgid: Cyclic dependency detected
-    occurances:
-    - superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigModal.tsx
-    po_translations:
-      ar: تم الكشف عن التبعية الدورية
-      de: Zyklische Abhängigkeit erkannt
-      es: ''
-      fr: Dépendance cyclique constatée
-      it: ''
-      ja: 循環依存関係が検出されました
-      ko: ''
-      nl: Cyclische afhankelijkheid gedetecteerd
-      pt: ''
-      pt_BR: Detectada dependência cíclica
-      ru: Обнаружена циклическая зависимость
-      sk: ''
-      sl: Zaznana krožna odvisnost
-      sl_SI: Zaznana krožna odvisnost
-      tr: ''
-      uk: Виявлена ​​циклічна залежність
-      zh: ''
-      zh_TW: ''
-    trimmed_msgid: Cyclic dependency detected
-  D3 Format:
-    ai_translations: {}
-    metadata: {}
-    msgid: D3 Format
-    occurances:
-    - superset/connectors/sqla/views.py
-    po_translations:
-      ar: تنسيق D3
-      de: D3-Format
-      es: Formato D3
-      fr: Format D3
-      it: Formato D3
-      ja: D3フォーマット
-      ko: D3 포멧
-      nl: D3 Formaat
-      pt: Formato D3
-      pt_BR: Formato D3
-      ru: Формат D3
-      sk: ''
-      sl: D3 format
-      sl_SI: D3 format
-      tr: ''
-      uk: Формат D3
-      zh: D3 格式
-      zh_TW: D3 格式
-    trimmed_msgid: D3 Format
-  D3 format:
-    ai_translations: {}
-    metadata: {}
-    msgid: D3 format
-    occurances:
-    - superset-frontend/src/components/Datasource/DatasourceEditor.jsx
-    - superset-frontend/src/explore/components/controls/ColumnConfigControl/constants.tsx
-    po_translations:
-      ar: تنسيق D3
-      de: D3 Format
-      es: Formato D3
-      fr: Format D3
-      it: Formato D3
-      ja: D3フォーマット
-      ko: ''
-    trimmed_msgid: D3 format

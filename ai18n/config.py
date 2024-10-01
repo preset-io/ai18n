@@ -1,12 +1,14 @@
 import os
-
-from Typing import Any, Dict
+from typing import Any, Dict
 
 conf: Dict[str, Any] = {
     "template_folder": "",
+    "po_folder_root": "",
+    "prompt_extra_context": "",
     "target_languages": ["es", "fr", "it", "de"],
 }
 
+# Populating the configuration with environment variables prefixed with "AI18N_"
 for k in conf.keys():
     v = os.getenv("AI18N_" + k.upper())
     if v:

@@ -3,16 +3,12 @@
 
 **ai18n** is a versatile tool for managing translations in PO files. Originally developed for Apache Superset, it leverages OpenAI to automate translation tasks, merging traditional PO workflows with AI enhancements. With built-in support for YAML-based translation memory, ai18n makes it easy to keep translations consistent and up-to-date across multiple languages.
 
----
-
 ## Key Features
 
 - **AI-Powered Translations**: Automatically fill in missing translations using OpenAI models like `gpt-4`.
 - **PO/YAML Syncing**: Manage translations centrally in a YAML file while keeping traditional PO files in sync.
 - **Custom Reports**: Generate reports showing translation coverage across languages.
 - **CLI Interface**: Easy-to-use command-line interface for translating, syncing, and reporting on translations.
-
----
 
 ## Installation
 
@@ -30,9 +26,15 @@
     export OPENAI_API_KEY=<your-openai-api-key>
     ```
 
----
-
 ## Usage
+
+### Configuration
+```bash
+export AI18N_TARGET_LANGUAGES=ar,de,es,fr,it,ja,ko,nl,pt,pt_BR,ru,sk,sl,tr,uk,zh,zh_TW
+export AI18N_TEMPLATE_FOLDER="./templates/"
+export AI18N_PO_FOLDER_ROOT="./translations/"
+export AI18N_PROMPT_EXTRA_CONTEXT="These translation are part of Apache Superset, a Business Intelligence data exploration, visualization and dashboard open source application"
+```
 
 ### General Commands
 
@@ -70,8 +72,6 @@
     ai18n flush-ai
     ```
 
----
-
 ## Development Workflow
 
 1. **Clone the repository**:
@@ -93,21 +93,17 @@
     pytest
     ```
 
----
-
 ## License
 
 ai18n is currently all-rights reserved to Preset, but could eventually be open source if it
 turns out to not be much of a differentiator.
-
----
 
 ## Author
 
 Built by the team behind Apache Superset, originally tailored for its multilingual support needs, but adaptable to any project that uses PO files for translations.
 
 
-## Example prompt
+## Example/default prompt
 ```
 Translate the following text for the UI of Apache Superset, a web-based business intelligence software.
 This is in the context of a .po file, so please follow the appropriate formatting for pluralization if needed.

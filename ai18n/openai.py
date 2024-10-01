@@ -22,8 +22,13 @@ class OpenAIMessageTranslator:
             api_key=api_key
         )  # Instantiate client once in the constructor
         module_dir = os.path.dirname(os.path.abspath(__file__))
+
         # Set the template directory relative to the current module
         template_dir = os.path.join(module_dir, "templates")
+        # Looking for a custom template folder in the configuration
+        if template_folder := conf.get("template_folder"):
+            template_dir = template_folder
+
         self.env = Environment(loader=FileSystemLoader(template_dir))
 
     def build_prompt(self, message: Message) -> str:
@@ -35,6 +40,7 @@ class OpenAIMessageTranslator:
             "languages": conf["target_languages"],
             "msgid": message.msgid,
             "occurances": message.occurances or [],
+            "extra_context": conf.get("prompt_extra_context"),
             "other_languages": {
                 lang: translation
                 for lang, translation in message.po_translations.items()
