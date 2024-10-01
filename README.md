@@ -83,27 +83,6 @@ ai18n po-push
 ai18n flush-ai
 ```
 
-## Development Setup & Contributing
-
-1. Clone the repository and install dependencies for both runtime and development:
-
-```bash
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-pip install -e .
-```
-
-
-## License
-
-ai18n is currently all-rights reserved to Preset, but could eventually be open source if it
-turns out to not be much of a differentiator.
-
-## Author
-
-Built by the team behind Apache Superset, originally tailored for its multilingual support needs, but adaptable to any project that uses PO files for translations.
-
-
 ## Example/default prompt
 
 Here's the prompt that we dynamically build and send to the openai API. Note that you
@@ -187,9 +166,6 @@ messages:
     zh: 不等于（!=）
     zh_TW: 不等於（!=）
     en: '!= (Is not equal)'
-  metadata:
-    model_used: gpt-4-turbo
-    last_executed: '2024-09-30T18:07:14.542663'
   ai_translations:
     ar: '!= (ﻎﻳﺭ ﻢﺘﺳﺍﻭ)'
     de: '!= (Ist nicht gleich)'
@@ -208,4 +184,27 @@ messages:
     uk: '!= (Не рівний)'
     zh: 不等于（!=）
     zh_TW: 不等於（!=）
+  metadata:
+    model_used: gpt-4-turbo
+    last_executed: '2024-09-30T18:07:14.542663'
 ```
+
+## Development Setup & Contributing
+
+Clone the repository and install dependencies for both runtime and development:
+
+```bash
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+pip install -e .
+```
+
+Run unit tests
+```
+pytest tests/
+```
+
+## Author
+
+Maxime Beauchemin is the original creator of [Apache Superset](https://superset.apache.org),
+[Apache Airflow](https://airflow.apache.org) and the founder and CEO of [Preset](https://preset.io).
