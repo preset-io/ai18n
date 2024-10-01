@@ -1,30 +1,34 @@
+# ai18n - AI-Powered PO Translation Toolkit
 
-# ai18n - AI-Powered PO Translation Tool
-
-**ai18n** is a versatile tool for managing translations in PO files. Originally developed for Apache Superset, it leverages OpenAI to automate translation tasks, merging traditional PO workflows with AI enhancements. With built-in support for YAML-based translation memory, ai18n makes it easy to keep translations consistent and up-to-date across multiple languages.
+**ai18n** is a toolkit that enables you to tackle translations based on the [GNU gettext
+framework](https://www.gnu.org/software/gettext/) while working with and
+augmenting your `.po` files. It integrates with the
+OpenAI API to automate translations either manually or as part of your CI/CD pipeline.
 
 ## Key Features
 
-- **AI-Powered Translations**: Automatically fill in missing translations using OpenAI models like `gpt-4`.
-- **PO/YAML Syncing**: Manage translations centrally in a YAML file while keeping traditional PO files in sync.
-- **Custom Reports**: Generate reports showing translation coverage across languages.
-- **CLI Interface**: Easy-to-use command-line interface for translating, syncing, and reporting on translations.
+- **AI-Powered Translations**: Automatically generate missing translations using OpenAI
+  models like `gpt-4`.
+- **PO/YAML Syncing**: Manage translations centrally in a YAML file while keeping
+  traditional `.po` files in sync.
+- **Custom Reports**: Generate reports showing translation coverage across languages
+  and files.
+- **CLI Interface**: Easy-to-use command-line interface for translating, syncing, and
+  reporting on translations.
+- **Non-Destructive Workflow**: Original translations remain intact, with AI suggestions
+  added on top, and you control the merging back into `.po` files.
 
-## Installation
+## How It Works
 
-1. Clone the repository and install dependencies for both runtime and development:
+Through a simple CLI, `ai18n` can load your existing `.po` files into memory, call the
+OpenAI API to generate translations where missing or incorrect, and save the progress
+into a central YAML file. You can then choose to merge these AI-generated translations
+back into your `.po` files as needed.
 
-    ```bash
-    pip install -r requirements.txt
-    pip install -r requirements-dev.txt
-    pip install -e .
-    ```
+The framework is **non-destructive**—your original translations are preserved, and
+AI-generated translations are added incrementally. You have full control over merging
+them into your `.po` files based on your needs.
 
-2. Set your OpenAI API key:
-
-    ```bash
-    export OPENAI_API_KEY=<your-openai-api-key>
-    ```
 
 ## Usage
 
@@ -32,6 +36,8 @@
 ```bash
 export AI18N_TARGET_LANGUAGES=ar,de,es,fr,it,ja,ko,nl,pt,pt_BR,ru,sk,sl,tr,uk,zh,zh_TW
 export AI18N_PO_FOLDER_ROOT="./translations/"
+
+# This will be embedded into our prompt for extra context about your application / use cases
 export AI18N_PROMPT_EXTRA_CONTEXT="These translation are part of Apache Superset, a Business Intelligence data exploration, visualization and dashboard open source application"
 export AI18N_TEMPLATE_FOLDER="./templates/"
 export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
@@ -50,20 +56,20 @@ export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
     Get insights into how many strings and words are translated:
 
     ```bash
-    ai18n report --po-files-folder <path-to-po-files>
+    ai18n report
     ```
 
 3. **PO/YAML Management**:
     - **Pull**: Load translations from PO files into the YAML memory.
 
       ```bash
-      ai18n po-pull --po-files-folder <path-to-po-files>
+      ai18n po-pull
       ```
 
     - **Push**: Push translations from the YAML back into PO files.
 
       ```bash
-      ai18n po-push --po-files-folder <path-to-po-files>
+      ai18n po-push
       ```
 
 4. **Flush AI Translations**:
@@ -73,25 +79,20 @@ export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
     ai18n flush-ai
     ```
 
-## Development Workflow
+## Development Setup & Contributing
 
-1. **Clone the repository**:
-
-    ```bash
-    git clone <repository-url>
-    ```
-
-2. **Install dependencies** for development:
+1. Clone the repository and install dependencies for both runtime and development:
 
     ```bash
+    pip install -r requirements.txt
     pip install -r requirements-dev.txt
     pip install -e .
     ```
 
-3. **Run tests**:
+2. Set your OpenAI API key:
 
     ```bash
-    pytest
+    export OPENAI_API_KEY=<your-openai-api-key>
     ```
 
 ## License
