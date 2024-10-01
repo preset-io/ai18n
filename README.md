@@ -1,5 +1,7 @@
 # ai18n - AI-Powered PO Translation Toolkit
 
+<img src="logo.webp" width="200" alt="ai18n"/>
+
 **ai18n** is a toolkit that enables you to tackle translations based on the [GNU gettext
 framework](https://www.gnu.org/software/gettext/) while working with and
 augmenting your `.po` files. It integrates with the
