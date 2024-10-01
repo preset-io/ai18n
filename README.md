@@ -33,13 +33,24 @@ them into your `.po` files based on your needs.
 ## Usage
 
 ### Configuration
+
+While you can pass some of these as parameters to the commands, we suggest you prepare your
+environment by setting these environment variables:
+
 ```bash
+# Set your target locales
 export AI18N_TARGET_LANGUAGES=ar,de,es,fr,it,ja,ko,nl,pt,pt_BR,ru,sk,sl,tr,uk,zh,zh_TW
+
+# Tell ai18n where your PO files are located
 export AI18N_PO_FOLDER_ROOT="./translations/"
 
 # This will be embedded into our prompt for extra context about your application / use cases
 export AI18N_PROMPT_EXTRA_CONTEXT="These translation are part of Apache Superset, a Business Intelligence data exploration, visualization and dashboard open source application"
+
+# If you want alter / customize the jinja template used to prompt AI
 export AI18N_TEMPLATE_FOLDER="./templates/"
+
+# Where your big yaml file with all your translations live
 export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
 ```
 
