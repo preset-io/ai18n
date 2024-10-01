@@ -7,12 +7,12 @@ from ai18n.openai import OpenAIMessageTranslator
 from ai18n.translator import Translator
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-TRANSLATION_YAML_FILE = conf.get("AI18N_YAML_FILE")
+TRANSLATION_YAML_FILE: str = conf.get("yaml_file") or "./translations.yaml"
 
 
 def add_po_files_folder_arg(subparser: ArgumentParser) -> None:
     """Add --po-files-folder argument to the subparser."""
-    po_folder_default = conf.get("AI18N_PO_FOLDER") or os.path.join(os.getcwd())
+    po_folder_default = conf.get("po_folder_root") or os.path.join(os.getcwd())
     subparser.add_argument(
         "--po-files-folder",
         type=str,
@@ -97,6 +97,7 @@ def main() -> None:
         translator.print_report()
 
     elif args.command == "po-pull":
+        print(args.po_files_folder)
         translator.load_po_files(args.po_files_folder)
         translator.merge_all_po_files()
         translator.to_yaml()

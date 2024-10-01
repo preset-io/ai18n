@@ -54,12 +54,12 @@ class Message:
 
     def to_dict(self) -> Dict[str, Any]:
         return {
-            "msgid": self.msgid,
             "trimmed_msgid": self.trimmed_msgid,
-            "po_translations": self.po_translations,
-            "ai_translations": self.ai_translations,
-            "metadata": self.metadata,
+            "msgid": self.msgid,
             "occurances": self.occurances,
+            "po_translations": self.po_translations,
+            "metadata": self.metadata,
+            "ai_translations": self.ai_translations,
         }
 
     def merge_ai_output(self, ai_translations: Dict[str, str]) -> None:
