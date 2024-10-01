@@ -1,8 +1,12 @@
-d "Hello"
+msgid ""
 msgstr ""
+"Language: en\n"
+
+msgid "Hello"
+msgstr "Hi"
 
 msgid "Goodbye"
-msgstr "Adiós"
+msgstr "BeBye"
 
 msgid "Thank you"
 msgstr ""

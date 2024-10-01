@@ -1,3 +1,7 @@
+msgid ""
+msgstr ""
+"Language: sp\n"
+
 msgid "Hello"
 msgstr "Hola"
 

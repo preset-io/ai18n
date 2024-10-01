@@ -75,6 +75,7 @@ class Translator:
             po_file = pofile(filepath)
             lang = po_file.metadata["Language"]
             self.po_files_dict[lang] = po_file
+        self.merge_all_po_files()
 
     def merge_po_file(self, lang: str, po_file: POFile) -> None:
         for entry in po_file:

@@ -99,7 +99,6 @@ def main() -> None:
     elif args.command == "po-pull":
         print(args.po_files_folder)
         translator.load_po_files(args.po_files_folder)
-        translator.merge_all_po_files()
         translator.to_yaml()
 
     elif args.command == "po-push":
