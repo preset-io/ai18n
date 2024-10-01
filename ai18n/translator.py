@@ -11,9 +11,9 @@ from ai18n.message import Message
 
 
 class Translator:
-    def __init__(self, yaml_file: str = "./translations.yaml") -> None:
+    def __init__(self, yaml_file: Optional[str]) -> None:
         self.messages: Dict[str, Message] = {}
-        self.yaml_file: str = yaml_file
+        self.yaml_file = yaml_file or "./translations.yaml"
         self.po_files_dict: Dict[str, POFile] = {}
 
         if yaml_file:
@@ -25,9 +25,10 @@ class Translator:
             message = Message.from_dict(message_data)
             self.messages[trimmed_msgid] = message
 
-    def from_yaml(self, yaml_file: str) -> None:
+    def from_yaml(self, yaml_file: Optional[str] = None) -> None:
         print(f"Loading translations from YAML file '{yaml_file}'")
-        with open(yaml_file, "r") as file:
+        yaml_location = yaml_file or self.yaml_file
+        with open(yaml_location, "r") as file:
             data = yaml.safe_load(file)
         return self.from_dict(data)
 
@@ -35,10 +36,11 @@ class Translator:
         sorted_keys = sorted(self.messages.keys())
         return {"messages": {k: self.messages[k].to_dict() for k in sorted_keys}}
 
-    def to_yaml(self, yaml_path: str) -> None:
-        print(f"Saving translations to YAML file '{yaml_path}'")
+    def to_yaml(self, yaml_file: Optional[str] = None) -> None:
+        yaml_location = yaml_file or self.yaml_file
+        print(f"Saving translations to YAML file '{yaml_location}'")
         data = self.to_dict()
-        with open(yaml_path, "w", encoding="utf-8") as file:
+        with open(yaml_location, "w", encoding="utf-8") as file:
             yaml.dump(data, file, allow_unicode=True, sort_keys=True)
 
     def randomize_messages(self) -> None:

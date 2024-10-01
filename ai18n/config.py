@@ -5,6 +5,7 @@ conf: Dict[str, Any] = {
     "template_folder": "",
     "po_folder_root": "",
     "prompt_extra_context": "",
+    "yaml_file": "",
     "target_languages": ["es", "fr", "it", "de"],
 }
 
@@ -14,5 +15,7 @@ for k in conf.keys():
     if v:
         if k == "target_languages":
             conf[k] = [lang.strip() for lang in v.split(",")]
+        elif k == "yaml_file":
+            conf[k] = "./translations.yaml"
         else:
             conf[k] = v

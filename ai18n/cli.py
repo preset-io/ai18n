@@ -7,7 +7,7 @@ from ai18n.openai import OpenAIMessageTranslator
 from ai18n.translator import Translator
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-TRANSLATION_YAML_FILE = "./translations.yaml"
+TRANSLATION_YAML_FILE = conf.get("AI18N_YAML_FILE")
 
 
 def add_po_files_folder_arg(subparser: ArgumentParser) -> None:
@@ -79,7 +79,7 @@ def main() -> None:
     translator = Translator(TRANSLATION_YAML_FILE)
 
     if args.command == "translate":
-        translator.to_yaml(TRANSLATION_YAML_FILE)
+        translator.to_yaml()
         if not OPENAI_API_KEY:
             print("Error: OPENAI_API_KEY environment variable is not set.")
             return
@@ -91,7 +91,7 @@ def main() -> None:
             if msg.requires_translation():
                 openai_translator.translate_message(msg)
                 # checkpointing after each message
-                translator.to_yaml(TRANSLATION_YAML_FILE)
+                translator.to_yaml()
 
     elif args.command == "report":
         translator.print_report()
@@ -99,7 +99,7 @@ def main() -> None:
     elif args.command == "po-pull":
         translator.load_po_files(args.po_files_folder)
         translator.merge_all_po_files()
-        translator.to_yaml(TRANSLATION_YAML_FILE)
+        translator.to_yaml()
 
     elif args.command == "po-push":
         translator.load_po_files(args.po_files_folder)
@@ -107,7 +107,7 @@ def main() -> None:
 
     elif args.command == "flush-ai":
         translator.flush_ai()
-        translator.to_yaml(TRANSLATION_YAML_FILE)
+        translator.to_yaml()
 
 
 if __name__ == "__main__":
