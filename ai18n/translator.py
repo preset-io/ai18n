@@ -21,9 +21,15 @@ class Translator:
 
     def from_dict(self, data: Dict[str, Any]) -> None:
         messages = data.get("messages") or []
+        languages = set()
         for message_data in messages:
             message = Message.from_dict(message_data)
             self.messages[message.trimmed_msgid] = message
+            languages |= set(message.po_translations.keys())
+            languages |= set(message.ai_translations.keys())
+        print(
+            f"Loaded {len(self.messages)} messages from referencing {len(languages)} languages"
+        )
 
     def from_yaml(self, yaml_file: Optional[str] = None) -> None:
         print(f"Loading translations from YAML file '{yaml_file}'")
