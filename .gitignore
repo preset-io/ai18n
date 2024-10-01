@@ -3,3 +3,4 @@ ai18n/__pycache__/
 translations.yml
 .*__pycache__.*
 *.pyc
+dist/
