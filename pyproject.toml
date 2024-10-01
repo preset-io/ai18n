@@ -7,7 +7,7 @@ name = "ai18n"
 version = "0.1.0"
 description = "A tool for managing and automating translations with OpenAI and PO files"
 authors = [
-    { name="Max", email="max@example.com" }
+    { name="Max", email="max@preset.io" }
 ]
 license = { text = "Apache-2.0" }
 readme = "README.md"
