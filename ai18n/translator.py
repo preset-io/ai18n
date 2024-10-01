@@ -87,6 +87,9 @@ class Translator:
             if matched_message:
                 matched_message.po_translations[lang] = msgstr
                 matched_message.occurances = occurances
+                if lang == conf["main_language"] and not msgstr:
+                    # If the message is empty in the main language, use the msgid
+                    matched_message.po_translations[lang] = msgid
             elif msgstr:
                 new_message = Message(msgid=trimmed_msgid)
                 new_message.po_translations[lang] = msgstr

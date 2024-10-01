@@ -31,6 +31,11 @@ The framework is **non-destructive**—your original translations are preserved,
 AI-generated translations are added incrementally. You have full control over merging
 them into your `.po` files based on your needs.
 
+From an operational standpoint, we recommend that you commit the `ai18n.yml` file along
+with your po files. It contains the latest state of everything `ai18n`-related, including
+what's in your .po files, AI-generated translations from previous runs, and all sorts
+of relevant metadata.
+
 
 ## Usage
 
@@ -58,55 +63,36 @@ export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
 
 ### General Commands
 
-1. **Translate Missing Strings**:
-    Run this command to use OpenAI for filling in missing translations:
+```bash
+# Set your OPENAI_API_KEY so that ai18n can use it
+export OPENAI_API_KEY=<your-openai-api-key>
 
-    ```bash
-    ai18n translate --po-files-folder <path-to-po-files> --batch-size 10 --temperature 0.5
-    ```
+# Populate/sync the latest translations from PO files into the YAML file
+ai18n po-pull
 
-2. **Generate a Translation Report**:
-    Get insights into how many strings and words are translated:
+# Run this command to use OpenAI for filling in missing translations:
+ai18n translate
 
-    ```bash
-    ai18n report
-    ```
+# Show a report of translations coverage for each locale
+ai18n report
 
-3. **PO/YAML Management**:
-    - **Pull**: Load translations from PO files into the YAML memory.
+# Push translations from the YAML back into PO files.
+ai18n po-push
 
-      ```bash
-      ai18n po-pull
-      ```
-
-    - **Push**: Push translations from the YAML back into PO files.
-
-      ```bash
-      ai18n po-push
-      ```
-
-4. **Flush AI Translations**:
-    Clear all AI-generated translations from the YAML file:
-
-    ```bash
-    ai18n flush-ai
-    ```
+# start clear - flush all existing AI-generated translation out of your yaml file
+ai18n flush-ai
+```
 
 ## Development Setup & Contributing
 
 1. Clone the repository and install dependencies for both runtime and development:
 
-    ```bash
-    pip install -r requirements.txt
-    pip install -r requirements-dev.txt
-    pip install -e .
-    ```
+```bash
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+pip install -e .
+```
 
-2. Set your OpenAI API key:
-
-    ```bash
-    export OPENAI_API_KEY=<your-openai-api-key>
-    ```
 
 ## License
 
@@ -119,32 +105,59 @@ Built by the team behind Apache Superset, originally tailored for its multilingu
 
 
 ## Example/default prompt
+
+Here's the prompt that we dynamically build and send to the openai API. Note that you
+can alter/customize this template to suit your need.
+
 ```
-Translate the following text for the UI of Apache Superset, a web-based business intelligence software.
+Translate the following text for the UI of a software application using the GNU gettext framework.
 This is in the context of a .po file, so please follow the appropriate formatting for pluralization if needed.
+
 Other language translations are provided as a reference where available, but they may need improvement or correction.
 Ensure the translation is appropriate for a technical audience and aligns with common UI/UX terminology.
 
 Instructions:
 - Provide the output in JSON format (no markdown) with the language code as a key and the translated string as the value.
-- Provide translations for the following languages: ['sl', 'sk', 'pt_BR', 'ja', 'it', 'zh_TW', 'ru', 'pt', 'zh', 'uk', 'ar', 'nl', 'de', 'ko', 'fr', 'es', 'tr']
+- Provide translations for the following locales: ar, de, es, fr, it, ja, ko, nl, pt, pt_BR, ru, sk, sl, tr, uk, zh, zh_TW
 - Follow the pluralization rules for the target language if applicable.
 - Only pass the key to overwrite if your translation is significantly better than the existing one.
 
-Original string to translate: 'Could not fetch all saved charts'
+Original string to translate: 'A comma separated list of columns that should be parsed as dates'
 
 Existing translations for reference:
-sl: 'Vseh shranjenih grafikonov ni bilo mogoče pridobiti'
-pt_BR: 'Não foi possível obter todos os gráficos salvos'
-ja: '保存したすべてのチャートを取得できませんでした'
-it: 'Non posso connettermi al server'
-nl: 'Kon niet alle opgeslagen grafieken ophalen'
-de: 'Nicht alle gespeicherten Diagramme konnten abgerufen werden'
-fr: 'Impossible de récupérer tous les graphiques sauvegardés'
-es: 'No se pudieron cargar todos los gráficos guardados'
-tr: 'Tüm kayıtlı grafikler getirilemedi'
+ar: 'قائمة مفصولة بفواصل من الأعمدة التي يجب تحليلها كتواريخ'
+de: 'Eine durch Kommas getrennte Liste von Spalten, die als Datumsangaben interpretiert werden sollen'
+es: 'Una lista separada por comas de columnas que deben ser parseadas como fechas.'
+fr: 'Une liste de colonnes séparées par des virgules qui doivent être analysées comme des dates.'
+ja: '日付として解析する必要がある列のカンマ区切りのリスト'
+nl: 'Een door komma's gescheiden lijst van kolommen die als datums moeten worden geïnterpreteerd'
+pt_BR: 'Uma lista separada por vírgulas de colunas que devem ser analisadas como datas'
+ru: 'Разделенный запятыми список столбцов, которые должны быть интерпретированы как даты.'
+sl_SI: 'Z vejico ločen seznam stolpcev, v katerih bodo prepoznani datumi'
+uk: 'Кома -розділений список стовпців, які слід проаналізувати як дати'
+zh: '应作为日期解析的列的逗号分隔列表。'
+zh_TW: '應作為日期解析的列的逗號分隔列表。'
 ```
 
-## TODO
-- generic/custom template jinja
-- language linting
+Example response from openai
+```json
+{
+  "ar": "قائمة مفصولة بفواصل من المخططات التي يسمح للملفات بالتحميل إليها.",
+  "de": "Eine durch Kommas getrennte Liste von Schemata, in die Dateien hochgeladen werden dürfen.",
+  "es": "Una lista separada por comas de esquemas que permiten la subida de archivos.",
+  "fr": "Une liste de schémas séparés par des virgules autorisés pour le téléversement.",
+  "it": "Un elenco di schemi separati da virgole a cui è consentito caricare file.",
+  "ja": "ファイルのアップロードを許可するスキーマのカンマ区切りのリスト。",
+  "ko": "파일 업로드가 허용되는 스키마의 쉼표로 구분된 목록입니다.",
+  "nl": "Een komma gescheiden lijst van schema's waar bestanden naar mogen uploaden.",
+  "pt": "Uma lista separada por vírgulas de esquemas para os quais é permitido fazer upload de arquivos.",
+  "pt_BR": "Uma lista separada por vírgulas de esquemas para os quais os arquivos têm permissão para fazer upload.",
+  "ru": "Разделенный запятыми список схем, в которые можно загружать файлы.",
+  "sk": "Zoznam schém oddelených čiarkami, do ktorých je povolené nahrávanie súborov.",
+  "sl": "Seznam shem, ločenih z vejicami, na katere je dovoljeno nalagati datoteke.",
+  "tr": "Dosyaların yüklenebileceği virgülle ayrılmış şema listesi.",
+  "uk": "Список схем, відокремлений комами, до яких файли дозволяють завантажувати.",
+  "zh": "允许文件上传的逗号分隔的模式列表。",
+  "zh_TW": "允許文件上傳的逗號分隔的模式列表。"
+}
+```
