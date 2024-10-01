@@ -1,0 +1,8 @@
+d "Hello"
+msgstr ""
+
+msgid "Goodbye"
+msgstr "Adiós"
+
+msgid "Thank you"
+msgstr ""
