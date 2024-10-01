@@ -1,13 +1,10 @@
 import argparse
 import os
-import typing
+from argparse import ArgumentParser
 
 from ai18n.config import conf
 from ai18n.openai import OpenAIMessageTranslator
 from ai18n.translator import Translator
-
-if typing.TYPE_CHECKING:
-    from argparse import ArgumentParser
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 TRANSLATION_YAML_FILE = "./translations.yaml"
