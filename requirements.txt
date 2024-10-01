@@ -28,8 +28,12 @@ idna==3.10
     # via
     #   anyio
     #   httpx
+jinja2==3.1.4
+    # via ai18n (pyproject.toml)
 jiter==0.5.0
     # via openai
+markupsafe==2.1.5
+    # via jinja2
 openai==1.50.2
     # via ai18n (pyproject.toml)
 polib==1.2.0

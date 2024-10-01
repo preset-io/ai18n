@@ -1,11 +1,12 @@
 import datetime
 import json
-import textwrap
+import os
 from typing import Dict, List
 
+from jinja2 import Environment, FileSystemLoader
 from openai import OpenAI
 
-from ai18n.constants import DEFAULT_LANGUAGES
+from ai18n.config import conf
 from ai18n.message import Message
 
 MAX_TOKEN = 4096
@@ -20,41 +21,31 @@ class OpenAIMessageTranslator:
         self.client = OpenAI(
             api_key=api_key
         )  # Instantiate client once in the constructor
+        module_dir = os.path.dirname(os.path.abspath(__file__))
+        # Set the template directory relative to the current module
+        template_dir = os.path.join(module_dir, "templates")
+        self.env = Environment(loader=FileSystemLoader(template_dir))
 
     def build_prompt(self, message: Message) -> str:
-        """Create a translation prompt for the OpenAI API."""
-        occurances_str = ""
-        if message.occurances:
-            occurances_str = (
-                "For context here are the files that the string appears in:\n"
-            )
-            occurances_str += "\n".join([f"- {s}" for s in message.occurances])
-        prompt = textwrap.dedent(f"""
-            Translate the following text for the UI of Apache Superset, a web-based business intelligence software.
-            This is in the context of a .po file, so please follow the appropriate formatting for pluralization if needed.
-            Other language translations are provided as a reference where available, but they may need improvement or correction.
-            Ensure the translation is appropriate for a technical audience and aligns with common UI/UX terminology.
+        """Create a translation prompt for the OpenAI API using Jinja2."""
+        template = self.env.get_template("prompt.jinja")
 
-            Instructions:
-            - Provide the output in JSON format (no markdown) with the language code as a key and the translated string as the value.
-            - Provide translations for the following languages: {DEFAULT_LANGUAGES}
-            - Follow the pluralization rules for the target language if applicable.
-            - Only pass the key to overwrite if your translation is significantly better than the existing one.
+        # Prepare the context for rendering the template
+        context = {
+            "languages": conf["target_languages"],
+            "msgid": message.msgid,
+            "occurances": message.occurances or [],
+            "other_languages": {
+                lang: translation
+                for lang, translation in message.po_translations.items()
+                if translation
+            },
+        }
 
-            {occurances_str}
+        # Render the template with the provided context
+        prompt = template.render(context) or ""
 
-            Original string to translate: '{message.msgid}'
-        """)
-        # TODO: add occurances to the prompt
-
-        # Add existing translations as a reference
-        other_languages = "\n".join(
-            f"{lang}: '{translation}'"
-            for lang, translation in message.po_translations.items()
-            if translation
-        )
-        if other_languages:
-            prompt += f"\nExisting translations for reference:\n{other_languages}\n"
+        # Output the generated prompt for debugging purposes
         print("-=-" * 20)
         print(prompt)
         print("-=-" * 20)

@@ -133,3 +133,7 @@ fr: 'Impossible de récupérer tous les graphiques sauvegardés'
 es: 'No se pudieron cargar todos los gráficos guardados'
 tr: 'Tüm kayıtlı grafikler getirilemedi'
 ```
+
+## TODO
+- generic/custom template jinja
+- language linting

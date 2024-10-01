@@ -1,0 +1,27 @@
+Translate the following text for the UI of a software application using the GNU gettext framework.
+This is in the context of a .po file, so please follow the appropriate formatting for pluralization if needed.
+{{ extra_context }}  {# Placeholder for additional context based on specific software #}
+Other language translations are provided as a reference where available, but they may need improvement or correction.
+Ensure the translation is appropriate for a technical audience and aligns with common UI/UX terminology.
+
+Instructions:
+- Provide the output in JSON format (no markdown) with the language code as a key and the translated string as the value.
+- Provide translations for the following locales: {{ languages | join(', ') }}
+- Follow the pluralization rules for the target language if applicable.
+- Only pass the key to overwrite if your translation is significantly better than the existing one.
+
+{% if occurances %}
+For context here are the files that the string appears in:
+{% for occurance in occurances -%}
+- {{ occurance }}
+{% endfor %}
+{% endif %}
+
+Original string to translate: '{{ msgid }}'
+
+{% if other_languages %}
+Existing translations for reference:
+{% for lang, translation in other_languages.items() -%}
+{{ lang }}: '{{ translation }}'
+{% endfor %}
+{% endif %}

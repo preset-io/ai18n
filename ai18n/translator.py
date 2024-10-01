@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional
 import yaml
 from polib import POFile, pofile
 
-from ai18n.constants import DEFAULT_LANGUAGES
+from ai18n.config import conf
 from ai18n.message import Message
 
 
@@ -129,7 +129,7 @@ class Translator:
                 "total_words": 0,
                 "orphaned": 0,
             }
-            for lang in DEFAULT_LANGUAGES
+            for lang in conf["target_languages"]
             if lang != "en"
         }
 
@@ -137,7 +137,7 @@ class Translator:
             # Assume English text for counting words
             english_word_count = self.count_words(msgid)
 
-            for lang in DEFAULT_LANGUAGES:
+            for lang in conf["target_languages"]:
                 po_translation = message.po_translations.get(lang)
                 ai_translation = message.ai_translations.get(lang) or po_translation
                 stats[lang]["total_strings"] += 1

@@ -1,7 +1,7 @@
 import datetime
 from typing import Any, Dict, List, Optional
 
-from ai18n.constants import DEFAULT_LANGUAGES
+from ai18n.config import conf
 
 
 class Message:
@@ -49,7 +49,7 @@ class Message:
 
     def requires_translation(self) -> bool:
         return not self.ai_translations or not (
-            all([self.ai_translations.get(lang) for lang in DEFAULT_LANGUAGES])
+            all([self.ai_translations.get(lang) for lang in conf["target_languages"]])
         )
 
     def to_dict(self) -> Dict[str, Any]:
