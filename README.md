@@ -31,9 +31,9 @@
 ### Configuration
 ```bash
 export AI18N_TARGET_LANGUAGES=ar,de,es,fr,it,ja,ko,nl,pt,pt_BR,ru,sk,sl,tr,uk,zh,zh_TW
-export AI18N_TEMPLATE_FOLDER="./templates/"
 export AI18N_PO_FOLDER_ROOT="./translations/"
 export AI18N_PROMPT_EXTRA_CONTEXT="These translation are part of Apache Superset, a Business Intelligence data exploration, visualization and dashboard open source application"
+export AI18N_TEMPLATE_FOLDER="./templates/"
 ```
 
 ### General Commands
