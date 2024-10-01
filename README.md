@@ -161,3 +161,51 @@ Example response from openai
   "zh_TW": "允許文件上傳的逗號分隔的模式列表。"
 }
 ```
+
+Sample of the `ai18n.yml`
+```yaml
+messages:
+- trimmed_msgid: '!= (Is not equal)'
+  msgid: '!= (Is not equal)'
+  occurances: []
+  po_translations:
+    ar: '!= (ﻎﻳﺭ ﻢﺘﺳﺍﻭ)'
+    de: '!= (Ist nicht gleich)'
+    es: '!= (No es igual)'
+    fr: '!= (N''est pas égal)'
+    it: ''
+    ja: '!= (等しくない)'
+    ko: ''
+    nl: '!= (Is niet gelijk)'
+    pt: ''
+    pt_BR: '!= (diferente)'
+    ru: '!= (не равно)'
+    sk: ''
+    sl_SI: '!= (ni enako)'
+    tr: ''
+    uk: '! = (Не рівний)'
+    zh: 不等于（!=）
+    zh_TW: 不等於（!=）
+    en: '!= (Is not equal)'
+  metadata:
+    model_used: gpt-4-turbo
+    last_executed: '2024-09-30T18:07:14.542663'
+  ai_translations:
+    ar: '!= (ﻎﻳﺭ ﻢﺘﺳﺍﻭ)'
+    de: '!= (Ist nicht gleich)'
+    es: '!= (No es igual)'
+    fr: '!= (N''est pas égal)'
+    it: '!= (Non è uguale)'
+    ja: '!= (等しくない)'
+    ko: '!= (같지 않음)'
+    nl: '!= (Is niet gelijk)'
+    pt: '!= (não é igual)'
+    pt_BR: '!= (diferente)'
+    ru: '!= (не равно)'
+    sk: '!= (nie je rovné)'
+    sl: '!= (ni enako)'
+    tr: '!= (eşit değil)'
+    uk: '!= (Не рівний)'
+    zh: 不等于（!=）
+    zh_TW: 不等於（!=）
+```
