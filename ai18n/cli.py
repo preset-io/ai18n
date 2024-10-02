@@ -21,6 +21,7 @@ def add_po_files_folder_arg(subparser: ArgumentParser) -> None:
 
 
 def main() -> None:
+    """main function for the CLI."""
     parser = argparse.ArgumentParser(description="Superset Translation Tool")
 
     # Define subcommands
