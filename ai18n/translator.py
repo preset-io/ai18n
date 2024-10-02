@@ -1,6 +1,7 @@
 import os
 import random
 import re
+import sys
 from typing import Any, Dict, List, Optional, Set
 
 import yaml
@@ -59,8 +60,22 @@ class Translator:
         yaml_location = yaml_file or self.yaml_file
         print(f"Saving translations to YAML file '{yaml_location}'")
         data = self.to_dict()
-        with open(yaml_location, "w", encoding="utf-8") as file:
-            yaml.dump(data, file, allow_unicode=True, sort_keys=False)
+
+        def export_yaml() -> None:
+            with open(yaml_location, "w", encoding="utf-8") as file:
+                yaml.dump(data, file, allow_unicode=True, sort_keys=False)
+
+        try:
+            export_yaml()
+        except KeyboardInterrupt:
+            print(
+                "Export interrupted. Retrying to prevent partial file... Please hold on for a sec."
+            )
+            export_yaml()
+            print("Export completed to '{yaml_location}', exiting now...")
+            sys.exit(1)
+
+        print(f"Export completed to '{yaml_location}'")
 
     def randomize_messages(self) -> None:
         keys = list(self.messages.keys())
@@ -130,7 +145,10 @@ class Translator:
         return po_files
 
     def translate(
-        self, lang: Optional[str] = None, checkpoint: Optional[bool] = True
+        self,
+        lang: Optional[str] = None,
+        dry_run: bool = False,
+        checkpoint: bool = True,
     ) -> None:
         messages_to_translate = []
         for msg in self.messages.values():
@@ -144,7 +162,7 @@ class Translator:
             print(f"Identified {len(messages_to_translate)} messages to translate")
         for i, msg in enumerate(messages_to_translate):
             print(f"Translating message ({i}/{len(messages_to_translate)})")
-            self.openai_translator.translate_message(msg)
+            self.openai_translator.translate_message(msg, dry_run=dry_run)
             if checkpoint:
                 self.to_yaml()
         print(f"Translation complete, processed {len(messages_to_translate)} messages")

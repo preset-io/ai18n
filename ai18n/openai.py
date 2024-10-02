@@ -63,24 +63,26 @@ class OpenAIMessageTranslator:
 
         return prompt
 
-    def execute_prompt(self, message: Message) -> Dict[str, str]:
+    def execute_prompt(self, message: Message, dry_run: bool = False) -> Dict[str, str]:
         prompt = self.build_prompt(message)
 
-        # Use the chat completion endpoint for the chat models
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a professional translator proficient in multiple languages.",
-                },
-                {"role": "user", "content": prompt},
-            ],
-            max_tokens=MAX_TOKEN,
-            temperature=self.temperature,
-        )
+        response_text = "{}"
+        if not dry_run:
+            # Use the chat completion endpoint for the chat models
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are a professional translator proficient in multiple languages.",
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=MAX_TOKEN,
+                temperature=self.temperature,
+            )
 
-        response_text = response.choices[0].message.content.strip()
+            response_text = response.choices[0].message.content.strip()
         print(response_text)
         print("-=-" * 20)
         translations = {}
@@ -92,13 +94,17 @@ class OpenAIMessageTranslator:
             print(f"Error: {e}")
         return translations
 
-    def translate_message(self, message: Message, force: bool = False) -> None:
+    def translate_message(
+        self, message: Message, force: bool = False, dry_run: bool = False
+    ) -> None:
         if message.requires_translation() or force:
-            translations = self.execute_prompt(message)
-            if translations:
+            translations = self.execute_prompt(message, dry_run=dry_run)
+            if translations and not dry_run:
                 message.merge_ai_output(translations)
                 message.update_metadata(self.model, datetime.datetime.now())
 
-    def translate(self, messages: List[Message], force: bool = False) -> None:
+    def translate(
+        self, messages: List[Message], force: bool = False, dry_run: bool = False
+    ) -> None:
         for message in messages:
-            self.translate_message(message, force=force)
+            self.translate_message(message, force=force, dry_run=dry_run)

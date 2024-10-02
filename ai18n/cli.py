@@ -34,7 +34,6 @@ def main() -> None:
     translate_parser.add_argument(
         "--target-language", type=str, help="Target language code"
     )
-    translate_parser.add_argument("--batch-size", type=int, default=5, help="Batch size")
     translate_parser.add_argument("--dry-run", action="store_true", help="Dry run")
     translate_parser.add_argument(
         "--temperature", type=float, default=0.3, help="Translation temperature"
@@ -78,14 +77,16 @@ def main() -> None:
         parser.print_help()
         return
 
-    # Use the provided folder path or default to the current directory
-    translator = Translator(OPENAI_API_KEY, args.model, TRANSLATION_YAML_FILE)
+    model = None
+    if args.command == "translate":
+        model = args.model
+    translator = Translator(OPENAI_API_KEY, model, TRANSLATION_YAML_FILE)
 
     if args.command == "translate":
         if not OPENAI_API_KEY:
             print("Error: OPENAI_API_KEY environment variable is not set.")
             return
-        translator.translate(args.target_language)
+        translator.translate(args.target_language, args.dry_run)
 
     elif args.command == "report":
         translator.print_report()
