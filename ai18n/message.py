@@ -1,5 +1,5 @@
 import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional, Set
 
 from ai18n.config import conf
 
@@ -11,10 +11,10 @@ class Message:
         po_translations: Optional[Dict[str, str]] = None,
         ai_translations: Optional[Dict[str, str]] = None,
         metadata: Optional[Dict[str, str]] = None,
-        occurances: Optional[List[str]] = None,
+        occurances: Optional[Set[str]] = None,
     ) -> None:
         self.msgid = msgid
-        self.occurances = occurances or []
+        self.occurances: Set[str] = occurances or set()
         self.po_translations: Dict[str, str] = po_translations or {}
         self.ai_translations: Dict[str, str] = ai_translations or {}
         self.metadata = (
@@ -50,7 +50,7 @@ class Message:
             po_translations=data.get("po_translations", {}),
             ai_translations=data.get("ai_translations", {}),
             metadata=data.get("metadata", {}),
-            occurances=sorted(set(data.get("occurances", []))),
+            occurances=set(data.get("occurances", [])),
         )
 
     def requires_translation(
@@ -73,7 +73,7 @@ class Message:
         return {
             "trimmed_msgid": self.trimmed_msgid,
             "msgid": self.msgid,
-            "occurances": self.occurances,
+            "occurances": sorted(self.occurances),
             "po_translations": self.po_translations,
             "metadata": self.metadata,
             "ai_translations": self.ai_translations,

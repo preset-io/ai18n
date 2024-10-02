@@ -1,7 +1,7 @@
 import os
 import random
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import yaml
 from polib import POFile, pofile
@@ -36,7 +36,8 @@ class Translator:
             languages |= set(message.po_translations.keys())
             languages |= set(message.ai_translations.keys())
         print(
-            f"Loaded {len(self.messages)} messages from referencing {len(languages)} languages"
+            f"Loaded {len(self.messages)} messages "
+            f"referencing {len(languages)} languages"
         )
 
     def from_yaml(self, yaml_file: Optional[str] = None) -> None:
@@ -97,10 +98,16 @@ class Translator:
             msgstr = str(entry.msgstr)
             trimmed_msgid = self.trim_message(msgid)
             matched_message = self.find_message(trimmed_msgid)
-            occurances: List[str] = sorted({o[0] for o in entry.occurrences})
+            occurances: Set[str] = set({o[0] for o in entry.occurrences if o})
             if matched_message:
-                matched_message.po_translations[lang] = msgstr
-                matched_message.occurances = occurances
+                existing_translation = matched_message.po_translations.get(lang)
+                if msgstr and (
+                    not existing_translation or len(msgstr) > len(existing_translation)
+                ):
+                    # In some cases, there may be multiple translations for the same message
+                    # that are trimmed in different ways. We should prefer the longer one.
+                    matched_message.po_translations[lang] = msgstr
+                matched_message.occurances |= set(occurances)
                 if lang == conf["main_language"] and not msgstr:
                     # If the message is empty in the main language, use the msgid
                     matched_message.po_translations[lang] = msgid
@@ -140,6 +147,7 @@ class Translator:
             self.openai_translator.translate_message(msg)
             if checkpoint:
                 self.to_yaml()
+        print(f"Translation complete, processed {len(messages_to_translate)} messages")
 
     def push_po_file(self, lang: str, po_file: POFile, prefer_ai: bool = False) -> None:
         for message in self.messages.values():
