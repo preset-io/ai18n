@@ -31,6 +31,7 @@ fix = true
 [tool.mypy]
 strict = true
 ignore_missing_imports = true
+no_implicit_optional = false
 
 [tool.ruff.lint]
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.

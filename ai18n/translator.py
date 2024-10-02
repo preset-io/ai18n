@@ -8,16 +8,24 @@ from polib import POFile, pofile
 
 from ai18n.config import conf
 from ai18n.message import Message
+from ai18n.openai import OpenAIMessageTranslator
 
 
 class Translator:
-    def __init__(self, yaml_file: Optional[str]) -> None:
+    def __init__(
+        self, api_key: str = None, model: str = None, yaml_file: str = None
+    ) -> None:
         self.messages: Dict[str, Message] = {}
         self.yaml_file = yaml_file or "./translations.yaml"
         self.po_files_dict: Dict[str, POFile] = {}
+        self.api_key = api_key
 
         if self.yaml_file:
             self.from_yaml(self.yaml_file)
+        if self.api_key:
+            self.openai_translator = OpenAIMessageTranslator(
+                api_key=self.api_key, model=model
+            )
 
     def from_dict(self, data: Dict[str, Any]) -> None:
         messages = data.get("messages") or []
@@ -113,6 +121,25 @@ class Translator:
                 if file.endswith(".po"):
                     po_files.append(os.path.join(root, file))
         return po_files
+
+    def translate(
+        self, lang: Optional[str] = None, checkpoint: Optional[bool] = True
+    ) -> None:
+        messages_to_translate = []
+        for msg in self.messages.values():
+            if msg.requires_translation(lang):
+                messages_to_translate.append(msg)
+        if lang:
+            print(
+                f"Identified {len(messages_to_translate)} messages to translate to {lang}"
+            )
+        else:
+            print(f"Identified {len(messages_to_translate)} messages to translate")
+        for i, msg in enumerate(messages_to_translate):
+            print(f"Translating message ({i}/{len(messages_to_translate)})")
+            self.openai_translator.translate_message(msg)
+            if checkpoint:
+                self.to_yaml()
 
     def push_po_file(self, lang: str, po_file: POFile, prefer_ai: bool = False) -> None:
         for message in self.messages.values():

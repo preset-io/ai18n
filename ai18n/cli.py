@@ -3,7 +3,6 @@ import os
 from argparse import ArgumentParser
 
 from ai18n.config import conf
-from ai18n.openai import OpenAIMessageTranslator
 from ai18n.translator import Translator
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -79,22 +78,13 @@ def main() -> None:
         return
 
     # Use the provided folder path or default to the current directory
-    translator = Translator(TRANSLATION_YAML_FILE)
+    translator = Translator(OPENAI_API_KEY, args.model, TRANSLATION_YAML_FILE)
 
     if args.command == "translate":
-        translator.to_yaml()
         if not OPENAI_API_KEY:
             print("Error: OPENAI_API_KEY environment variable is not set.")
             return
-        openai_translator = OpenAIMessageTranslator(
-            api_key=OPENAI_API_KEY, model=args.model
-        )
-
-        for msg in translator.messages.values():
-            if msg.requires_translation():
-                openai_translator.translate_message(msg)
-                # checkpointing after each message
-                translator.to_yaml()
+        translator.translate(args.target_language)
 
     elif args.command == "report":
         translator.print_report()

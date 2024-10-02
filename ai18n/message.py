@@ -53,9 +53,20 @@ class Message:
             occurances=sorted(set(data.get("occurances", []))),
         )
 
-    def requires_translation(self) -> bool:
-        return not self.ai_translations or not (
-            all([self.ai_translations.get(lang) for lang in conf["target_languages"]])
+    def requires_translation(
+        self, lang: str = None, require_ai_translation: bool = False
+    ) -> bool:
+        if lang:
+            ai_translation = self.ai_translations.get(lang)
+            po_translation = self.po_translations.get(lang)
+            if require_ai_translation:
+                return True if not ai_translation else False
+            else:
+                return True if not ai_translation and not po_translation else False
+        # Otherwise, check if any of the required languages are missing
+        return any(
+            self.requires_translation(lang, require_ai_translation)
+            for lang in conf["target_languages"]
         )
 
     def to_dict(self) -> Dict[str, Any]:

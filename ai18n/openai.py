@@ -1,7 +1,7 @@
 import datetime
 import json
 import os
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from jinja2 import Environment, FileSystemLoader
 from openai import OpenAI
@@ -14,10 +14,13 @@ MAX_TOKEN = 4096
 
 class OpenAIMessageTranslator:
     def __init__(
-        self, api_key: str, model: str = "gpt-4", temperature: float = 0.3
+        self,
+        api_key: str,
+        model: Optional[str] = None,
+        temperature: Optional[float] = None,
     ) -> None:
-        self.model = model
-        self.temperature = temperature
+        self.model: str = model or "gpt-4"
+        self.temperature: float = temperature or 0.3
         self.client = OpenAI(
             api_key=api_key
         )  # Instantiate client once in the constructor
@@ -28,6 +31,8 @@ class OpenAIMessageTranslator:
         # Looking for a custom template folder in the configuration
         if template_folder := conf.get("template_folder"):
             template_dir = template_folder
+
+        print(f"Using template folder: {template_dir}")
 
         self.env = Environment(loader=FileSystemLoader(template_dir))
 
