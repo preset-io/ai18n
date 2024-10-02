@@ -66,6 +66,9 @@ def main() -> None:
     push_parser = subparsers.add_parser(
         "po-push", help="Push translations from the YAML file to .po files"
     )
+    push_parser.add_argument(
+        "--prefer-ai", action="store_true", help="Prefer AI-generated translations"
+    )
     add_po_files_folder_arg(push_parser)
 
     args = parser.parse_args()
@@ -103,7 +106,7 @@ def main() -> None:
 
     elif args.command == "po-push":
         translator.load_po_files(args.po_files_folder)
-        translator.push_all_po_files()
+        translator.push_all_po_files(args.prefer_ai)
 
     elif args.command == "flush-ai":
         translator.flush_ai()

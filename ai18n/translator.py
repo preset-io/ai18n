@@ -114,16 +114,22 @@ class Translator:
                     po_files.append(os.path.join(root, file))
         return po_files
 
-    def push_po_file(self, lang: str, po_file: POFile) -> None:
+    def push_po_file(self, lang: str, po_file: POFile, prefer_ai: bool = False) -> None:
         for message in self.messages.values():
             entry = po_file.find(message.msgid)
             if entry and message.ai_translations:
-                entry.msgstr = message.ai_translations.get(lang, entry.msgstr)
+                po_translation = message.po_translations.get(lang, entry.msgstr)
+                ai_translation = message.ai_translations.get(lang, entry.msgstr)
+                if prefer_ai:
+                    translation = ai_translation or po_translation
+                else:
+                    translation = po_translation or ai_translation
+                entry.msgstr = translation
         po_file.save()
 
-    def push_all_po_files(self) -> None:
+    def push_all_po_files(self, prefer_ai: bool = False) -> None:
         for lang, po_file in self.po_files_dict.items():
-            self.push_po_file(lang, po_file)
+            self.push_po_file(lang, po_file, prefer_ai)
 
     @staticmethod
     def count_words(text: str) -> int:

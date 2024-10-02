@@ -29,6 +29,12 @@ class Message:
     def match_message(self, message: str) -> bool:
         return self.normalize_message(message) == self.trimmed_msgid
 
+    def get_translation(self, lang: str, prefer_ai: bool = False) -> Optional[str]:
+        msg = self.po_translations.get(lang)
+        if prefer_ai:
+            msg = self.ai_translations.get(lang)
+        return msg
+
     def update_message(self, normalized_message: str) -> None:
         self.msgid = normalized_message
         self.trimmed_msgid = self.normalize_message(normalized_message)

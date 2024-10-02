@@ -76,8 +76,9 @@ ai18n translate
 # Show a report of translations coverage for each locale
 ai18n report
 
-# Push translations from the YAML back into PO files.
-ai18n po-push
+# Push translations from the YAML back into PO files while prioritizing AI
+# over original translations (default is to prefer original PO translations)
+ai18n po-push --prefer-ai
 
 # start clear - flush all existing AI-generated translation out of your yaml file
 ai18n flush-ai
