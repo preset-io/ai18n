@@ -61,6 +61,7 @@ export AI18N_TEMPLATE_FOLDER="./templates/"
 export AI18N_YAML_FILE=$AI18N_PO_FOLDER_ROOT/ai18n.yml
 ```
 
+
 ### General Commands
 
 ```bash
@@ -84,10 +85,59 @@ ai18n po-push --prefer-ai
 ai18n flush-ai
 ```
 
+### Force a po-translation
+Depending on your environment, in cases where you have a translation in your PO file as
+well as one contributed by AI, you'll have to decide on your precedence rule when pushing
+translations back into your PO files. By default, `ai18n po-push` will prefer the PO translation
+over the AI one. If you prefer using the AI translations (where available) you can simply
+`ai18n po-push --prefer-ai`, which we believe people will want to use as AI translations get
+better. Now, if you want to prefer the AI translations, there may be particular strings where
+AI simply cannot do a great job, and you may want to set certain strings to force a
+PO file string over the AI-contributed one. For this, you simply have to add the `ai18n-force`
+flag into your PO file, as such:
+
+```
+#, ai18n-force
+msgid "Dataset Name"
+msgstr "Nom de l’ensemble de données"
+```
+This PO file comment will be extracted from your PO, and will force this string to be used,
+even while running `ai18n po-push --prefer-ai`.
+
+### Common workflow
+
+While PO files are used as an interface in and out of `ai18n`, we recommend that you
+1. check/commit the `ai18n.yaml` as a companion file in your code repository. Yes it is large
+   and yes, it duplicates some i18n information in your repository, this is how the state
+   and precious AI-generated translations get persisted and version-controlled as part of your app
+1. keep your PO files intact in your repository, at least while figuring out your i18n workflows,
+   this enables contributors to interface and contribute new strings where required
+1. add a `ai18n po pull && ai18n translate` to your release workflows, filling in gaps in your
+   po files
+1. add a `ai18n po-push` somewhere in your release pipeline, so that your software can use
+   these "merged" po files to feed your app with translations
+
+Eventually, and as you validate this approach, and as you mature your i18n workflow to take
+`ai18n` into account, you can decide to either:
+
+- push the merged AI translated strings back into your app's PO files, and into your repository,
+  this would enable humans working with PO files to iterate on the latest/greatest/merged
+  translations, either to review translations or alter the bad ones using their favorite
+  PO file editor. Translators should be instructed to use the `#, ai18n-force` flag where
+  they'd want to override AI-generated translations
+- OR, potentially, if you don't need to interface with PO files for data entry, get rid
+  of PO files in your repository altogether, and pivot to using the yaml file as the
+  source-of-truth for all your translations. To merge new strings into the yaml file, you would, as part
+  of your release process, run the PO file extraction, run `ai18n po-pull` to augment it
+  with newly discovered/altered strings, and NOT persist PO files in your code repository. In
+  this scenario, PO files are simply used as an ephemeral construct to interface between your
+  app and the `ai18n` framework during your release process.
+
 ## Example/default prompt
 
-Here's the prompt that we dynamically build and send to the openai API. Note that you
-can alter/customize this template to suit your need.
+To better understand what's happening behind the scene, here's the prompt that we dynamically
+build and send to the openai API. Note that you can alter/customize this template to better
+fit your need.
 
 ```
 Translate the following text for the UI of a software application using the GNU gettext framework.

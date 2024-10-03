@@ -112,25 +112,29 @@ class Translator:
             msgid = str(entry.msgid)
             msgstr = str(entry.msgstr)
             trimmed_msgid = self.trim_message(msgid)
-            matched_message = self.find_message(trimmed_msgid)
+            message = self.find_message(trimmed_msgid)
             occurances: Set[str] = set({o[0] for o in entry.occurrences if o})
-            if matched_message:
-                existing_translation = matched_message.po_translations.get(lang)
-                if msgstr and (
-                    not existing_translation or len(msgstr) > len(existing_translation)
-                ):
-                    # In some cases, there may be multiple translations for the same message
-                    # that are trimmed in different ways. We should prefer the longer one.
-                    matched_message.po_translations[lang] = msgstr
-                matched_message.occurances |= set(occurances)
-                if lang == conf["main_language"] and not msgstr:
-                    # If the message is empty in the main language, use the msgid
-                    matched_message.po_translations[lang] = msgid
-            elif msgstr:
-                new_message = Message(msgid=trimmed_msgid)
-                new_message.po_translations[lang] = msgstr
-                new_message.occurances = occurances
-                self.add_message(new_message)
+            flags: Set[str] = set(
+                [flag for flag in entry.flags if flag.startswith("ai18n")]
+            )
+
+            if not message:
+                message = Message(msgid=trimmed_msgid)
+                self.add_message(message)
+
+            existing_translation = message.po_translations.get(lang)
+            if msgstr and (
+                not existing_translation or len(msgstr) > len(existing_translation)
+            ):
+                # In some cases, there may be multiple translations for the same message
+                # that are trimmed in different ways. We should prefer the longer one.
+                message.po_translations[lang] = msgstr
+            message.occurances |= set(occurances)
+            message.flags[lang] |= flags
+
+            if lang == conf["main_language"] and not msgstr:
+                # If the message is empty in the main language, use the msgid
+                message.po_translations[lang] = msgid
 
     def merge_all_po_files(self) -> None:
         for lang, po_file in self.po_files_dict.items():
@@ -177,7 +181,11 @@ class Translator:
                 po_translation = message.po_translations.get(lang, entry.msgstr)
                 ai_translation = message.ai_translations.get(lang, entry.msgstr)
                 if prefer_ai:
-                    translation = ai_translation or po_translation
+                    # If there is a ai18n-force flag, force the po translation
+                    if "ai18n-force" in (message.flags.get(lang) or []):
+                        translation = po_translation
+                    else:
+                        translation = ai_translation or po_translation
                 else:
                     translation = po_translation or ai_translation
                 entry.msgstr = translation
@@ -240,9 +248,7 @@ class Translator:
         stats = self.compute_translation_statistics()
 
         print("Translation Statistics Report:")
-        print(
-            f"{'Language':<10} | {'Translated Strings %':<20} | {'Orphaned':<10} | {'Words %':<10}"
-        )
+        print(f"{'Language':<10} | {'PO %':<20} | {'Orphaned':<10} | {'PO+AI %':<10}")
         print("=" * 60)
 
         for lang, data in stats.items():
