@@ -149,11 +149,14 @@ class Translator:
         lang: Optional[str] = None,
         dry_run: bool = False,
         checkpoint: bool = True,
+        message_regex: Optional[str] = None,
+        force: bool = False,
     ) -> None:
         messages_to_translate = []
         for msg in self.messages.values():
-            if msg.requires_translation(lang):
-                messages_to_translate.append(msg)
+            if not message_regex or re.match(message_regex, msg.msgid):
+                if msg.requires_translation(lang) or force:
+                    messages_to_translate.append(msg)
         if lang:
             print(
                 f"Identified {len(messages_to_translate)} messages to translate to {lang}"
@@ -162,7 +165,7 @@ class Translator:
             print(f"Identified {len(messages_to_translate)} messages to translate")
         for i, msg in enumerate(messages_to_translate):
             print(f"Translating message ({i}/{len(messages_to_translate)})")
-            self.openai_translator.translate_message(msg, dry_run=dry_run)
+            self.openai_translator.translate_message(msg, dry_run=dry_run, force=force)
             if checkpoint:
                 self.to_yaml()
         print(f"Translation complete, processed {len(messages_to_translate)} messages")
@@ -178,6 +181,7 @@ class Translator:
                 else:
                     translation = po_translation or ai_translation
                 entry.msgstr = translation
+        print(f"Exporting {lang}.po")
         po_file.save()
 
     def push_all_po_files(self, prefer_ai: bool = False) -> None:

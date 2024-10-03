@@ -12,6 +12,7 @@ class Message:
         ai_translations: Optional[Dict[str, str]] = None,
         metadata: Optional[Dict[str, str]] = None,
         occurances: Optional[Set[str]] = None,
+        flags: Optional[Dict[str, str]] = None,
     ) -> None:
         self.msgid = msgid
         self.occurances: Set[str] = occurances or set()
@@ -21,6 +22,7 @@ class Message:
             metadata if metadata else {}
         )  # Metadata (e.g., model used, last execution time)
         self.trimmed_msgid = self.normalize_message(msgid)
+        self.flags = flags or {}
 
     @classmethod
     def normalize_message(cls, message: str) -> str:
@@ -51,6 +53,7 @@ class Message:
             ai_translations=data.get("ai_translations", {}),
             metadata=data.get("metadata", {}),
             occurances=set(data.get("occurances", [])),
+            flags=data.get("flags", {}),
         )
 
     def requires_translation(
@@ -77,6 +80,9 @@ class Message:
             "po_translations": self.po_translations,
             "metadata": self.metadata,
             "ai_translations": self.ai_translations,
+            "flags": {
+                k: self.flags[k] for k in sorted(self.flags.keys()) if k and self.flags[k]
+            },
         }
 
     def merge_ai_output(self, ai_translations: Dict[str, str]) -> None:

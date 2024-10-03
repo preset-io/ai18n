@@ -34,7 +34,13 @@ def main() -> None:
     translate_parser.add_argument(
         "--target-language", type=str, help="Target language code"
     )
+    translate_parser.add_argument(
+        "--message-regex", type=str, help="Regex to filter messages to translate"
+    )
     translate_parser.add_argument("--dry-run", action="store_true", help="Dry run")
+    translate_parser.add_argument(
+        "--force", action="store_true", help="Force a re-translation"
+    )
     translate_parser.add_argument(
         "--temperature", type=float, default=0.3, help="Translation temperature"
     )
@@ -86,7 +92,12 @@ def main() -> None:
         if not OPENAI_API_KEY:
             print("Error: OPENAI_API_KEY environment variable is not set.")
             return
-        translator.translate(args.target_language, args.dry_run)
+        translator.translate(
+            args.target_language,
+            args.dry_run,
+            message_regex=args.message_regex,
+            force=args.force,
+        )
 
     elif args.command == "report":
         translator.print_report()
