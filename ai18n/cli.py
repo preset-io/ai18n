@@ -74,6 +74,11 @@ def main() -> None:
     push_parser.add_argument(
         "--prefer-ai", action="store_true", help="Prefer AI-generated translations"
     )
+    push_parser.add_argument(
+        "--occurrence-regex",
+        type=str,
+        help="Filter messages by occurrence regex, for instance you can export only strings that live in your frontend",
+    )
     add_po_files_folder_arg(push_parser)
 
     args = parser.parse_args()
@@ -109,7 +114,7 @@ def main() -> None:
 
     elif args.command == "po-push":
         translator.load_po_files(args.po_files_folder)
-        translator.push_all_po_files(args.prefer_ai)
+        translator.push_all_po_files(args.prefer_ai, args.occurrence_regex)
 
     elif args.command == "flush-ai":
         translator.flush_ai()

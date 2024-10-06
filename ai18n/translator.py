@@ -174,10 +174,21 @@ class Translator:
                 self.to_yaml()
         print(f"Translation complete, processed {len(messages_to_translate)} messages")
 
-    def push_po_file(self, lang: str, po_file: POFile, prefer_ai: bool = False) -> None:
+    def push_po_file(
+        self,
+        lang: str,
+        po_file: POFile,
+        prefer_ai: bool = False,
+        occurrence_regex: Optional[str] = None,
+    ) -> None:
+        msg_count = 0
         for message in self.messages.values():
             entry = po_file.find(message.msgid)
             if entry and message.ai_translations:
+                if occurrence_regex and not any(
+                    re.match(occurrence_regex, o[0]) for o in entry.occurrences
+                ):
+                    continue
                 po_translation = message.po_translations.get(lang, entry.msgstr)
                 ai_translation = message.ai_translations.get(lang, entry.msgstr)
                 if prefer_ai:
@@ -189,12 +200,15 @@ class Translator:
                 else:
                     translation = po_translation or ai_translation
                 entry.msgstr = translation
-        print(f"Exporting {lang}.po")
+                msg_count += 1
+        print(f"Exporting {msg_count} messages to {lang}.po")
         po_file.save()
 
-    def push_all_po_files(self, prefer_ai: bool = False) -> None:
+    def push_all_po_files(
+        self, prefer_ai: bool = False, occurrence_regex: Optional[str] = None
+    ) -> None:
         for lang, po_file in self.po_files_dict.items():
-            self.push_po_file(lang, po_file, prefer_ai)
+            self.push_po_file(lang, po_file, prefer_ai, occurrence_regex)
 
     @staticmethod
     def count_words(text: str) -> int:
