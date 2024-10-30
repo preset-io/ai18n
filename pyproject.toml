@@ -27,7 +27,7 @@ include-package-data = true
 
 [tool.setuptools.package-data]
 # Specify the package that contains the .jinja file and the file pattern to include
-"ai18n" = ["*.jinja"]
+"ai18n" = ["**/*.jinja"]
 
 [tool.ruff]
 line-length = 90
