@@ -28,7 +28,7 @@ idna==3.10
     # via
     #   anyio
     #   httpx
-jinja2==3.1.4
+jinja2==3.1.5
     # via ai18n (pyproject.toml)
 jiter==0.5.0
     # via openai
